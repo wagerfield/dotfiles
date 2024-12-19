@@ -1,0 +1,49 @@
+cask_args appdir: "/Applications"
+
+# Repositories
+tap "homebrew/bundle"
+tap "homebrew/services"
+
+# Packages
+brew "deno"
+brew "git"
+brew "mas" # Mac App Store
+brew "oven-sh/bun/bun"
+brew "pnpm"
+brew "stow"
+brew "supabase"
+brew "tree"
+brew "wget"
+brew "yarn"
+
+# Applications
+cask "1password"
+cask "arc"
+cask "datagrip"
+cask "discord"
+cask "docker"
+cask "dropbox"
+cask "elgato-control-center"
+cask "figma"
+cask "google-chrome"
+cask "hyperkey"
+cask "logi-options+"
+cask "loom"
+cask "microsoft-teams"
+cask "miro"
+cask "nordlayer"
+cask "notion"
+cask "postman"
+cask "postman-agent"
+cask "raycast"
+cask "slack"
+cask "spotify"
+cask "ticktick"
+cask "tradingview"
+cask "visual-studio-code"
+cask "warp"
+cask "whatsapp"
+cask "zed"
+
+# Fonts
+cask "font-jetbrains-mono" # Optionally delete JetBrains Mono NL (No Ligatures) from Font Book
