@@ -1,0 +1,32 @@
+{
+  "recommendations": [
+    "wallabyjs.quokka-vscode",
+    "wallabyjs.wallaby-vscode",
+    "astro-build.astro-vscode",
+    "teabyii.ayu",
+    "sharat.vscode-brewfile",
+    "catppuccin.catppuccin-vsc",
+    "catppuccin.catppuccin-vsc-icons",
+    "wmaurer.change-case",
+    "streetsidesoftware.code-spell-checker",
+    "denoland.vscode-deno",
+    "ms-azuretools.vscode-docker",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "pomdtr.excalidraw-editor",
+    "donjayamanne.githistory",
+    "vector-of-bool.gitflow",
+    "hashicorp.terraform",
+    "davidanson.vscode-markdownlint",
+    "ms-playwright.playwright",
+    "csstools.postcss",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "mechatroner.rainbow-csv",
+    "thebearingedge.vscode-sql-lit",
+    "bradlc.vscode-tailwindcss",
+    "wayou.vscode-todo-highlight",
+    "vitest.explorer"
+  ]
+}
