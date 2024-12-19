@@ -10,7 +10,6 @@ brew "git"
 brew "mas" # Mac App Store
 brew "pnpm"
 brew "stow"
-brew "supabase"
 brew "tree"
 brew "wget"
 brew "yarn"
