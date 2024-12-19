@@ -42,6 +42,3 @@ cask "visual-studio-code"
 cask "warp"
 cask "whatsapp"
 cask "zed"
-
-# Fonts
-cask "font-jetbrains-mono" # Optionally delete JetBrains Mono NL (No Ligatures) from Font Book
