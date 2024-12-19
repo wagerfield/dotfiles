@@ -8,7 +8,6 @@ tap "homebrew/services"
 brew "deno"
 brew "git"
 brew "mas" # Mac App Store
-brew "oven-sh/bun/bun"
 brew "pnpm"
 brew "stow"
 brew "supabase"
