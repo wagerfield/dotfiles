@@ -1,34 +1,34 @@
 # dotfiles
 
-**Step 1:** Install [Homebrew](https://brew.sh):
+**Step 1:** Install [Homebrew](https://brew.sh)
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-**Step 2:** Install [oh-my-zsh](https://ohmyz.sh):
+**Step 2:** Install [oh-my-zsh](https://ohmyz.sh)
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-**Step 3:** Install [NVM (Node Version Manager)](https://github.com/nvm-sh/nvm#readme):
+**Step 3:** Install [Node Version Manager](https://github.com/nvm-sh/nvm#readme)
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh)"
 
-**Step 4:** Install [Node](https://nodejs.org) via NVM:
+**Step 4:** Install [Node](https://nodejs.org)
 
     nvm install node
 
-**Step 5:** Install [Bun](https://bun.sh):
+**Step 5:** Install [Bun](https://bun.sh)
 
     curl -fsSL https://bun.sh/install | bash
 
-**Step 6:** Clone `dotfiles` repository:
+**Step 6:** Clone `dotfiles` repository
 
     git clone https://github.com/wagerfield/dotfiles.git && cd dotfiles
 
-**Step 7:** Install `brew` packages and casks:
+**Step 7:** Install `brew` packages and casks
 
     brew bundle
 
-**Step 8:** Stow directories to `$HOME` directory:
+**Step 8:** Stow directories to `$HOME` directory
 
     stow git oh-my-zsh zed zsh --target $HOME
 
