@@ -1,0 +1,12 @@
+[user]
+	name = Matthew Wagerfield
+	email = matthew@wagerfield.com
+
+[init]
+	defaultBranch = main
+
+[includeIf "gitdir:~/Documents/work/make/"]
+	path = ~/.config/git/make.gitconfig
+
+[includeIf "gitdir:~/Documents/work/make/progleasing/"]
+	path = ~/.config/git/progleasing.gitconfig

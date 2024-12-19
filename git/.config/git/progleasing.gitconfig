@@ -1,0 +1,13 @@
+[user]
+	name = Matthew Wagerfield
+	email = matthew.wagerfield@progleasing.com
+	signingkey = C5F487C3FDF45639
+
+[init]
+	defaultBranch = main
+
+[core]
+	sshCommand = "ssh -i ~/.ssh/progleasing_ed25519"
+
+[commit]
+	gpgSign = true
