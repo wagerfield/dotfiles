@@ -10,7 +10,6 @@ brew "git"
 brew "mas" # Mac App Store
 brew "pnpm"
 brew "stow"
-brew "supabase"
 brew "tree"
 brew "wget"
 brew "yarn"
@@ -43,6 +42,3 @@ cask "visual-studio-code"
 cask "warp"
 cask "whatsapp"
 cask "zed"
-
-# Fonts
-cask "font-jetbrains-mono" # Optionally delete JetBrains Mono NL (No Ligatures) from Font Book
