@@ -1,8 +1,10 @@
 export BUN="$HOME/.bun"
 export NVM="$HOME/.nvm"
 export ZSH="$HOME/.oh-my-zsh"
+export BREW="/opt/homebrew"
 
 export PATH="$PATH:$BUN/bin"
+export PATH="$PATH:$BREW/bin"
 export PATH="$PATH:./node_modules/.bin"
 
 export EDITOR="code"
