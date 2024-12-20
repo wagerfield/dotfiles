@@ -7,6 +7,7 @@ tap "homebrew/services"
 # Packages
 brew "deno"
 brew "git"
+brew "gpg"
 brew "mas" # Mac App Store
 brew "pnpm"
 brew "stow"
