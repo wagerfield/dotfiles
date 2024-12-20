@@ -5,6 +5,9 @@
 [init]
 	defaultBranch = main
 
+[pull]
+	rebase = false # merge
+
 [includeIf "gitdir:~/Documents/work/make/"]
 	path = ~/.config/git/make.gitconfig
 
