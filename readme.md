@@ -32,6 +32,8 @@
 
     stow git oh-my-zsh zed zsh --target $HOME
 
+You will likely have to delete (or rename) some files like `$HOME/.zshrc` that already exist before running `stow`.
+
 ## Brew Commands
 
 | Command                          | Description                      |
@@ -46,3 +48,28 @@
 | `brew list`                      | List `brew` packages             |
 | `brew (un)install <package>`     | (Un)install `brew` package       |
 | `brew (un)install --cask <cask>` | (Un)install `brew` cask          |
+
+## Mac Configuration
+
+### Disable Spotlight Keyboard Shortcut
+
+    Settings --> Keyboard --> Keyboard Shortcuts --> Spotlight
+
+![Spotlight Keyboard Shortcut](assets/spotlight-keyboard-shortcut.png)
+
+### Disable Chinese Keyboard Shortcuts
+
+    Settings --> Keyboard --> Keyboard Shortcuts --> Services --> Text
+
+![Chinese Keyboard Shortcuts](assets/chinese-keyboard-shortcuts.png)
+
+### Show File Extensions
+
+### Show Hidden Files
+
+## SSH
+
+Create separate SSH keys for different emails:
+
+    ssh-keygen -t ed25519 -C "matthew@wagerfield.com" -f ~/.ssh/id_ed25519
+    ssh-keygen -t ed25519 -C "matthew.wagerfield@progleasing.com" -f ~/.ssh/prg_ed25519
