@@ -5,6 +5,7 @@ export BREW="/opt/homebrew"
 
 export PATH="$PATH:$BUN/bin"
 export PATH="$PATH:$BREW/bin"
+export PATH="$PATH:$BREW/opt/postgresql@13/bin"
 export PATH="$PATH:./node_modules/.bin"
 
 export EDITOR="code"
