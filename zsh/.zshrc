@@ -46,3 +46,5 @@ source $BUN/_bun
 source $NVM/nvm.sh
 source $NVM/bash_completion
 source $ZSH/oh-my-zsh.sh
+
+eval "$(oh-my-posh init zsh)"

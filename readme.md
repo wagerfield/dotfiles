@@ -30,7 +30,7 @@
 
 **Step 8:** Stow directories to `$HOME` directory
 
-    stow git oh-my-zsh zed zsh --target $HOME
+    stow git oh-my-posh oh-my-zsh zed zsh --target $HOME
 
 You will likely have to delete (or rename) some files like `$HOME/.zshrc` that already exist before running `stow`.
 
@@ -51,17 +51,13 @@ You will likely have to delete (or rename) some files like `$HOME/.zshrc` that a
 
 ## Mac Configuration
 
-### Disable Spotlight Keyboard Shortcut
-
-    Settings --> Keyboard --> Keyboard Shortcuts --> Spotlight
-
-![Spotlight Keyboard Shortcut](assets/spotlight-keyboard-shortcut.png)
-
 ### Disable Chinese Keyboard Shortcuts
 
     Settings --> Keyboard --> Keyboard Shortcuts --> Services --> Text
 
 ![Chinese Keyboard Shortcuts](assets/chinese-keyboard-shortcuts.png)
+
+### List Folders Before Files
 
 ### Show File Extensions
 
