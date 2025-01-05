@@ -8,8 +8,8 @@
 [pull]
 	rebase = false # merge
 
-[includeIf "gitdir:~/Clients/make/"]
+[includeIf "gitdir:~/Documents/work/make/"]
 	path = ~/.config/git/make.gitconfig
 
-[includeIf "gitdir:~/Clients/prg/"]
+[includeIf "gitdir:~/Documents/work/make/prg/"]
 	path = ~/.config/git/prg.gitconfig
