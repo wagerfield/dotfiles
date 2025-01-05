@@ -9,6 +9,7 @@
     "catppuccin.catppuccin-vsc-icons",
     "wmaurer.change-case",
     "streetsidesoftware.code-spell-checker",
+    "ms-vscode.cpptools-extension-pack",
     "denoland.vscode-deno",
     "ms-azuretools.vscode-docker",
     "mikestead.dotenv",
