@@ -12,6 +12,9 @@
   "buffer_font_size": 13,
   "ui_font_family": "JetBrains Mono",
   "buffer_font_family": "JetBrains Mono",
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
   "theme": {
     "mode": "system",
     "dark": "Catppuccin Frappé",
