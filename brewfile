@@ -3,14 +3,17 @@ cask_args appdir: "/Applications"
 # Repositories
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "qmk/qmk"
 
 # Packages
 brew "deno"
 brew "git"
 brew "gpg"
 brew "mas" # Mac App Store
+brew "oh-my-posh"
 brew "postgresql@13"
 brew "pnpm"
+brew "qmk/qmk/qmk"
 brew "stow"
 brew "terraform"
 brew "tree"
@@ -26,6 +29,7 @@ cask "docker"
 cask "dropbox"
 cask "elgato-control-center"
 cask "figma"
+cask "ghostty"
 cask "google-chrome"
 cask "hyperkey"
 cask "logi-options+"
@@ -45,3 +49,6 @@ cask "visual-studio-code"
 cask "warp"
 cask "whatsapp"
 cask "zed"
+
+# Fonts
+cask "font-jetbrains-mono-nerd-font"
