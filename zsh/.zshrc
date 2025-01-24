@@ -35,6 +35,8 @@ alias sb="supabase"
 
 alias kn="killall node -9"
 
+alias ssh-argo-dev="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-dev-database/ssh-tunnel-to-dev.sh"
+
 # Config
 
 ZSH_THEME="wagerfield"
