@@ -17,5 +17,11 @@
     "bindings": {
       "j k": ["workspace::SendKeystrokes", "escape"]
     }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "m": "project_panel::CollapseAllEntries"
+    }
   }
 ]
