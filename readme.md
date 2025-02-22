@@ -51,6 +51,8 @@ You will likely have to delete (or rename) some files like `$HOME/.zshrc` that a
 
 ## Mac Configuration
 
+    bash macos.sh
+
 ### Disable Mission Control Keyboard Shortcuts
 
     Settings --> Keyboard --> Keyboard Shortcuts --> Mission Control
