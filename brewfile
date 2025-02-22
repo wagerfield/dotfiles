@@ -20,7 +20,6 @@ brew "luarocks"
 brew "mas" # Mac App Store
 brew "neovim"
 brew "nmap"
-brew "oh-my-posh"
 brew "postgresql@13"
 brew "pnpm"
 brew "qmk/qmk/qmk"
