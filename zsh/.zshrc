@@ -2,6 +2,7 @@ export BUN="$HOME/.bun"
 export NVM="$HOME/.nvm"
 export ZSH="$HOME/.oh-my-zsh"
 export BREW="/opt/homebrew"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 export PATH="$PATH:$BUN/bin"
 export PATH="$PATH:$BREW/bin"
@@ -31,6 +32,8 @@ alias yb="yarn run build"
 alias ys="yarn run start"
 alias yt="yarn run test"
 
+alias nv="nvim"
+alias lg="lazygit"
 alias sb="supabase"
 
 alias kn="killall node -9"
@@ -51,8 +54,6 @@ source $BUN/_bun
 source $NVM/nvm.sh
 source $NVM/bash_completion
 source $ZSH/oh-my-zsh.sh
-
-eval "$(oh-my-posh init zsh)"
 
 # bun completions
 [ -s "/Users/wagerfield/.bun/_bun" ] && source "/Users/wagerfield/.bun/_bun"
