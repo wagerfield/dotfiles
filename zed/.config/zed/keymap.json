@@ -9,13 +9,13 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle"
+      "g p": "file_finder::Toggle"
     }
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      "j k": ["workspace::SendKeystrokes", "escape"]
+      "k k": ["workspace::SendKeystrokes", "escape"]
     }
   },
   {
