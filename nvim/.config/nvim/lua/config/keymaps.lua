@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Remap arrow keys to HJKL
 vim.keymap.set("n", "<up>", "k", { desc = "Up", remap = true })
 vim.keymap.set("n", "<down>", "j", { desc = "Down", remap = true })
 vim.keymap.set("n", "<left>", "h", { desc = "Left", remap = true })
@@ -25,10 +26,12 @@ vim.keymap.set("t", "<c-j>", "<c-\\><c-n><c-w>j", { desc = "Go to Lower Window",
 vim.keymap.set("t", "<c-h>", "<c-\\><c-n><c-w>h", { desc = "Go to Left Window", silent = true })
 vim.keymap.set("t", "<c-l>", "<c-\\><c-n><c-w>l", { desc = "Go to Right Window", silent = true })
 
--- Move Lines
+-- Move lines up
 vim.keymap.set("n", "<a-up>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
 vim.keymap.set("v", "<a-up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 vim.keymap.set("i", "<a-up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+
+-- Move lines down
 vim.keymap.set("n", "<a-down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
 vim.keymap.set("v", "<a-down>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
 vim.keymap.set("i", "<a-down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
