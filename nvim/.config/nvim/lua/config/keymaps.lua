@@ -25,6 +25,14 @@ vim.keymap.set("t", "<c-j>", "<c-\\><c-n><c-w>j", { desc = "Go to Lower Window",
 vim.keymap.set("t", "<c-h>", "<c-\\><c-n><c-w>h", { desc = "Go to Left Window", silent = true })
 vim.keymap.set("t", "<c-l>", "<c-\\><c-n><c-w>l", { desc = "Go to Right Window", silent = true })
 
+-- Move Lines
+vim.keymap.set("n", "<a-up>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+vim.keymap.set("v", "<a-up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+vim.keymap.set("i", "<a-up>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+vim.keymap.set("n", "<a-down>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+vim.keymap.set("v", "<a-down>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+vim.keymap.set("i", "<a-down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+
 -- Switch buffers
 vim.keymap.set("n", "<s-left>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<s-right>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
@@ -34,3 +42,8 @@ vim.keymap.set("n", "<leader>t", ":terminal<cr>", { desc = "New Terminal Buffer"
 
 -- Return to NORMAL mode
 vim.keymap.set("t", "<esc>", "<c-\\><c-n>", { desc = "Return to NORMAL mode", remap = true, silent = true })
+
+-- Clear terminal
+vim.keymap.set("t", "<d-k>", function()
+  vim.api.nvim_chan_send(vim.b.terminal_job_id, "\x0c")
+end, { desc = "Clear terminal like CMD-K" })
