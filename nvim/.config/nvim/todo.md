@@ -1,7 +1,7 @@
 # Todo
 
 - [ ] Enable hidden files in explorer and find windows excluding node_modules
-- [ ] Disable UI conceal by default
+- [x] Disable UI conceal by default
 - [ ] Multi-cursor
 - [ ] HTTP client
 - [ ] DAP debugging
