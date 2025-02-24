@@ -1,7 +1,9 @@
 # Todo
 
 - [ ] Enable hidden files in explorer and find windows excluding node_modules
+- [x] Setup ESLint to formatter / DAP
 - [x] Disable UI conceal by default
+- [ ] Jump to diagnostics panel when opened
 - [ ] Multi-cursor
 - [ ] HTTP client
 - [ ] DAP debugging
