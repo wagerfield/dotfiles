@@ -1,1 +1,16 @@
+font-size = 15
+
+title = " "
 theme = tokyonight_moon
+
+macos-icon = official
+macos-icon = blueprint
+macos-icon = holographic
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 0.2
+
+window-padding-balance = true
+window-inherit-working-directory = true
+window-title-font-family = JetBrains Mono
+
