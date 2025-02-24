@@ -1,8 +1,8 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+export BREW="/opt/homebrew"
 export BUN="$HOME/.bun"
 export NVM="$HOME/.nvm"
 export ZSH="$HOME/.oh-my-zsh"
-export BREW="/opt/homebrew"
-export XDG_CONFIG_HOME="$HOME/.config"
 
 export PATH="$PATH:$BUN/bin"
 export PATH="$PATH:$BREW/bin"
