@@ -30,7 +30,7 @@
 
 **Step 8:** Stow directories to `$HOME` directory
 
-    stow git lazygit nvim oh-my-zsh ssh vim zed zsh --target $HOME
+    stow ghostty git lazygit nvim oh-my-zsh ssh vim zed zsh --target $HOME
 
 You will likely have to delete (or rename) some files like `$HOME/.zshrc` that already exist before running `stow`.
 
