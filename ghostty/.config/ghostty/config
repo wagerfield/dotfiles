@@ -1,16 +1,23 @@
-font-size = 15
+# font
+font-size = 14
 
-title = " "
+# theme
+# title = 👻 Ghostty
 theme = tokyonight_moon
 
-macos-icon = official
-macos-icon = blueprint
+# cursor
+cursor-style = block
+
+# macos
+# macos-icon = official
+# macos-icon = blueprint
 macos-icon = holographic
+macos-titlebar-proxy-icon = hidden
 
+# mouse
 mouse-hide-while-typing = true
-mouse-scroll-multiplier = 0.2
 
+# window
 window-padding-balance = true
 window-inherit-working-directory = true
-window-title-font-family = JetBrains Mono
-
+# window-title-font-family = JetBrains Mono
