@@ -2,9 +2,11 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- Remap arrow keys to HJKL
-vim.keymap.set("n", "<up>", "k", { desc = "Up", remap = true })
-vim.keymap.set("n", "<down>", "j", { desc = "Down", remap = true })
+-- Move screen up and down
+vim.keymap.set("n", "<c-u>", "<c-u>zz", { desc = "Move Screen Up" })
+vim.keymap.set("n", "<c-d>", "<c-d>zz", { desc = "Move Screen Down" })
+
+-- Remap left and right arrow keys
 vim.keymap.set("n", "<left>", "h", { desc = "Left", remap = true })
 vim.keymap.set("n", "<right>", "l", { desc = "Right", remap = true })
 
@@ -50,3 +52,7 @@ vim.keymap.set("t", "<esc>", "<c-\\><c-n>", { desc = "Exit Terminal Mode", remap
 vim.keymap.set("t", "<d-k>", function()
   vim.api.nvim_chan_send(vim.b.terminal_job_id, "\x0c")
 end, { desc = "Clear Terminal" })
+
+-- Paste from yank register
+vim.keymap.set("n", "<leader>p", '"0p', { desc = "Paste Yank After" })
+vim.keymap.set("n", "<leader>P", '"0P', { desc = "Paste Yank Before" })
