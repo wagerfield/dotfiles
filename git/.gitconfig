@@ -1,15 +1,21 @@
 [user]
-	name = Matthew Wagerfield
-	email = matthew@wagerfield.com
+  name = Matthew Wagerfield
+  email = matthew@wagerfield.com
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [pull]
-	rebase = false # merge
+  rebase = false # merge
+
+[filter "lfs"]
+  required = true
+  process = git-lfs filter-process
+  smudge = git-lfs smudge -- %f
+  clean = git-lfs clean -- %f
 
 [includeIf "gitdir:~/Documents/work/make/"]
-	path = ~/.config/git/make.gitconfig
+  path = ~/.config/git/make.gitconfig
 
 [includeIf "gitdir:~/Documents/work/make/prg/"]
-	path = ~/.config/git/prg.gitconfig
+  path = ~/.config/git/prg.gitconfig

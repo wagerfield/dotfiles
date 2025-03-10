@@ -1,13 +1,13 @@
 [user]
-	name = Matthew Wagerfield
-	email = matthew.wagerfield@progleasing.com
-	signingKey = 54A018935FFBE4E1
+  name = Matthew Wagerfield
+  email = matthew.wagerfield@progleasing.com
+  signingKey = 54A018935FFBE4E1
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [core]
-	sshCommand = "ssh -i ~/.ssh/prg_ed25519"
+  sshCommand = "ssh -i ~/.ssh/prg_ed25519"
 
 [commit]
-	gpgSign = true
+  gpgSign = true
