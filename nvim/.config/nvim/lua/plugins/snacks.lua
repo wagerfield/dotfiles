@@ -10,9 +10,6 @@ return {
       },
     },
     zen = {
-      show = {
-        statusline = false,
-      },
       toggles = {
         dim = false,
         git_signs = true,
