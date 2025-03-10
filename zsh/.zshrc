@@ -57,7 +57,11 @@ source $NVM/nvm.sh
 source $NVM/bash_completion
 source $ZSH/oh-my-zsh.sh
 
+eval "$(brew shellenv)"
 eval "$(zoxide init zsh)"
+
+autoload -Uz compinit
+compinit
 
 # bun completions
 [ -s "/Users/wagerfield/.bun/_bun" ] && source "/Users/wagerfield/.bun/_bun"
