@@ -4,12 +4,13 @@ export BUN="$HOME/.bun"
 export NVM="$HOME/.nvm"
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH="$PATH:$BUN/bin"
-export PATH="$PATH:$BREW/bin"
+export PATH="$BREW/bin:$BREW/sbin:$PATH"
 export PATH="$PATH:$BREW/opt/postgresql@13/bin"
+
+export PATH="$PATH:$BUN/bin"
 export PATH="$PATH:./node_modules/.bin"
 
-export EDITOR="code"
+export EDITOR="nvim"
 
 # Aliases
 
@@ -32,6 +33,7 @@ alias yb="yarn run build"
 alias ys="yarn run start"
 alias yt="yarn run test"
 
+alias n="nvim"
 alias nv="nvim"
 alias lg="lazygit"
 alias sb="supabase"
@@ -54,6 +56,8 @@ source $BUN/_bun
 source $NVM/nvm.sh
 source $NVM/bash_completion
 source $ZSH/oh-my-zsh.sh
+
+eval "$(zoxide init zsh)"
 
 # bun completions
 [ -s "/Users/wagerfield/.bun/_bun" ] && source "/Users/wagerfield/.bun/_bun"
