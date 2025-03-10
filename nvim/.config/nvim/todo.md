@@ -10,7 +10,6 @@
 - [ ] Jump to diagnostics panel when opened
 - [x] Show full file path or increase [depth of picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md)
 - [ ] Editorconfig
-- [ ] Code folding?
 - [ ] Multi-cursor
 - [ ] HTTP client
 - [ ] DAP debugging
