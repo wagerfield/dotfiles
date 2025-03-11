@@ -17,6 +17,7 @@ vim.keymap.set({ "n", "v", "i", "t" }, "<c-k>", smart_splits.move_cursor_up)
 vim.keymap.set({ "n", "v", "i", "t" }, "<c-j>", smart_splits.move_cursor_down)
 vim.keymap.set({ "n", "v", "i", "t" }, "<c-h>", smart_splits.move_cursor_left)
 vim.keymap.set({ "n", "v", "i", "t" }, "<c-l>", smart_splits.move_cursor_right)
+
 vim.keymap.set({ "n", "v", "i", "t" }, "<c-up>", smart_splits.move_cursor_up)
 vim.keymap.set({ "n", "v", "i", "t" }, "<c-down>", smart_splits.move_cursor_down)
 vim.keymap.set({ "n", "v", "i", "t" }, "<c-left>", smart_splits.move_cursor_left)
