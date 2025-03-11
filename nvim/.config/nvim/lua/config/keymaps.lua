@@ -2,6 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local smart_splits = require("smart-splits")
+
 -- Move screen up and down
 vim.keymap.set("n", "<c-u>", "<c-u>zz", { desc = "Move Screen Up" })
 vim.keymap.set("n", "<c-d>", "<c-d>zz", { desc = "Move Screen Down" })
@@ -11,15 +13,14 @@ vim.keymap.set("n", "<left>", "h", { desc = "Left", remap = true })
 vim.keymap.set("n", "<right>", "l", { desc = "Right", remap = true })
 
 -- Move between windows with smart-splits
-vim.keymap.set({ "n", "t" }, "<c-k>", require("smart-splits").move_cursor_up)
-vim.keymap.set({ "n", "t" }, "<c-j>", require("smart-splits").move_cursor_down)
-vim.keymap.set({ "n", "t" }, "<c-h>", require("smart-splits").move_cursor_left)
-vim.keymap.set({ "n", "t" }, "<c-l>", require("smart-splits").move_cursor_right)
-
-vim.keymap.set({ "n", "t" }, "<c-up>", require("smart-splits").move_cursor_up)
-vim.keymap.set({ "n", "t" }, "<c-down>", require("smart-splits").move_cursor_down)
-vim.keymap.set({ "n", "t" }, "<c-left>", require("smart-splits").move_cursor_left)
-vim.keymap.set({ "n", "t" }, "<c-right>", require("smart-splits").move_cursor_right)
+vim.keymap.set({ "n", "v", "i", "t" }, "<c-k>", smart_splits.move_cursor_up)
+vim.keymap.set({ "n", "v", "i", "t" }, "<c-j>", smart_splits.move_cursor_down)
+vim.keymap.set({ "n", "v", "i", "t" }, "<c-h>", smart_splits.move_cursor_left)
+vim.keymap.set({ "n", "v", "i", "t" }, "<c-l>", smart_splits.move_cursor_right)
+vim.keymap.set({ "n", "v", "i", "t" }, "<c-up>", smart_splits.move_cursor_up)
+vim.keymap.set({ "n", "v", "i", "t" }, "<c-down>", smart_splits.move_cursor_down)
+vim.keymap.set({ "n", "v", "i", "t" }, "<c-left>", smart_splits.move_cursor_left)
+vim.keymap.set({ "n", "v", "i", "t" }, "<c-right>", smart_splits.move_cursor_right)
 
 -- Move lines up
 vim.keymap.set("n", "<a-up>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
