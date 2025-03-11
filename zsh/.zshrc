@@ -12,7 +12,7 @@ export PATH="$PATH:./node_modules/.bin"
 
 export EDITOR="nvim"
 
-# Aliases
+# aliases
 
 alias b="bun"
 alias br="bun run"
@@ -45,7 +45,7 @@ alias flash="qmk flash --env CONVERT_TO=promicro_rp2040"
 alias ssh-argo-dev="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh dev"
 alias ssh-argo-prod="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh prod"
 
-# Config
+# config
 
 ZSH_THEME="wagerfield"
 HIST_STAMPS="dd/mm/yyyy"
@@ -60,8 +60,19 @@ source $ZSH/oh-my-zsh.sh
 eval "$(brew shellenv)"
 eval "$(zoxide init zsh)"
 
+# brew completions
 autoload -Uz compinit
 compinit
 
 # bun completions
 [ -s "/Users/wagerfield/.bun/_bun" ] && source "/Users/wagerfield/.bun/_bun"
+
+# yazi quit cwd
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
