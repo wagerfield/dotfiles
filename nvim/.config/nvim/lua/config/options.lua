@@ -3,6 +3,13 @@
 -- Add any additional options here
 
 vim.g.snacks_animate = false
-
 vim.opt.conceallevel = 0
 vim.opt.spell = true
+vim.opt.list = true
+vim.opt.listchars = {
+  precedes = "«",
+  extends = "»",
+  trail = "-",
+  nbsp = "␣",
+  tab = "→ ",
+}
