@@ -1,0 +1,8 @@
+vim.api.nvim_create_user_command("UpdateSpellList", function()
+  vim.cmd("edit ~/.config/nvim/spell/en.utf-8.add")
+  vim.cmd("normal! ggguG")
+  vim.cmd("%sort u")
+  vim.cmd("write")
+  vim.cmd("mkspell! %")
+  vim.cmd("bdelete")
+end, {})
