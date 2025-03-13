@@ -9,6 +9,7 @@ tap "qmk/qmk"
 # Packages
 brew "ast-grep"
 brew "autossh"
+brew "btop"
 brew "deno"
 brew "fd"
 brew "fish"
