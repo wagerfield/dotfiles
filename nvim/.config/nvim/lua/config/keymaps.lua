@@ -48,6 +48,24 @@ vim.keymap.set("t", "<d-k>", function()
   vim.api.nvim_chan_send(vim.b.terminal_job_id, "\x0c")
 end, { desc = "Clear Terminal" })
 
--- Paste from yank register
-vim.keymap.set("n", "<leader>p", '"0p', { desc = "Paste Yank After" })
-vim.keymap.set("n", "<leader>P", '"0P', { desc = "Paste Yank Before" })
+-- Yanky ring
+vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
+vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
+vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)")
+vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")
+
+vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
+vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
+
+vim.keymap.set("n", "]p", "<Plug>(YankyPutIndentAfterLinewise)", { desc = "" })
+vim.keymap.set("n", "[p", "<Plug>(YankyPutIndentBeforeLinewise)")
+vim.keymap.set("n", "]P", "<Plug>(YankyPutIndentAfterLinewise)")
+vim.keymap.set("n", "[P", "<Plug>(YankyPutIndentBeforeLinewise)")
+
+vim.keymap.set("n", ">p", "<Plug>(YankyPutIndentAfterShiftRight)")
+vim.keymap.set("n", "<p", "<Plug>(YankyPutIndentAfterShiftLeft)")
+vim.keymap.set("n", ">P", "<Plug>(YankyPutIndentBeforeShiftRight)")
+vim.keymap.set("n", "<P", "<Plug>(YankyPutIndentBeforeShiftLeft)")
+
+vim.keymap.set("n", "=p", "<Plug>(YankyPutAfterFilter)")
+vim.keymap.set("n", "=P", "<Plug>(YankyPutBeforeFilter)")
