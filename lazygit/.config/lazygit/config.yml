@@ -1,0 +1,9 @@
+gui:
+  border: single
+  sidePanelWidth: 0.333
+  tabWidth: 2
+  theme:
+    activeBorderColor:
+      - green
+    inactiveBorderColor:
+      - default
