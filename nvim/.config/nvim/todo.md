@@ -1,9 +1,9 @@
 # Todo
 
-- [ ] Configure fzf
 - [ ] Remove snacks borders (explorer, picker etc.)
+- [ ] Configure fzf
 - [ ] Refine Document Symbols UI to not include comments and filter symbols by type or depth
-- [ ] Refine UI (ref Everforest powerline, tabs, etc.)
+- [ ] Refine UI (ref Everforest powerline, Kitty tabs and Neovim tabs, etc.)
 - [ ] Setup AI plugin like avante
 - [ ] Multi-cursor
 - [ ] HTTP client
@@ -34,3 +34,4 @@ return {
 - [ ] [Nordic](https://github.com/AlexvZyl/nordic.nvim)
   - [x] lualine
   - [ ] yazi
+  - [ ] btop
