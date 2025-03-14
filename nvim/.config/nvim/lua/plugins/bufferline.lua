@@ -1,4 +1,5 @@
 return {
+  -- https://github.com/akinsho/bufferline.nvim#readme
   "akinsho/bufferline.nvim",
   enabled = false,
   opts = {
