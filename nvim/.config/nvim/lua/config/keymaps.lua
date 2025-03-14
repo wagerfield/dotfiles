@@ -1,8 +1,4 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
-
-local smart_splits = require("smart-splits")
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
 -- Move screen up and down
 vim.keymap.set("n", "<c-u>", "<c-u>zz", { desc = "Move Screen Up" })
@@ -11,17 +7,6 @@ vim.keymap.set("n", "<c-d>", "<c-d>zz", { desc = "Move Screen Down" })
 -- Remap left and right arrow keys
 vim.keymap.set("n", "<left>", "h", { desc = "Left", remap = true })
 vim.keymap.set("n", "<right>", "l", { desc = "Right", remap = true })
-
--- Move between windows with smart-splits
-vim.keymap.set({ "n", "v", "i", "t" }, "<c-k>", smart_splits.move_cursor_up)
-vim.keymap.set({ "n", "v", "i", "t" }, "<c-j>", smart_splits.move_cursor_down)
-vim.keymap.set({ "n", "v", "i", "t" }, "<c-h>", smart_splits.move_cursor_left)
-vim.keymap.set({ "n", "v", "i", "t" }, "<c-l>", smart_splits.move_cursor_right)
-
-vim.keymap.set({ "n", "v", "i", "t" }, "<c-up>", smart_splits.move_cursor_up)
-vim.keymap.set({ "n", "v", "i", "t" }, "<c-down>", smart_splits.move_cursor_down)
-vim.keymap.set({ "n", "v", "i", "t" }, "<c-left>", smart_splits.move_cursor_left)
-vim.keymap.set({ "n", "v", "i", "t" }, "<c-right>", smart_splits.move_cursor_right)
 
 -- Move lines up
 vim.keymap.set("n", "<a-up>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
@@ -47,25 +32,3 @@ vim.keymap.set("t", "<esc>", "<c-\\><c-n>", { desc = "Exit Terminal Mode", remap
 vim.keymap.set("t", "<d-k>", function()
   vim.api.nvim_chan_send(vim.b.terminal_job_id, "\x0c")
 end, { desc = "Clear Terminal" })
-
--- Yanky ring
-vim.keymap.set({ "n", "x" }, "p", "<Plug>(YankyPutAfter)")
-vim.keymap.set({ "n", "x" }, "P", "<Plug>(YankyPutBefore)")
-vim.keymap.set({ "n", "x" }, "gp", "<Plug>(YankyGPutAfter)")
-vim.keymap.set({ "n", "x" }, "gP", "<Plug>(YankyGPutBefore)")
-
-vim.keymap.set("n", "<c-p>", "<Plug>(YankyPreviousEntry)")
-vim.keymap.set("n", "<c-n>", "<Plug>(YankyNextEntry)")
-
-vim.keymap.set("n", "]p", "<Plug>(YankyPutIndentAfterLinewise)", { desc = "" })
-vim.keymap.set("n", "[p", "<Plug>(YankyPutIndentBeforeLinewise)")
-vim.keymap.set("n", "]P", "<Plug>(YankyPutIndentAfterLinewise)")
-vim.keymap.set("n", "[P", "<Plug>(YankyPutIndentBeforeLinewise)")
-
-vim.keymap.set("n", ">p", "<Plug>(YankyPutIndentAfterShiftRight)")
-vim.keymap.set("n", "<p", "<Plug>(YankyPutIndentAfterShiftLeft)")
-vim.keymap.set("n", ">P", "<Plug>(YankyPutIndentBeforeShiftRight)")
-vim.keymap.set("n", "<P", "<Plug>(YankyPutIndentBeforeShiftLeft)")
-
-vim.keymap.set("n", "=p", "<Plug>(YankyPutAfterFilter)")
-vim.keymap.set("n", "=P", "<Plug>(YankyPutBeforeFilter)")
