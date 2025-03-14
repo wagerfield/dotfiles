@@ -14,6 +14,7 @@ deduplicate
 dotfiles
 enum
 env
+folke
 github
 homebrew
 json
