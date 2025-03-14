@@ -3,6 +3,9 @@ api
 apr
 argo
 auth
+autocmd
+autocmds
+axios
 concat
 config
 const
@@ -13,6 +16,7 @@ enum
 env
 github
 homebrew
+json
 keymap
 keymaps
 lazyvim
@@ -20,6 +24,7 @@ lms
 lua
 nestjs
 num
+nvim
 okta
 param
 params
@@ -27,9 +32,9 @@ prng
 readonly
 rxjs
 sentilink
+sequelize
 ssn
 todo
 upsert
-verylazy
 yanky
 zsh
