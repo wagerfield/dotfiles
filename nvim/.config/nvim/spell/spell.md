@@ -10,6 +10,10 @@
 
 ## Updating Spell List
 
+Run the following command:
+
+    :UpdateSpellList
+
 1. Lowercase entire `en.utf-8.add` file: `guag`
 2. Sort current file and deduplicate words: `:%sort u` (`u = unique`)
 3. Rebuild `.spl` file: `:mkspell! %`
