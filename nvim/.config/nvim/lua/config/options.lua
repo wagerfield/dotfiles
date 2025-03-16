@@ -11,9 +11,21 @@ vim.opt.spelloptions = "camel"
 
 vim.opt.list = true
 vim.opt.listchars = {
-  precedes = "«",
-  extends = "»",
   trail = "-",
   nbsp = "␣",
-  tab = "→ ",
+  tab = "⟩ ",
+}
+
+vim.opt.fillchars = {
+  fold = " ",
+
+  horiz = "━",
+  horizup = "┻",
+  horizdown = "┳",
+
+  vert = "┃",
+  vertleft = "┫",
+  vertright = "┣",
+
+  verthoriz = "╋",
 }
