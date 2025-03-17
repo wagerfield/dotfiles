@@ -1,9 +1,10 @@
 export XDG_CONFIG_HOME="$HOME/.config"
-export BREW="/opt/homebrew"
+
 export BUN="$HOME/.bun"
 export NVM="$HOME/.nvm"
 export ZSH="$HOME/.oh-my-zsh"
 
+export BREW="/opt/homebrew"
 export PATH="$BREW/bin:$BREW/sbin:$PATH"
 export PATH="$PATH:$BREW/opt/postgresql@13/bin"
 
@@ -33,8 +34,12 @@ alias yb="yarn run build"
 alias ys="yarn run start"
 alias yt="yarn run test"
 
+alias f="fzf"
+alias fz="fzf"
+
 alias n="nvim"
 alias nv="nvim"
+
 alias lg="lazygit"
 alias sb="supabase"
 
