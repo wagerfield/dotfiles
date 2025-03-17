@@ -1,27 +1,37 @@
 return {
-  -- { "RRethy/base16-nvim" },
-  -- { "rose-pine/neovim" },
   {
+    -- https://github.com/AlexvZyl/nordic.nvim#readme
     "AlexvZyl/nordic.nvim",
     priority = 1000,
     lazy = false,
     opts = {
-      bright_border = false,
       cursorline = {
         theme = "light",
-        blend = 0.8,
+        blend = 0.5,
       },
-      noice = {
-        style = "flat",
-      },
+      after_palette = function(palette)
+        -- local border_fg = palette.gray3
+        --
+        -- palette.border_fg = border_fg
+        -- palette.fg_float_border = border_fg
+        -- palette.fg_popup_border = border_fg
+      end,
+      on_highlight = function(H, P)
+        H.YankyYanked = { link = "IncSearch" }
+        H.YankyPut = { link = "IncSearch" }
+
+        H.FloatTitle.bg = P.bg_float
+
+        H.IndentBlanklineChar = { fg = P.orange.base }
+        H.IndentBlanklineContextChar = { fg = P.yellow.base }
+      end,
     },
   },
   {
     "LazyVim/LazyVim",
+    lazy = false,
     opts = {
       colorscheme = "nordic",
-      -- colorscheme = "rose-pine",
-      -- colorscheme = "base16-black-metal-gorgoroth",
     },
   },
 }
