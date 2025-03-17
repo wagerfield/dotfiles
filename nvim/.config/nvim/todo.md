@@ -1,7 +1,9 @@
 # Todo
 
 - [ ] Remove snacks borders (explorer, picker etc.)
+- [ ] Use https://github.com/catppuccin/nvim and override colors to nordic
 - [ ] Configure fzf
+- [ ] Add super tab plugin
 - [ ] Refine Document Symbols UI to not include comments and filter symbols by type or depth
 - [ ] Refine UI (ref Everforest powerline, Kitty tabs and Neovim tabs, etc.)
 - [ ] Setup AI plugin like avante
@@ -35,3 +37,7 @@ return {
   - [x] lualine
   - [ ] yazi
   - [ ] btop
+  - [ ] add divider between input and list
+  - [ ] make left side of float win dark like sidebar
+  - [ ] update icons in Cmdline input
+  - [ ] lighten indent guides
