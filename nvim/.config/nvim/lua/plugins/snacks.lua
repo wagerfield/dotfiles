@@ -1,31 +1,212 @@
 require("snacks")
 
-local exclude = { ".git", ".DS_Store", "node_modules" }
+local include = {
+  ".env",
+  ".env.*",
+  ".npmrc",
+  "notes.*",
+  "todo.*",
+  "tmp",
+}
+
+-- 1 2 3
+-- 8   4
+-- 7 6 5
+local borders = {
+  thick_t = { "▔", "▔", "▔", "", "", "", "", "" }, -- ▔ U+2594 Upper One Eighth Block
+  thick_b = { "", "", "", "", "▁", "▁", "▁", "" }, -- ▁ U+2581 Lower One Eighth Block
+  thick_l = { "▎", "", "", "", "", "", "▎", "▎" }, -- ▎ U+258E Left One Quarter Block
+  thick_r = { "", "", "🮇", "🮇", "🮇", "", "", "" }, -- 🮇 U+1FB87 Right One Quarter Block
+
+  solid_t = { " ", " ", " ", "", "", "", "", "" },
+  solid_b = { "", "", "", "", " ", " ", " ", "" },
+  solid_l = { " ", "", "", "", "", "", " ", " " },
+  solid_r = { "", "", " ", " ", " ", "", "", "" },
+}
 
 return {
+  -- https://github.com/folke/snacks.nvim#readme
   "folke/snacks.nvim",
+  lazy = false,
   ---@type snacks.Config
   opts = {
+    -- https://github.com/folke/snacks.nvim/blob/main/docs/styles.md
+    styles = {
+      float = {
+        relative = "editor",
+        position = "float",
+        backdrop = 60,
+        height = 0.80,
+        width = 0.86,
+        zindex = 50,
+      },
+    },
+
+    -- https://github.com/folke/snacks.nvim/blob/main/docs/lazygit.md
+    lazygit = {
+      configure = false,
+      win = {
+        style = "float",
+      },
+    },
+
+    -- https://github.com/folke/snacks.nvim/blob/main/docs/picker.md
     picker = {
+      prompt = "   ",
       formatters = {
         file = {
           filename_first = true,
           truncate = 80,
         },
       },
+
+      layouts = {
+        -- https://github.com/folke/snacks.nvim/blob/main/docs/picker.md#default
+        default = {
+          layout = {
+            box = "horizontal",
+            border = "solid",
+            style = "float",
+            width = 0.8,
+            height = 0.8,
+            {
+              box = "vertical",
+              title = "{title} {live} {flags}",
+              {
+                win = "input",
+                border = borders.solid_b,
+                height = 1,
+              },
+              {
+                win = "list",
+              },
+            },
+            {
+              win = "preview",
+              title = "{preview}",
+              width = 0.6,
+            },
+          },
+        },
+
+        -- https://github.com/folke/snacks.nvim/blob/main/docs/picker.md#sidebar
+        sidebar = {
+          preview = "main",
+          layout = {
+            backdrop = false,
+            width = 48,
+            min_width = 48,
+            max_width = 48,
+            height = 0,
+            min_height = 100,
+            position = "left",
+            border = borders.thick_r,
+            box = "vertical",
+            {
+              win = "input",
+              border = "solid",
+              title = "{title} {live} {flags}",
+              title_pos = "center",
+              height = 1,
+            },
+            {
+              win = "list",
+              border = borders.solid_l,
+            },
+            {
+              win = "preview",
+              title = "{preview}",
+              border = borders.thick_t,
+              height = 0.4,
+            },
+          },
+        },
+
+        -- https://github.com/folke/snacks.nvim/blob/main/docs/picker.md#ivy
+        ivy = {
+          layout = {
+            box = "vertical",
+            backdrop = false,
+            row = -1,
+            width = 0,
+            height = 0.4,
+            border = borders.thick_t,
+            title = " {title} {live} {flags}",
+            title_pos = "left",
+            {
+              win = "input",
+              border = "solid",
+              height = 1,
+            },
+            {
+              box = "horizontal",
+              {
+                win = "list",
+                border = "none",
+              },
+              {
+                win = "preview",
+                title = "{preview}",
+                border = borders.thick_l,
+                width = 0.6,
+              },
+            },
+          },
+        },
+      },
       sources = {
         explorer = {
+          auto_close = false,
           hidden = true,
-          ignored = true,
-          exclude = exclude,
+          include = include,
+          -- layout = {
+          --   preset = "default",
+          --   preview = true,
+          -- },
+          matcher = {
+            fuzzy = true,
+          },
         },
         files = {
           hidden = true,
-          ignored = true,
-          exclude = exclude,
+          include = include,
+        },
+        lsp_symbols = {
+          tree = true,
+          filter = {
+            typescript = {
+              -- "Module",
+              -- "Namespace",
+              -- "Package",
+              "Class",
+              "Method",
+              "Property",
+              "Field",
+              "Constructor",
+              "Enum",
+              "Interface",
+              "Function",
+              "Variable",
+              "Constant",
+              -- "String",
+              -- "Number",
+              -- "Boolean",
+              -- "Array",
+              -- "Object",
+              -- "Key",
+              -- "Null",
+              -- "EnumMember",
+              -- "Struct",
+              -- "Event",
+              -- "Operator",
+              -- "TypeParameter",
+            },
+          },
         },
       },
     },
+
+    -- https://github.com/folke/snacks.nvim/blob/main/docs/zen.md#default
     zen = {
       toggles = {
         dim = false,
