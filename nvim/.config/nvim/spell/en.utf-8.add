@@ -12,6 +12,7 @@ concat
 config
 const
 ctx
+cwd
 deduplicate
 dotfiles
 editorconfig
@@ -20,6 +21,7 @@ env
 folke
 github
 homebrew
+init
 ip
 json
 keymap
@@ -51,4 +53,6 @@ url
 utf
 whitespace
 yanky
+yazi
+zoxide
 zsh
