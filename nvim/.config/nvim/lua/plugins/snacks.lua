@@ -28,6 +28,7 @@ return {
   -- https://github.com/folke/snacks.nvim#readme
   "folke/snacks.nvim",
   lazy = false,
+
   ---@type snacks.Config
   opts = {
     -- https://github.com/folke/snacks.nvim/blob/main/docs/styles.md
@@ -36,8 +37,8 @@ return {
         relative = "editor",
         position = "float",
         backdrop = 60,
-        height = 0.80,
-        width = 0.86,
+        height = 0.8,
+        width = 0.85,
         zindex = 50,
       },
     },
@@ -154,7 +155,11 @@ return {
           },
         },
       },
+
+      -- https://github.com/folke/snacks.nvim/blob/main/docs/picker.md#-sources
       sources = {
+
+        -- https://github.com/folke/snacks.nvim/blob/main/docs/picker.md#explorer
         explorer = {
           auto_close = false,
           hidden = true,
@@ -167,10 +172,14 @@ return {
             fuzzy = true,
           },
         },
+
+        -- https://github.com/folke/snacks.nvim/blob/main/docs/picker.md#files
         files = {
           hidden = true,
           include = include,
         },
+
+        -- https://github.com/folke/snacks.nvim/blob/main/docs/picker.md#lsp_symbols
         lsp_symbols = {
           tree = true,
           filter = {
