@@ -4,10 +4,10 @@ gui:
   tabWidth: 2
   theme:
     activeBorderColor:
-      - yellow
+      - cyan
     inactiveBorderColor:
       - default
     selectedLineBgColor:
-      - "#3B4252"
+      - reverse
   authorColors:
     "Matthew Wagerfield": "yellow"
