@@ -22,9 +22,6 @@ vim.keymap.set("i", "<a-down>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" 
 vim.keymap.set("n", "<s-left>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<s-right>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
--- New terminal buffer
-vim.keymap.set("n", "<leader>t", ":terminal<cr>", { desc = "New Terminal Buffer" })
-
 -- Exit terminal mode
 vim.keymap.set("t", "<esc>", "<c-\\><c-n>", { desc = "Exit Terminal Mode", remap = true, silent = true })
 
