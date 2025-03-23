@@ -1,43 +1,45 @@
 # Todo
 
-- [ ] Remove snacks borders (explorer, picker etc.)
-- [ ] Use https://github.com/catppuccin/nvim and override colors to nordic
-- [ ] Configure fzf
-- [ ] Add super tab plugin
-- [ ] Refine Document Symbols UI to not include comments and filter symbols by type or depth
-- [ ] Refine UI (ref Everforest powerline, Kitty tabs and Neovim tabs, etc.)
-- [ ] Setup AI plugin like avante
-- [ ] Multi-cursor
-- [ ] HTTP client
-- [ ] DAP debugging
-- [ ] Fix up/down arrow keys in grug-far to gk/gj
-- [ ] Enable syntax highlighting in git diffs (see below)
+## UI
 
-```lua
-return {
-  "lewis6991/gitsigns.nvim",
-  opts = {
-    diff_opts = {
-      internal = true,
-      algorithm = "patience",
-      indent_heuristic = true,
-      linematch = true, -- enables syntax highlighting in diff view
-    },
-  },
-}
-```
-
-## Themes
-
-- [ ] [Catppuccin](https://github.com/catppuccin/nvim)
-- [ ] [Katsushika](https://github.com/rebelot/kanagawa.nvim)
-- [ ] [Tokyo Night](https://github.com/folke/tokyonight.nvim)
 - [ ] [Everforest](https://github.com/sainnhe/everforest)
-- [ ] [Nordic](https://github.com/AlexvZyl/nordic.nvim)
-  - [x] lualine
+  - [ ] kitty
+  - [ ] Slack
+  - [ ] bufferline
+  - [ ] lualine
   - [ ] yazi
   - [ ] btop
-  - [ ] add divider between input and list
-  - [ ] make left side of float win dark like sidebar
-  - [ ] update icons in Cmdline input
-  - [ ] lighten indent guides
+- [ ] Show Dashboard when all buffers are closed
+- [ ] Refine snacks borders (explorer, picker etc.)
+- [ ] Fix colors of lazygit inside neovim (background is washed out)
+- [ ] Enable syntax highlighting in git diffs (see below)
+- [ ] Refine Document Symbols UI
+  - [ ] Try and replicate what Zed has
+  - [ ] Look at alternatives to trouble (check LazyVim site)
+  - [ ] Remove include comments and
+  - [ ] Filter symbols by type or depth
+- [ ] Refine UI (ref Everforest powerline, Kitty tabs and Neovim tabs, etc.)
+
+## AI
+
+- [ ] Setup [Augment](https://hjkl.ai/)
+  - [ ] [Neovim docs](https://docs.augmentcode.com/using-augment/vim-neovim)
+- [ ] Setup [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)
+- [ ] Setup [avante.nvim](https://github.com/yetone/avante.nvim#readme)
+- [ ] Improve tab completion of copilot ie. show suggestions on newlines
+
+## Neovim
+
+- [ ] Multi-cursor
+  - [ ] [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)
+  - [ ] [smoka7/multicursors.nvim](https://github.com/smoka7/multicursors.nvim)
+- [ ] HTTP client
+- [ ] DAP debugging ([YouTube Tutorial](https://www.youtube.com/watch?v=fvRwG17XsaA))
+- [ ] Fix up/down arrow keys in grug-far to gk/gj
+- [ ] Super tab (do this after setting up Augment to see if it's still needed)
+
+## Tools
+
+- [ ] Setup [Starship](https://starship.rs/)
+- [ ] Setup [chezmoi](https://www.chezmoi.io/)
+- [ ] Configure [fzf](https://junegunn.github.io/fzf/)
