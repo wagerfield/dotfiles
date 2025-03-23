@@ -7,21 +7,6 @@ local duration = {
   step = 8,
 }
 
--- 1 2 3
--- 8   4
--- 7 6 5
-local borders = {
-  thick_t = { "▔", "▔", "▔", "", "", "", "", "" }, -- ▔ U+2594 Upper One Eighth Block
-  thick_b = { "", "", "", "", "▁", "▁", "▁", "" }, -- ▁ U+2581 Lower One Eighth Block
-  thick_l = { "▎", "", "", "", "", "", "▎", "▎" }, -- ▎ U+258E Left One Quarter Block
-  thick_r = { "", "", "🮇", "🮇", "🮇", "", "", "" }, -- 🮇 U+1FB87 Right One Quarter Block
-
-  solid_t = { " ", " ", " ", "", "", "", "", "" },
-  solid_b = { "", "", "", "", " ", " ", " ", "" },
-  solid_l = { " ", "", "", "", "", "", " ", " " },
-  solid_r = { "", "", " ", " ", " ", "", "", "" },
-}
-
 local include = {
   ".env",
   ".env.*",
