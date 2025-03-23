@@ -1,19 +1,15 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 
-vim.g.snacks_animate = false
+vim.g.lazyvim_eslint_auto_format = true
+vim.g.lazyvim_prettier_needs_config = true
 
 vim.opt.conceallevel = 0
 
-vim.opt.spell = true
-vim.opt.spelloptions = "camel"
-
 vim.opt.list = true
 vim.opt.listchars = {
-  trail = "-",
-  nbsp = "␣",
-  tab = "⟩ ",
+  trail = "·",
+  nbsp = "_",
+  tab = "> ",
 }
 
 vim.opt.fillchars = {
