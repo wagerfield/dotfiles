@@ -1,4 +1,4 @@
-local utils = require("utils")
+local border = require("utils.border")
 
 return {
   -- https://github.com/folke/which-key.nvim#readme
@@ -6,7 +6,7 @@ return {
   opts = {
     delay = 250,
     win = {
-      border = utils.borders.heavy,
+      border = border.box,
       padding = { 0, 1 },
     },
   },
