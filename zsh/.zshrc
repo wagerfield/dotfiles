@@ -45,7 +45,7 @@ alias sb="supabase"
 
 alias kn="killall node -9"
 
-alias flash="qmk flash --env CONVERT_TO=promicro_rp2040"
+alias lts="nvm use --lts"
 
 alias ssh-argo-dev="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh dev"
 alias ssh-argo-prod="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh prod"
