@@ -4,14 +4,23 @@ return {
   name = "everforest",
   opts = {
     show_eob = false,
-    on_highlights = function(hl, pal)
+    on_highlights = function(hl, palette)
       hl.CurrentWord.bold = false
 
+      -- Snacks Indent
+      hl.SnacksIndent1 = { link = "Red" }
+      hl.SnacksIndent2 = { link = "Yellow" }
+      hl.SnacksIndent3 = { link = "Blue" }
+      hl.SnacksIndent4 = { link = "Orange" }
+      hl.SnacksIndent5 = { link = "Green" }
+      hl.SnacksIndent6 = { link = "Purple" }
+      hl.SnacksIndent7 = { link = "Aqua" }
+
       -- WhichKey
-      hl.WhichKeyNormal = { fg = pal.none, bg = pal.bg0 }
-      hl.WhichKeyBorder = { fg = pal.bg4, bg = pal.bg0 }
-      hl.WhichKeyTitle = { fg = pal.none, bg = pal.bg0 }
-      hl.WhichKeyDesc = { link = "Fg" }
+      hl.WhichKeyNormal = { link = "Normal" }
+      hl.WhichKeyBorder = { link = "Grey" }
+      hl.WhichKeyTitle = { link = "Title" }
+      hl.WhichKeyDesc = { link = "Normal" }
     end,
   },
 }
