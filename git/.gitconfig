@@ -2,6 +2,9 @@
   name = Matthew Wagerfield
   email = matthew@wagerfield.com
 
+[core]
+  excludesfile = ~/.config/git/global.gitignore
+
 [init]
   defaultBranch = main
 
