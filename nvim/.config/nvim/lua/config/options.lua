@@ -3,6 +3,12 @@
 vim.g.lazyvim_eslint_auto_format = true
 vim.g.lazyvim_prettier_needs_config = true
 
+vim.g.augment_workspace_folders = {
+  "~/Documents/work/make/prg/argo-api",
+  "~/Documents/github/qmk_firmware",
+  "~/.dotfiles",
+}
+
 vim.opt.conceallevel = 0
 
 vim.opt.list = true
@@ -13,8 +19,6 @@ vim.opt.listchars = {
 }
 
 vim.opt.fillchars = {
-  fold = " ",
-
   horiz = "━",
   horizup = "┻",
   horizdown = "┳",
