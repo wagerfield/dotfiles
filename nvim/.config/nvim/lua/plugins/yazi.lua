@@ -1,5 +1,5 @@
 require("which-key").add({
-  { "<leader>y", group = "yazi", icon = "󱞊 " },
+  { "<leader>y", group = "yazi", icon = "󱞊 ", mode = { "n", "v" } },
 })
 
 return {
