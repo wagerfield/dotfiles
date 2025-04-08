@@ -1,10 +1,21 @@
 require("snacks")
 
+local border = require("utils.border")
+
 local backdrop = 60
 local easing = "inOutQuad"
 local duration = {
-  total = 240,
-  step = 8,
+  total = 250,
+  step = 10,
+}
+local indent_hl = {
+  "SnacksIndent1",
+  "SnacksIndent2",
+  "SnacksIndent3",
+  "SnacksIndent4",
+  "SnacksIndent5",
+  "SnacksIndent6",
+  "SnacksIndent7",
 }
 
 local include = {
@@ -46,6 +57,16 @@ return {
     indent = {
       animate = {
         enabled = false,
+      },
+      scope = {
+        hl = indent_hl,
+      },
+      chunk = {
+        enabled = false,
+        hl = indent_hl,
+        char = {
+          arrow = "◈", -- ⏵▷▶︎◆◈
+        },
       },
     },
 
@@ -125,30 +146,28 @@ return {
         -- sidebar = {
         --   preview = "main",
         --   layout = {
-        --     backdrop = false,
         --     width = 48,
-        --     min_width = 48,
-        --     max_width = 48,
-        --     height = 0,
-        --     min_height = 100,
         --     position = "left",
-        --     border = borders.thick_r,
+        --     -- border = border.box,
         --     box = "vertical",
+        --     wo = {
+        --       fillchars = "vert:W",
+        --     },
         --     {
         --       win = "input",
-        --       border = "solid",
+        --       border = border.box,
         --       title = "{title} {live} {flags}",
         --       title_pos = "center",
         --       height = 1,
         --     },
         --     {
         --       win = "list",
-        --       border = borders.solid_l,
+        --       border = "hpad",
         --     },
         --     {
         --       win = "preview",
         --       title = "{preview}",
-        --       border = borders.thick_t,
+        --       border = border.box,
         --       height = 0.4,
         --     },
         --   },
@@ -195,10 +214,6 @@ return {
           auto_close = false,
           hidden = true,
           include = include,
-          -- layout = {
-          --   preset = "default",
-          --   preview = true,
-          -- },
           matcher = {
             fuzzy = true,
           },
