@@ -11,6 +11,9 @@ export PATH="$PATH:$BREW/opt/postgresql@13/bin"
 export PATH="$PATH:$BUN/bin"
 export PATH="$PATH:./node_modules/.bin"
 
+export PATH="$PATH:$HOME/.lmstudio/bin"
+export PATH="$PATH:$HOME/.codeium/windsurf/bin"
+
 export EDITOR="nvim"
 
 # aliases
@@ -46,6 +49,8 @@ alias sb="supabase"
 alias kn="killall node -9"
 
 alias lts="nvm use --lts"
+
+alias fkb="qmk flash --no-eject"
 
 alias ssh-argo-dev="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh dev"
 alias ssh-argo-prod="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh prod"
