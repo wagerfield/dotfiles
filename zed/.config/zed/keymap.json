@@ -7,18 +7,6 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
-    "bindings": {
-      "g p": "file_finder::Toggle"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      "k k": ["workspace::SendKeystrokes", "escape"]
-    }
-  },
-  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "m": "project_panel::CollapseAllEntries"
