@@ -1,4 +1,5 @@
 export XDG_CONFIG_HOME="$HOME/.config"
+export PNPM_HOME="/Users/wagerfield/Library/pnpm"
 
 export BUN="$HOME/.bun"
 export NVM="$HOME/.nvm"
@@ -9,6 +10,7 @@ export PATH="$BREW/bin:$BREW/sbin:$PATH"
 export PATH="$PATH:$BREW/opt/postgresql@13/bin"
 
 export PATH="$PATH:$BUN/bin"
+export PATH="$PATH:$PNPM_HOME"
 export PATH="$PATH:./node_modules/.bin"
 
 export PATH="$PATH:$HOME/.lmstudio/bin"
@@ -30,6 +32,11 @@ alias nd="npm run dev"
 alias nb="npm run build"
 alias ns="npm run start"
 alias nt="npm run test"
+
+alias p="pnpm"
+alias pd="pnpm run dev"
+alias pb="pnpm run build"
+alias pt="pnpm run test"
 
 alias yr="yarn run"
 alias yd="yarn run dev"
