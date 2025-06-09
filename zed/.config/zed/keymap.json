@@ -7,9 +7,28 @@
 // from the command palette.
 [
   {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-alt-i": "editor::SplitSelectionIntoLines"
+    }
+  },
+  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
-      "m": "project_panel::CollapseAllEntries"
+      "alt-enter": ["workspace::SendKeystrokes", "space cmd-shift-e"], // Open and focus file
+      "c": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "context": "GitPanel && ChangesList",
+    "bindings": {
+      "alt-enter": ["workspace::SendKeystrokes", "ctrl-enter ctrl-shift-g"] // Open and focus file
     }
   }
 ]
