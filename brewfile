@@ -15,6 +15,7 @@ brew "fd"
 brew "fish"
 brew "ffmpeg"
 brew "fzf"
+brew "gh"
 brew "git"
 brew "gpg"
 brew "hashicorp/tap/terraform"
@@ -74,8 +75,8 @@ cask "warp"
 cask "whatsapp"
 cask "windsurf"
 cask "zed"
+cask "zed@preview"
 
 # Fonts
 cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
-

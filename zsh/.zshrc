@@ -59,6 +59,9 @@ alias lts="nvm use --lts"
 
 alias fkb="qmk flash --no-eject"
 
+alias zedp="zed-preview"
+alias zep="zed-preview"
+
 alias ssh-argo-dev="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh dev"
 alias ssh-argo-prod="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh prod"
 
@@ -93,3 +96,8 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/wagerfield/.lmstudio/bin"
+# End of LM Studio CLI section
+
