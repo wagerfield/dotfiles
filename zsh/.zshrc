@@ -44,6 +44,8 @@ alias yb="yarn run build"
 alias ys="yarn run start"
 alias yt="yarn run test"
 
+alias c="claude"
+
 alias f="fzf"
 alias fz="fzf"
 
