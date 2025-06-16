@@ -1,43 +1,35 @@
 {
-  "model": "sonnet",
+  "$schema": "./settings.schema.json",
   "includeCoAuthoredBy": false,
-  // https://docs.anthropic.com/en/docs/claude-code/settings#permissions
-  // https://docs.anthropic.com/en/docs/claude-code/security#tools-available-to-claude
+  "model": "sonnet",
+  "theme": "dark",
   "permissions": {
     "allow": [
       "Read(~/.zshrc)",
-      // File Discovery
       "Bash(ls:*)",
-      "Bash(rg:*)", // ripgrep
-      "Bash(sg:*)", // ast-grep
+      "Bash(rg:*)",
+      "Bash(sg:*)",
       "Bash(fd:*)",
       "Bash(fzf:*)",
       "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(tree:*)",
-      // Text Inspection
       "Bash(cat:*)",
       "Bash(head:*)",
       "Bash(tail:*)",
       "Bash(less:*)",
       "Bash(sort:*)",
       "Bash(uniq:*)",
-      // Readonly Git
       "Bash(git log:*)",
       "Bash(git diff:*)",
       "Bash(git show:*)",
-      // Package Managers
       "Bash(bun run:*)",
       "Bash(npm run:*)",
       "Bash(pnpm run:*)",
       "Bash(yarn run:*)",
-      // Specialized Tools
       "Bash(markdownlint:*)",
-      // Web Fetch
-      "WebFetch(domain:anthropic.com)",
+      "WebFetch(domain:docs.anthropic.com)",
       "WebFetch(domain:github.com)"
-    ],
-    "deny": []
-  },
-  "env": {}
+    ]
+  }
 }
