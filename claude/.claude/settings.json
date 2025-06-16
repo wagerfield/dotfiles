@@ -11,8 +11,6 @@
       "Bash(sg:*)",
       "Bash(fd:*)",
       "Bash(fzf:*)",
-      "Bash(find:*)",
-      "Bash(grep:*)",
       "Bash(tree:*)",
       "Bash(cat:*)",
       "Bash(head:*)",
@@ -29,7 +27,8 @@
       "Bash(yarn run:*)",
       "Bash(markdownlint:*)",
       "WebFetch(domain:docs.anthropic.com)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "mcp__ide__getDiagnostics"
     ],
     "deny": ["Read(node_modules)"]
   }
