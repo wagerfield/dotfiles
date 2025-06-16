@@ -96,7 +96,7 @@
     "rule": {
       "type": "string",
       "description": "Tool permission rule (e.g., 'Bash(ls:*)', 'Read(~/.zshrc)', 'WebFetch(domain:github.com)')",
-      "pattern": "^(Agent|Bash|Read|Write|Edit|MultiEdit|Glob|Grep|LS|Task|NotebookRead|NotebookEdit|WebFetch|WebSearch)\\(?"
+      "pattern": "^(Agent|Bash|Edit|Glob|Grep|LS|MultiEdit|NotebookEdit|NotebookRead|Read|TodoRead|TodoWrite|WebFetch|WebSearch|Write)\\(?"
     }
   },
   "examples": [
