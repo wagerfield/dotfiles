@@ -30,6 +30,7 @@
       "Bash(markdownlint:*)",
       "WebFetch(domain:docs.anthropic.com)",
       "WebFetch(domain:github.com)"
-    ]
+    ],
+    "deny": ["Read(node_modules)"]
   }
 }
