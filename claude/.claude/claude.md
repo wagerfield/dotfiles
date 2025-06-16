@@ -32,6 +32,7 @@ High-performance tools available for code analysis and file operations:
 - **`fd`** - modern file finder with intuitive syntax, faster than `find` (`fd --help`)
 - **`fzf`** - interactive fuzzy finder for files, command history, and text (`fzf --help`)
 - **`tree`** - directory structure visualization with filtering options (`tree --help`)
+- **`gh`** - GitHub CLI for repository operations, issues, and pull requests (`gh --help`)
 - **`imagemagick`** - comprehensive image manipulation suite (`convert --help`, `identify --help`)
 - **`markdownlint`** - markdown linter and formatter (`markdownlint --help`)
 
