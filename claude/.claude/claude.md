@@ -52,38 +52,22 @@ Write markdown that conforms to `markdownlint` default rules:
 
 ## Git Conventions
 
-**Branch Naming:**
-
-- Use `kebab-case` with descriptive names that reference issue numbers when applicable
-- Apply prefixes for git flow workflows: `feature/auth-system`, `bugfix/header-overflow`, `hotfix/security-patch`
-- Keep names under 50 characters for terminal readability
-
-**Commit Messages:**
-
-- Start with conventional commit types: `build, chore, ci, docs, feat, fix, style, refactor, perf, test`
-- Write imperative present tense: "add feature" not "added feature"
-- Lowercase first letter after colon, no period at end
-- Keep each line under 60 characters
-- Reference issues/PRs with `#123` or `closes #123`
-
-**Commit Structure:**
+- Name branches `kebab-case` under 60 chars: `feature/auth-system`, `bugfix/header-overflow`
+- Use conventional commits with type: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `style:`, `perf:`, `test:`
+- Write commit subjects imperative present tense, lowercase after colon, under 80 chars
+- Add issue references: `closes #123` or `fixes #456`
+- Run `git status && git diff --staged` before every commit
+- Structure multi-line commits with bullet points under 80 chars for key changes
 
 ```git
-feat: add JWT authentication system
+feat: add user authentication
 
-- Implement token validation middleware
-- Create login/logout API endpoints
-- Add protected route guards
-- Update user session management
+- implement JWT middleware
+- create login/logout endpoints
+- add session management
 
-Closes #245
+closes #245
 ```
-
-**Before Each Commit:**
-
-- Run `git status` to verify staged changes
-- Use `git diff --staged` to review exact changes
-- Ensure commit contains related changes only
 
 ## PR Reviews
 
