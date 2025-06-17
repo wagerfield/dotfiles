@@ -23,7 +23,6 @@ brew "imagemagick"
 brew "lazygit"
 brew "llvm"
 brew "luarocks"
-brew "markdownlint-cli"
 brew "mas" # Mac App Store
 brew "neovim"
 brew "nmap"

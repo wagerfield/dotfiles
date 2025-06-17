@@ -59,6 +59,8 @@ alias kn="killall node -9"
 
 alias lts="nvm use --lts"
 
+alias nip="install-global-npm-packages"
+
 alias fkb="qmk flash --no-eject"
 
 alias zedp="zed-preview"
@@ -97,6 +99,19 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+# install global npm packages
+function install-global-npm-packages() {
+	local packages_file="$HOME/.config/npm/global-packages.txt"
+	
+	if [[ ! -f "$packages_file" ]]; then
+		echo "Error: $packages_file not found"
+		return 1
+	fi
+	
+	echo "Installing global npm packages..."
+	grep -v '^#\|^$' "$packages_file" | xargs npm install -g
 }
 
 # Added by LM Studio CLI (lms)
