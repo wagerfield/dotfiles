@@ -52,18 +52,38 @@ Write markdown that conforms to `markdownlint` default rules:
 
 ## Git Conventions
 
-- Concise, descriptive `kebab-case` branch names
-- Prefix branches with `feature/`, `bugfix/`, `hotfix/` etc. when using git flow
-- Conventional commit messages with type prefixes: `build, chore, ci, docs, feat, fix, style, refactor, perf, test`
-- Bullet points in commit body highlighting key changes
+**Branch Naming:**
+
+- Use `kebab-case` with descriptive names that reference issue numbers when applicable
+- Apply prefixes for git flow workflows: `feature/auth-system`, `bugfix/header-overflow`, `hotfix/security-patch`
+- Keep names under 50 characters for terminal readability
+
+**Commit Messages:**
+
+- Start with conventional commit types: `build, chore, ci, docs, feat, fix, style, refactor, perf, test`
+- Write imperative present tense: "add feature" not "added feature"
+- Lowercase first letter after colon, no period at end
+- Keep each line under 60 characters
+- Reference issues/PRs with `#123` or `closes #123`
+
+**Commit Structure:**
 
 ```git
-feat: add user authentication
+feat: add JWT authentication system
 
-- Implement JWT token validation
-- Add login/logout endpoints
-- Create protected route middleware
+- Implement token validation middleware
+- Create login/logout API endpoints
+- Add protected route guards
+- Update user session management
+
+Closes #245
 ```
+
+**Before Each Commit:**
+
+- Run `git status` to verify staged changes
+- Use `git diff --staged` to review exact changes
+- Ensure commit contains related changes only
 
 ## PR Reviews
 
