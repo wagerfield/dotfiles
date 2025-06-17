@@ -52,12 +52,12 @@ Write markdown that conforms to `markdownlint` default rules:
 
 ## Git Conventions
 
-- Name branches `kebab-case` under 60 chars: `feature/auth-system`, `bugfix/header-overflow`
-- Use conventional commits with type: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `style:`, `perf:`, `test:`
-- Write commit subjects imperative present tense, lowercase after colon, under 80 chars
-- Add issue references: `closes #123` or `fixes #456`
-- Run `git status && git diff --staged` before every commit
-- Structure multi-line commits with bullet points under 80 chars for key changes
+- Create `kebab-case` branches under 60 chars: `feature/auth-system`, `bugfix/header-overflow`
+- Execute `git status && git diff --staged` before committing
+- Start commits with: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `style:`, `perf:`, `test:`
+- Keep subjects imperative lowercase under 80 chars: `feat: add user auth`
+- Add body bullets under 80 chars for key changes
+- Include issue refs: `closes #123`, `fixes #456`
 
 ```git
 feat: add user authentication
