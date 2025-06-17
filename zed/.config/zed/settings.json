@@ -64,9 +64,7 @@
   },
   "context_servers": {
     "mcp-server-brave-search": {
-      "settings": {
-        "brave_api_key": "BSAKDX3Q_uM5AkzQFlYvC1FNE-aP4jf"
-      }
+      "settings": {}
     }
   }
 }
