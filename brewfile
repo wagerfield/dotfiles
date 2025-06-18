@@ -37,6 +37,7 @@ brew "tree"
 brew "wget"
 brew "yarn"
 brew "yazi"
+brew "yq"
 brew "zoxide"
 
 # Applications
