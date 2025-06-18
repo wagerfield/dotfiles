@@ -6,13 +6,11 @@
   "permissions": {
     "allow": [
       "Read(~/.zshrc)",
-      "Bash(ls:*)",
+      "Bash(fd:*)",
       "Bash(rg:*)",
       "Bash(sg:*)",
-      "Bash(fd:*)",
-      "Bash(fzf:*)",
-      "Bash(tree:*)",
       "Bash(cat:*)",
+      "Bash(tree:*)",
       "Bash(head:*)",
       "Bash(tail:*)",
       "Bash(less:*)",
@@ -36,6 +34,8 @@
       "WebFetch(domain:github.com)",
       "mcp__ide__getDiagnostics"
     ],
-    "deny": ["Read(node_modules)"]
+    "deny": [
+      "Read(node_modules)"
+    ]
   }
 }
