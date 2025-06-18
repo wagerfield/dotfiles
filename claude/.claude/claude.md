@@ -1,63 +1,73 @@
 # Claude
 
-**CRITICAL: When updating this file, optimize for tool consumption:**
+**CRITICAL: Optimize for Claude Code consumption:**
 
-- **Imperative verbs only** - "Search existing patterns" not "Consider searching patterns"
-- **Concrete behaviors** - specific actions that trigger during execution
-- **Token efficiency** - maximum utility per word, eliminate abstract guidance
-- **Test actionability** - would this instruction actually change tool behavior?
+- Use imperative verbs: "Search patterns" not "Consider searching"
+- Specify concrete trigger behaviors during execution
+- Maximize utility per word, eliminate abstract guidance
+- Test: "Does this change tool behavior?"
 
 Every instruction must pass: "Does this make me DO something different?"
 
 ## Workflow
 
-Whenever you need to perform multiple independent operations, invoke all relevant tools simultaneously rather than sequentially.
-
-## Code Style
-
-Write clean, concise code that prioritizes readability and maintainability:
-
-- **Clarity First**: Self-documenting code with descriptive names
-- **Modern Syntax**: Use latest language features that improve code quality
-- **Functional Patterns**: Favor immutability, pure functions, and composition
-- **Error Handling**: Explicit error handling with early returns
-- **SOLID Principles**: Apply when they improve design
-- **Minimal Dependencies**: Avoid unnecessary libraries and frameworks
-- **Performance**: Write efficient code that scales well
-- **Comments**: Only when code intent isn't obvious
-- **Testing**: Write testable code with clear boundaries
+Invoke multiple independent tools simultaneously, never sequentially.
 
 ## CLI Tools
 
-High-performance tools available for code analysis and file operations:
+Use these tools for code analysis and operations:
 
-- **`gh`** - GitHub CLI for repository operations, issues, and pull requests (`gh --help`)
-- **`rg`** - ripgrep: blazingly fast recursive text search with regex support (`rg --help`)
-- **`sg`** - ast-grep: structural code search, linting, and refactoring using AST patterns (`sg --help`)
-- **`fd`** - modern file finder with intuitive syntax, faster than `find` (`fd --help`)
-- **`fzf`** - interactive fuzzy finder for files, command history, and text (`fzf --help`)
-- **`tree`** - directory structure visualization with filtering options (`tree --help`)
-- **`imagemagick`** - comprehensive image manipulation suite (`convert --help`, `identify --help`)
-- **`markdownlint`** - markdown linter and formatter (`markdownlint --help`)
+- `rg` - Search file contents with regex patterns
+- `fd` - Find files by name patterns
+- `sg` - Search and refactor code using AST patterns
+- `gh` - Manage GitHub repos, issues, PRs
+- `tree` - Visualize directory structures
+- `markdownlint` - Lint and format markdown
+- `imagemagick` - Process images (`convert`, `identify`)
 
-## Markdown Conventions
+## Search Strategy
 
-Write markdown that conforms to `markdownlint` default rules:
+- Use `tree` to understand project structure first
+- Use `rg` for content searches, `fd` for file patterns
+- Search existing implementations before writing new code
+- Use `sg` for AST-based searches and refactoring
+- Batch search operations simultaneously
 
-- ATX heading style (# H1, ## H2, ### H3, etc.)
+## File Strategy
+
+- Edit existing files, never create new ones unless absolutely required
+- Never create documentation files (*.md, README) unless explicitly requested
+- Search existing patterns before implementing new solutions
+
+## Code Style
+
+- Use descriptive names for self-documenting code
+- Apply latest language features that improve quality
+- Favor immutability, pure functions, composition
+- Handle errors explicitly with early returns
+- Apply SOLID principles when they improve design
+- Avoid unnecessary dependencies
+- Write efficient, scalable code
+- Comment only when intent isn't obvious
+- Design testable code with clear boundaries
+
+## Markdown
+
+Format with `markdownlint` rules:
+
+- Use ATX headings (# ## ###)
 - Surround elements with blank lines
-- Use consistent list formatting
-- Specify language for all code blocks
-- Always run `markdownlint <file> --disable MD013` to validate before completion
+- Specify language for code blocks
+- Run `markdownlint <file> --disable MD013` before completion
 
-## Git Conventions
+## Git
 
-- Create `kebab-case` branches under 60 chars: `feature/auth-system`, `bugfix/header-overflow`
-- Execute `git status && git diff --staged` before committing
-- Start commits with: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `style:`, `perf:`, `test:`
-- Keep subjects imperative lowercase under 80 chars: `feat: add user auth`
-- Add body bullets under 80 chars for key changes
-- Include issue refs: `closes #123`, `fixes #456`
+- Create `kebab-case` branches <60 chars: `feature/auth-system`
+- Run `git status && git diff --staged` before commits
+- Use prefixes: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `style:`, `test:`
+- Write imperative subjects <80 chars: `feat: add user auth`
+- Add body bullets <80 chars for key changes
+- Include refs: `closes #123`, `fixes #456`
 
 ```git
 feat: add user authentication
@@ -71,12 +81,11 @@ closes #245
 
 ## PR Reviews
 
-Always analyze implementation details, not just functionality:
+Search existing patterns first, then analyze:
 
-- **Read existing codebase patterns first** - search for similar implementations before reviewing
-- **Question every design choice** - propose cleaner alternatives with code examples
-- **Examine test quality** - structure, mocking patterns, private method access approaches
-- **Assess parameter design** - extensibility vs simplicity tradeoffs
-- **Check method organization** - binding, arrow functions, factory patterns
+- Question design choices with code examples
+- Examine test structure and mocking patterns
+- Assess parameter extensibility vs simplicity
+- Check method organization patterns
 
-Be specific and opinionated about code quality improvements.
+Propose specific, opinionated improvements.
