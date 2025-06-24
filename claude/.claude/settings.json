@@ -18,6 +18,7 @@
       "Bash(uniq:*)",
       "Bash(git log:*)",
       "Bash(git diff:*)",
+      "Bash(git push:*)",
       "Bash(git show:*)",
       "Bash(gh pr diff:*)",
       "Bash(gh pr list:*)",
@@ -29,13 +30,20 @@
       "Bash(npm run:*)",
       "Bash(pnpm run:*)",
       "Bash(yarn run:*)",
+      "Bash(jest:*)",
+      "Bash(vitest:*)",
       "Bash(markdownlint:*)",
       "WebFetch(domain:docs.anthropic.com)",
       "WebFetch(domain:github.com)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "mcp__language-server__definition",
+      "mcp__language-server__diagnostics",
+      "mcp__language-server__edit_file",
+      "mcp__language-server__references",
+      "mcp__language-server__rename_symbol",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs"
     ],
-    "deny": [
-      "Read(node_modules)"
-    ]
+    "deny": []
   }
 }
