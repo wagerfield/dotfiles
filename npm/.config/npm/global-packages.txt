@@ -1,3 +1,6 @@
-eslint
-prettier
+dpdm
 markdownlint-cli
+prettier
+typescript
+typescript-language-server
+@vtsls/language-server
