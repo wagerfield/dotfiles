@@ -18,16 +18,25 @@ Invoke multiple independent tools simultaneously, never sequentially.
 Use these tools for code analysis and operations:
 
 - `rg` - Search file contents with regex patterns
-- `fd` - Find files by name patterns
+- `fd` - Find files by search patterns and paths
 - `sg` - Search and refactor code using AST patterns
+- `yq` - Process YAML, JSON, XML and CSV files
 - `gh` - Manage GitHub repos, issues, PRs
 - `tree` - Visualize directory structures
-- `markdownlint` - Lint and format markdown
+- `dpdm` - Analyze TypeScript and JavaScript dependencies
 - `imagemagick` - Process images (`convert`, `identify`)
+- `markdownlint` - Lint and format markdown
+- `prettier` - Format code across multiple languages
+
+## MCP Servers
+
+- `language-server` - Get symbol definitions, hover info, diagnostics, references, and rename symbols across codebase
+- `context7` - Resolve library IDs and fetch up-to-date documentation
 
 ## Search Strategy
 
 - Use `tree` to understand project structure first
+- Prioritize `language-server` MCP tools for supported languages over CLI alternatives
 - Use `rg` for content searches, `fd` for file patterns
 - Search existing implementations before writing new code
 - Use `sg` for AST-based searches and refactoring
@@ -35,9 +44,14 @@ Use these tools for code analysis and operations:
 
 ## File Strategy
 
-- Edit existing files, never create new ones unless absolutely required
-- Never create documentation files (*.md, README) unless explicitly requested
-- Search existing patterns before implementing new solutions
+- Prefer editing existing files over creating new ones
+- Locate similar implementations and follow their patterns
+
+## Testing
+
+- Discover existing test patterns and follow their structure
+- Run tests before and after changes to verify functionality
+- Maintain green test status throughout development
 
 ## Code Style
 
@@ -50,6 +64,18 @@ Use these tools for code analysis and operations:
 - Write efficient, scalable code
 - Comment only when intent isn't obvious
 - Design testable code with clear boundaries
+
+## Development Philosophy
+
+**Always be objective and honest about code quality:**
+
+- Question whether changes are genuine improvements
+- Prefer simple, readable solutions over clever abstractions
+- Call out when complexity doesn't justify benefits
+- Challenge premature optimization and over-engineering
+- Consider maintenance burden vs feature value
+- Evaluate type safety and performance impact
+- Test: "Does this make the code meaningfully better?"
 
 ## Markdown
 
