@@ -42,7 +42,21 @@
       "mcp__language-server__references",
       "mcp__language-server__rename_symbol",
       "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs"
+      "mcp__context7__get-library-docs",
+      "mcp__wallaby__wallaby_runtimeValues",
+      "mcp__wallaby__wallaby_runtimeValuesByTest",
+      "mcp__wallaby__wallaby_coveredLinesForFile",
+      "mcp__wallaby__wallaby_coveredLinesForTest",
+      "mcp__wallaby__wallaby_updateTestSnapshots",
+      "mcp__wallaby__wallaby_updateFileSnapshots",
+      "mcp__wallaby__wallaby_updateProjectSnapshots",
+      "mcp__wallaby__wallaby_failingTests",
+      "mcp__wallaby__wallaby_allTests",
+      "mcp__wallaby__wallaby_failingTestsForFile",
+      "mcp__wallaby__wallaby_allTestsForFile",
+      "mcp__wallaby__wallaby_failingTestsForFileAndLine",
+      "mcp__wallaby__wallaby_allTestsForFileAndLine",
+      "mcp__wallaby__wallaby_testById"
     ],
     "deny": []
   }

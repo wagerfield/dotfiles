@@ -4,3 +4,4 @@ prettier
 typescript
 typescript-language-server
 @vtsls/language-server
+@wallabyjs/cli
