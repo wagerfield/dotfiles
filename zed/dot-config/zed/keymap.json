@@ -19,6 +19,20 @@
     }
   },
   {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "down": "editor::MoveDown",
+      "up": "editor::MoveUp"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "down": "editor::SelectDown",
+      "up": "editor::SelectUp"
+    }
+  },
+  {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "alt-enter": ["workspace::SendKeystrokes", "space cmd-shift-e"], // Open and focus file

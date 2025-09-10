@@ -7,11 +7,11 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "vim_mode": false,
+  "vim_mode": true,
   "ui_font_size": 16,
-  "agent_font_size": 18,
+  "agent_font_size": 16,
   "buffer_font_size": 14,
-  "relative_line_numbers": false,
+  "relative_line_numbers": true,
   "ui_font_family": "JetBrains Mono",
   "buffer_font_family": "JetBrains Mono",
   "theme": "Zedokai (Filter Octagon)",
@@ -24,11 +24,15 @@
   "edit_predictions": {
     "mode": "subtle"
   },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "tabs": {
     "file_icons": true
   },
   "terminal": {
-    "font_family": "JetBrains Mono"
+    "font_family": "JetBrains Mono",
+    "font_size": 14
   },
   "telemetry": {
     "diagnostics": false,
@@ -59,11 +63,11 @@
       "model": "claude-sonnet-4"
     },
     "model_parameters": [],
-    "default_profile": "write",
-    "version": "2"
+    "default_profile": "write"
   },
   "context_servers": {
     "mcp-server-brave-search": {
+      "source": "extension",
       "settings": {}
     }
   }
