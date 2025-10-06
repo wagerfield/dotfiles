@@ -13,6 +13,20 @@ Every instruction must pass: "Does this make me DO something different?"
 
 Invoke multiple independent tools simultaneously, never sequentially.
 
+## Accuracy
+
+**Verify before stating facts:**
+
+- Use WebSearch/WebFetch before claiming library features, API behaviors, or tool capabilities
+- Read documentation, source code, or package.json before describing what code does
+- State "I need to verify this" instead of guessing
+- Distinguish certainty levels:
+  - "This file shows X" (observable)
+  - "Documentation states X" (verified)
+  - "I'm unsure, let me check X" (uncertain)
+- Never infer purpose, features, or relationships without evidence
+- Say "I don't know" when you don't know
+
 ## CLI Tools
 
 Use these tools for code analysis and operations:
