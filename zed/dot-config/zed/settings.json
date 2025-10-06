@@ -14,9 +14,13 @@
   "relative_line_numbers": true,
   "ui_font_family": "JetBrains Mono",
   "buffer_font_family": "JetBrains Mono",
-  "theme": "Zedokai (Filter Octagon)",
   "icon_theme": "Catppuccin Mocha",
   "format_on_save": "on",
+  "theme": {
+    "mode": "system",
+    "dark": "Zedokai Darker (Filter Octagon)",
+    "light": "Zedokai Darker (Filter Octagon)"
+  },
   "centered_layout": {
     "left_padding": 0.2,
     "right_padding": 0.2

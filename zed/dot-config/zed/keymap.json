@@ -19,6 +19,19 @@
     }
   },
   {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "alt-enter": ["workspace::SendKeystrokes", "space cmd-shift-e"], // Open and focus file
+      "c": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "context": "GitPanel && ChangesList",
+    "bindings": {
+      "alt-enter": ["workspace::SendKeystrokes", "ctrl-enter ctrl-shift-g"] // Open and focus file
+    }
+  },
+  {
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "down": "editor::MoveDown",
@@ -33,16 +46,10 @@
     }
   },
   {
-    "context": "ProjectPanel && not_editing",
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
-      "alt-enter": ["workspace::SendKeystrokes", "space cmd-shift-e"], // Open and focus file
-      "c": "project_panel::CollapseAllEntries"
-    }
-  },
-  {
-    "context": "GitPanel && ChangesList",
-    "bindings": {
-      "alt-enter": ["workspace::SendKeystrokes", "ctrl-enter ctrl-shift-g"] // Open and focus file
+      "q": "vim::MiniQuotes",
+      "b": "vim::MiniBrackets"
     }
   }
 ]
