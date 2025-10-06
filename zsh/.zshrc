@@ -1,5 +1,5 @@
 export XDG_CONFIG_HOME="$HOME/.config"
-export PNPM_HOME="/Users/wagerfield/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 
 export BUN="$HOME/.bun"
 export NVM="$HOME/.nvm"
@@ -9,7 +9,7 @@ export GOPATH="$HOME/go"
 export BREW="/opt/homebrew"
 export PATH="$BREW/bin:$BREW/sbin:$PATH"
 export PATH="$PATH:$BREW/opt/postgresql@13/bin"
-
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$BUN/bin"
 export PATH="$PATH:$PNPM_HOME"
 export PATH="$PATH:./node_modules/.bin"
@@ -78,6 +78,8 @@ HIST_STAMPS="dd/mm/yyyy"
 
 plugins=(git wd)
 
+tabs -2
+
 source $BUN/_bun
 source $NVM/nvm.sh
 source $NVM/bash_completion
@@ -106,12 +108,12 @@ function y() {
 # install global npm packages
 function install-global-npm-packages() {
 	local packages_file="$HOME/.config/npm/global-packages.txt"
-	
+
 	if [[ ! -f "$packages_file" ]]; then
 		echo "Error: $packages_file not found"
 		return 1
 	fi
-	
+
 	echo "Installing global npm packages..."
 	grep -v '^#\|^$' "$packages_file" | xargs npm install -g
 }
@@ -120,3 +122,8 @@ function install-global-npm-packages() {
 export PATH="$PATH:/Users/wagerfield/.lmstudio/bin"
 # End of LM Studio CLI section
 
+# Added by Docker Desktop to enable Docker CLI completions
+fpath=(/Users/wagerfield/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI section
