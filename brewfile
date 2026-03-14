@@ -1,13 +1,19 @@
 cask_args appdir: "/Applications"
 
 # Repositories
+tap "charmbracelet/tap"
+tap "entireio/tap"
 tap "hashicorp/tap"
 tap "qmk/qmk"
 
 # Packages
 brew "ast-grep"
 brew "autossh"
+brew "awscli"
+brew "biome"
+brew "bob" # neovim version manager
 brew "btop"
+brew "charmbracelet/tap/crush"
 brew "deno"
 brew "fd"
 brew "fish"
@@ -18,15 +24,17 @@ brew "git"
 brew "gpg"
 brew "go"
 brew "hashicorp/tap/terraform"
+brew "helix"
 brew "imagemagick"
 brew "lazygit"
 brew "llvm"
 brew "luarocks"
 brew "mas" # Mac App Store
-brew "neovim"
 brew "nmap"
 brew "poppler"
+brew "postgresql@18"
 brew "pnpm"
+brew "pulumi"
 brew "qmk/qmk/qmk"
 brew "ripgrep"
 brew "sevenzip"
@@ -39,8 +47,20 @@ brew "yazi"
 brew "yq"
 brew "zoxide"
 
+# Language Servers
+brew "gopls"                           # Go
+brew "lua-language-server"             # Lua
+brew "python-lsp-server"               # Python
+brew "rust-analyzer"                   # Rust
+brew "sql-language-server"             # SQL
+brew "taplo"                           # TOML
+brew "typescript-language-server"      # TypeScript/JavaScript
+brew "vscode-langservers-extracted"    # JSON/HTML/CSS
+brew "yaml-language-server"            # YAML
+
 # Applications
 cask "1password"
+cask "antigravity"
 cask "arc"
 cask "brainfm"
 cask "claude"
@@ -49,8 +69,8 @@ cask "datagrip"
 cask "discord"
 cask "docker-desktop"
 cask "dropbox"
+cask "entire"
 cask "figma"
-cask "fleet"
 cask "freecad"
 cask "ghostty"
 cask "github"
@@ -60,25 +80,29 @@ cask "kitty"
 cask "kaleidoscope"
 cask "logi-options+"
 cask "loom"
-cask "lm-studio"
 cask "miro"
 cask "nordlayer"
 cask "notion"
+cask "ollama-app"
 cask "postman"
 cask "postman-agent"
 cask "raycast"
-cask "repo-prompt"
+cask "screen-studio"
 cask "slack"
 cask "spotify"
+cask "superset"
 cask "superwhisper"
 cask "ticktick"
 cask "tradingview"
 cask "visual-studio-code"
 cask "warp"
 cask "whatsapp"
+cask "yaak"
 cask "zed"
 cask "zed@preview"
+cask "zoom"
 
 # Fonts
+cask "font-geist-mono-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
