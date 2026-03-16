@@ -1,6 +1,7 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export PNPM_HOME="$HOME/Library/pnpm"
 
+export BOB="$HOME/.local/share/bob"
 export BUN="$HOME/.bun"
 export NVM="$HOME/.nvm"
 export ZSH="$HOME/.oh-my-zsh"
@@ -8,7 +9,8 @@ export GOPATH="$HOME/go"
 
 export BREW="/opt/homebrew"
 export PATH="$BREW/bin:$BREW/sbin:$PATH"
-export PATH="$PATH:$BREW/opt/postgresql@13/bin"
+export PATH="$PATH:$BOB/nvim-bin"
+export PATH="$PATH:$BREW/opt/postgresql@18/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$BUN/bin"
 export PATH="$PATH:$PNPM_HOME"
@@ -19,6 +21,10 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 export PATH="$PATH:$HOME/.codeium/windsurf/bin"
 
 export EDITOR="nvim"
+
+# terminal title
+DISABLE_AUTO_TITLE=true
+precmd() { print -Pn "\e]2;%1~\a" }
 
 # aliases
 
@@ -40,13 +46,22 @@ alias pd="pnpm run dev"
 alias pb="pnpm run build"
 alias pt="pnpm run test"
 
+alias t="turbo"
+alias td="turbo run dev"
+alias tb="turbo run build"
+alias ts="turbo run start"
+alias tl="turbo run lint"
+alias tt="turbo run test"
+
 alias yr="yarn run"
 alias yd="yarn run dev"
 alias yb="yarn run build"
 alias ys="yarn run start"
 alias yt="yarn run test"
 
+alias o="ollama"
 alias c="claude"
+alias oc="opencode"
 
 alias f="fzf"
 alias fz="fzf"
@@ -67,9 +82,6 @@ alias fkb="qmk flash --no-eject"
 
 alias zedp="zed-preview"
 alias zep="zed-preview"
-
-alias ssh-argo-dev="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh dev"
-alias ssh-argo-prod="bash /Users/wagerfield/Documents/work/make/prg/argo-api/scripts/ssh-tunnel-to-argo-database/ssh-tunnel-to-argo-database.sh prod"
 
 # config
 
@@ -127,3 +139,7 @@ fpath=(/Users/wagerfield/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI section
+
+# Added by Antigravity
+export PATH="/Users/wagerfield/.antigravity/antigravity/bin:$PATH"
+# End of Antigravity section
