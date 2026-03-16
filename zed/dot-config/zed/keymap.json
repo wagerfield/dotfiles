@@ -1,55 +1,83 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
+// Zed keymap - https://zed.dev/docs/key-bindings
 [
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-shift-g": "git_panel::ToggleFocus"
-    }
+      "ctrl-tab": "tab_switcher::ToggleAll",
+      "ctrl-up": "workspace::ActivatePaneUp",
+      "ctrl-down": "workspace::ActivatePaneDown",
+      "ctrl-left": "workspace::ActivatePaneLeft",
+      "ctrl-right": "workspace::ActivatePaneRight",
+      "ctrl-alt-v": "workspace::ToggleVimMode",
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "cmd-shift-t": "terminal_panel::ToggleFocus",
+    },
   },
+
+  // ----------------------------------------
+  // PANE
+  // ----------------------------------------
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus",
+    },
+  },
+
+  // ----------------------------------------
+  // EDITOR
+  // ----------------------------------------
   {
     "context": "Editor",
     "bindings": {
-      "shift-alt-i": "editor::SplitSelectionIntoLines"
-    }
+      "ctrl-up": "workspace::ActivatePaneUp",
+      "ctrl-down": "workspace::ActivatePaneDown",
+      "shift-alt-i": "editor::SplitSelectionIntoLines",
+    },
   },
+
+  // ----------------------------------------
+  // PROJECT PANEL
+  // ----------------------------------------
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
-      "alt-enter": ["workspace::SendKeystrokes", "space cmd-shift-e"], // Open and focus file
-      "c": "project_panel::CollapseAllEntries"
-    }
+      "c": "project_panel::CollapseAllEntries",
+    },
   },
+
+  // ----------------------------------------
+  // GIT PANEL
+  // ----------------------------------------
   {
     "context": "GitPanel && ChangesList",
     "bindings": {
-      "alt-enter": ["workspace::SendKeystrokes", "ctrl-enter ctrl-shift-g"] // Open and focus file
-    }
+      "h": "git::FileHistory",
+      "t": "git_panel::ToggleTreeView",
+      "d": ["workspace::SendKeystrokes", "ctrl-enter cmd-shift-g"], // Open file diff
+      "o": ["workspace::SendKeystrokes", "enter alt-enter"], // Open and focus file
+    },
+  },
+
+  // ----------------------------------------
+  // VIM
+  // ----------------------------------------
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward",
+    },
   },
   {
-    "context": "Editor && vim_mode == normal",
+    "context": "vim_operator == a || vim_operator == i || vim_operator == cs || vim_operator == ds",
     "bindings": {
-      "down": "editor::MoveDown",
-      "up": "editor::MoveUp"
-    }
+      // Traditional Vim behavior
+      "q": "vim::AnyQuotes",
+      "b": "vim::AnyBrackets",
+      // mini.ai plugin behavior
+      "Q": "vim::MiniQuotes",
+      "B": "vim::MiniBrackets",
+    },
   },
-  {
-    "context": "Editor && vim_mode == visual",
-    "bindings": {
-      "down": "editor::SelectDown",
-      "up": "editor::SelectUp"
-    }
-  },
-  {
-    "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
-    "bindings": {
-      "q": "vim::MiniQuotes",
-      "b": "vim::MiniBrackets"
-    }
-  }
 ]

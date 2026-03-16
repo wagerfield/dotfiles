@@ -1,78 +1,234 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+// Zed settings - https://zed.dev/docs/configuring-zed
 {
-  "vim_mode": true,
-  "ui_font_size": 16,
-  "agent_font_size": 16,
-  "buffer_font_size": 14,
-  "relative_line_numbers": true,
   "ui_font_family": "JetBrains Mono",
+  "ui_font_size": 14,
+
   "buffer_font_family": "JetBrains Mono",
-  "icon_theme": "Catppuccin Mocha",
+  "buffer_line_height": "comfortable",
+  "buffer_font_size": 13,
+
+  "agent_ui_font_size": 14, // same as ui_font_size
+  "agent_buffer_font_size": 13, // same as buffer_font_size
+
+  "horizontal_scroll_margin": 8,
+  "vertical_scroll_margin": 4,
+
+  "auto_signature_help": true,
+  "inline_code_actions": false,
+
+  "selection_highlight": false,
+  "rounded_selection": false,
+
+  "relative_line_numbers": "enabled",
+  "resize_all_panels_in_dock": ["left", "right", "bottom"],
+
+  "pane_split_direction_horizontal": "down",
+  "pane_split_direction_vertical": "right",
+
+  "multi_cursor_modifier": "cmd_or_ctrl",
   "format_on_save": "on",
-  "theme": {
-    "mode": "system",
-    "dark": "Zedokai Darker (Filter Octagon)",
-    "light": "Zedokai Darker (Filter Octagon)"
-  },
-  "centered_layout": {
-    "left_padding": 0.2,
-    "right_padding": 0.2
-  },
-  "edit_predictions": {
-    "mode": "subtle"
-  },
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
-  "tabs": {
-    "file_icons": true
-  },
-  "terminal": {
-    "font_family": "JetBrains Mono",
-    "font_size": 14
-  },
+
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
+
+  // ----------------------------------------
+  // PROFILES
+  // ----------------------------------------
+
+  "profiles": {
+    "Light": {
+      "theme": "Zedokai Light",
+    },
+    "Presentation": {
+      "ui_font_size": 17,
+      "buffer_font_size": 16,
+      "agent_ui_font_size": 17,
+      "agent_buffer_font_size": 16,
+      "redact_private_values": true,
+    },
+  },
+
+  // ----------------------------------------
+  // VIM
+  // ----------------------------------------
+
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true,
+    "highlight_on_yank_duration": 400,
+    "use_system_clipboard": "always",
+    "use_smartcase_find": true,
+  },
+
+  // ----------------------------------------
+  // THEME
+  // ----------------------------------------
+
+  "icon_theme": "Soft Charmed Icons",
+  "theme": "Everforest Dark Medium (material)",
+  "theme_overrides": {
+    "Everforest Dark Medium (material)": {
+      "tab.active_background": "#3d484d",
+      "hint": "#859289",
+    },
+  },
+
+  // ----------------------------------------
+  // UI
+  // ----------------------------------------
+
+  "title_bar": {
+    "show_branch_icon": false,
+    "show_onboarding_banner": false,
+    "show_user_menu": false,
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false,
+  },
+  "tabs": {
+    "file_icons": false,
+  },
+  "toolbar": {
+    "quick_actions": false,
+  },
+  "gutter": {
+    "min_line_number_digits": 3,
+  },
+  "scrollbar": {
+    "show": "never",
+  },
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": false,
+    },
+  },
+
+  // ----------------------------------------
+  // PANELS
+  // ----------------------------------------
+
   "project_panel": {
     "default_width": 320,
+    "entry_spacing": "comfortable",
+    "auto_reveal_entries": true,
     "auto_fold_dirs": false,
-    "auto_reveal_entries": true
+    "git_status": false,
+    "hide_root": true,
   },
   "git_panel": {
-    "default_width": 320
+    "default_width": 320,
+    "tree_view": true,
   },
   "outline_panel": {
-    "default_width": 320
+    "default_width": 320,
   },
   "collaboration_panel": {
-    "default_width": 320
+    "default_width": 320,
   },
-  "chat_panel": {
-    "default_width": 480
+  "search": {
+    "button": false,
+    "center_on_match": true,
   },
+  "notification_panel": {
+    "default_width": 320,
+    "button": false,
+    "dock": "left",
+  },
+  "terminal": {
+    "default_height": 320,
+    "default_width": 640,
+    "dock": "bottom",
+  },
+
+  // ----------------------------------------
+  // AI
+  // ----------------------------------------
+
   "agent": {
-    "default_width": 480,
-    "always_allow_tool_actions": true,
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+    "default_width": 640,
+    "inline_assistant_model": {
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
+      "enable_thinking": false,
     },
-    "model_parameters": [],
-    "default_profile": "write"
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+    "opencode": {
+      "type": "registry",
+    },
   },
   "context_servers": {
-    "mcp-server-brave-search": {
-      "source": "extension",
-      "settings": {}
-    }
-  }
+    "mcp-server-context7": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "context7_api_key": "ctx7sk-41c0cdc5-742d-44e2-a54d-46175401d4f4",
+      },
+    },
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+    "mode": "eager",
+  },
+
+  // ----------------------------------------
+  // EXTENSIONS
+  // ----------------------------------------
+
+  "auto_install_extensions": {
+    // Themes
+    "catppuccin": true,
+    "everforest": true,
+    "rose-pine-theme": true,
+    "tokyo-night": true,
+    "zedokai": true,
+
+    // Icon Themes
+    "catppuccin-icons": true,
+    "charmed-icons": true,
+
+    // Language Servers
+    "astro": true,
+    "biome": true,
+    "cspell": true,
+    "csv": true,
+    "dockerfile": true,
+    "git-firefly": true,
+    "html": true,
+    "lua": true,
+    "markdownlint": true,
+    "markdown-oxide": true,
+    "mermaid": true,
+    "rainbow-csv": true,
+    "sql": true,
+    "svelte": true,
+    "terraform": true,
+    "toml": true,
+    "vue": true,
+
+    // MCP Servers
+    "browser-tools-context-server": true,
+    "chrome-devtools-mcp": true,
+    "mcp-server-brave-search": true,
+    "mcp-server-context7": true,
+    "mcp-server-github": true,
+    "mcp-server-nextjs": true,
+    "mcp-server-notion": true,
+    "mcp-server-playwright": true,
+    "mcp-server-resend": true,
+    "mcp-server-supabase": true,
+    "postgres-context-server": true,
+    "sentry-mcp": true,
+    "shadcn-mcp": true,
+    "svelte-mcp": true,
+  },
 }
