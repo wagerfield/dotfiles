@@ -1,14 +1,14 @@
 // Zed settings - https://zed.dev/docs/configuring-zed
 {
   "ui_font_family": "JetBrains Mono",
-  "ui_font_size": 14,
+  "ui_font_size": 15,
 
   "buffer_font_family": "JetBrains Mono",
   "buffer_line_height": "comfortable",
-  "buffer_font_size": 13,
+  "buffer_font_size": 14,
 
-  "agent_ui_font_size": 14, // same as ui_font_size
-  "agent_buffer_font_size": 13, // same as buffer_font_size
+  "agent_ui_font_size": 15, // same as ui_font_size
+  "agent_buffer_font_size": 14, // same as buffer_font_size
 
   "horizontal_scroll_margin": 8,
   "vertical_scroll_margin": 4,
@@ -116,7 +116,7 @@
 
   "project_panel": {
     "default_width": 320,
-    "entry_spacing": "comfortable",
+    "entry_spacing": "standard",
     "auto_reveal_entries": true,
     "auto_fold_dirs": false,
     "git_status": false,
