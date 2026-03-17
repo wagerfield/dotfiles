@@ -1,0 +1,35 @@
+name: Everforest Dark Soft
+type: dark
+variant: soft
+author: sainnhe
+url: https://github.com/sainnhe/everforest/blob/master/palette.md
+palette:
+  # Background colors (palette1)
+  bg_dim: "#293136"
+  bg0: "#333C43"
+  bg1: "#3A464C"
+  bg2: "#434F55"
+  bg3: "#4D5960"
+  bg4: "#555F66"
+  bg5: "#5D6B66"
+  bg_visual: "#5C3F4F"
+  bg_red: "#59464C"
+  bg_yellow: "#55544A"
+  bg_green: "#48584E"
+  bg_blue: "#3F5865"
+  bg_purple: "#4E4953"
+  # Foreground colors (palette2)
+  fg: "#D3C6AA"
+  red: "#E67E80"
+  orange: "#E69875"
+  yellow: "#DBBC7F"
+  green: "#A7C080"
+  aqua: "#83C092"
+  blue: "#7FBBB3"
+  purple: "#D699B6"
+  grey0: "#7A8478"
+  grey1: "#859289"
+  grey2: "#9DA9A0"
+  statusline1: "#A7C080"
+  statusline2: "#D3C6AA"
+  statusline3: "#E67E80"
