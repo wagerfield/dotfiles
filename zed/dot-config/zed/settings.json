@@ -96,7 +96,7 @@
     "breadcrumbs": true,
   },
   "gutter": {
-    "min_line_number_digits": 3,
+    "min_line_number_digits": 4,
   },
   "scrollbar": {
     "show": "never",
@@ -142,8 +142,8 @@
     "dock": "left",
   },
   "terminal": {
-    "default_height": 320,
     "default_width": 640,
+    "default_height": 320,
     "dock": "right",
   },
 
