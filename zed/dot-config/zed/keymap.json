@@ -4,13 +4,19 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-tab": "tab_switcher::ToggleAll",
+
       "ctrl-up": "workspace::ActivatePaneUp",
       "ctrl-down": "workspace::ActivatePaneDown",
       "ctrl-left": "workspace::ActivatePaneLeft",
       "ctrl-right": "workspace::ActivatePaneRight",
-      "ctrl-alt-v": "workspace::ToggleVimMode",
+
       "cmd-shift-g": "git_panel::ToggleFocus",
       "cmd-shift-t": "terminal_panel::ToggleFocus",
+
+      "cmd-ctrl-alt-r": "editor::RestartLanguageServer",
+      "cmd-ctrl-alt-v": "workspace::ToggleVimMode",
+      "cmd-ctrl-alt-s": "zed::OpenSettingsFile",
+      "cmd-ctrl-alt-k": "zed::OpenKeymapFile",
     },
   },
 

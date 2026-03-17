@@ -70,7 +70,7 @@
   "theme": "Everforest Dark Medium (material)",
   "theme_overrides": {
     "Everforest Dark Medium (material)": {
-      "tab.active_background": "#3d484d",
+      "tab.active_background": "#2d353b",
       "hint": "#859289",
     },
   },
@@ -93,6 +93,7 @@
   },
   "toolbar": {
     "quick_actions": false,
+    "breadcrumbs": true,
   },
   "gutter": {
     "min_line_number_digits": 3,
@@ -143,7 +144,7 @@
   "terminal": {
     "default_height": 320,
     "default_width": 640,
-    "dock": "bottom",
+    "dock": "right",
   },
 
   // ----------------------------------------
@@ -164,6 +165,14 @@
     },
     "opencode": {
       "type": "registry",
+      "default_model": "opencode-go/kimi-k2.5",
+      "favorite_models": [
+        "opencode-go/glm-5",
+        "opencode-go/kimi-k2.5",
+        "opencode-go/minimax-m2.5",
+        "anthropic/claude-sonnet-4-6",
+        "anthropic/claude-opus-4-6",
+      ],
     },
   },
   "context_servers": {
@@ -205,8 +214,8 @@
     "git-firefly": true,
     "html": true,
     "lua": true,
-    "markdownlint": true,
     "markdown-oxide": true,
+    "markdownlint": true,
     "mermaid": true,
     "rainbow-csv": true,
     "sql": true,
