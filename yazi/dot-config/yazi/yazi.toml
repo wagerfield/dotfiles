@@ -1,4 +1,9 @@
-[manager]
-ratio        = [ 1, 1, 2 ]
+[mgr]
+ratio        = [1, 2, 2]
+linemode     = "size"
 show_hidden  = true
 show_symlink = true
+show_cwd     = false
+
+[preview]
+tab_size     = 2
