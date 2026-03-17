@@ -17,12 +17,10 @@ export PATH="$PATH:$PNPM_HOME"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$GOPATH/bin"
 
-export PATH="$PATH:$HOME/.lmstudio/bin"
-export PATH="$PATH:$HOME/.codeium/windsurf/bin"
-
 export EDITOR="nvim"
 
-# terminal title
+# title
+
 DISABLE_AUTO_TITLE=true
 precmd() { print -Pn "\e]2;%1~\a" }
 
@@ -61,7 +59,11 @@ alias yt="yarn run test"
 
 alias o="ollama"
 alias c="claude"
+alias lg="lazygit"
 alias oc="opencode"
+alias sb="supabase"
+alias zd="zed-preview"
+alias zedp="zed-preview"
 
 alias f="fzf"
 alias fz="fzf"
@@ -69,19 +71,9 @@ alias fz="fzf"
 alias n="nvim"
 alias nv="nvim"
 
-alias lg="lazygit"
-alias sb="supabase"
-
 alias kn="killall node -9"
-
 alias lts="nvm use --lts"
-
-alias nip="install-global-npm-packages"
-
 alias fkb="qmk flash --no-eject"
-
-alias zedp="zed-preview"
-alias zep="zed-preview"
 
 # config
 
@@ -117,7 +109,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# install global npm packages
+
+
+### Global NPM Packages ###
 function install-global-npm-packages() {
 	local packages_file="$HOME/.config/npm/global-packages.txt"
 
@@ -129,17 +123,41 @@ function install-global-npm-packages() {
 	echo "Installing global npm packages..."
 	grep -v '^#\|^$' "$packages_file" | xargs npm install -g
 }
+### Global NPM Packages ###
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/wagerfield/.lmstudio/bin"
-# End of LM Studio CLI section
 
-# Added by Docker Desktop to enable Docker CLI completions
+
+### Docker Desktop ###
 fpath=(/Users/wagerfield/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
-# End of Docker CLI section
+### Docker Desktop ###
 
-# Added by Antigravity
+
+
+### Antigravity ###
 export PATH="/Users/wagerfield/.antigravity/antigravity/bin:$PATH"
-# End of Antigravity section
+### Antigravity ###
+
+
+
+### OpenCode ###
+_opencode_yargs_completions()
+{
+  local reply
+  local si=$IFS
+  IFS=$'
+' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" opencode --get-yargs-completions "${words[@]}"))
+  IFS=$si
+  if [[ ${#reply} -gt 0 ]]; then
+    _describe 'values' reply
+  else
+    _default
+  fi
+}
+if [[ "'${zsh_eval_context[-1]}" == "loadautofunc" ]]; then
+  _opencode_yargs_completions "$@"
+else
+  compdef _opencode_yargs_completions opencode
+fi
+### OpenCode ###
