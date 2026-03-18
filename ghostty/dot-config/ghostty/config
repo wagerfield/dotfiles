@@ -1,9 +1,9 @@
 # font
 font-size = 14
+font-family = JetBrains Mono
 
 # theme
-# title = 👻 Ghostty
-theme = tokyonight_moon
+theme = Everforest Dark Hard
 
 # cursor
 cursor-style = block
@@ -18,6 +18,5 @@ macos-titlebar-proxy-icon = hidden
 mouse-hide-while-typing = true
 
 # window
-window-padding-balance = true
 window-inherit-working-directory = true
-# window-title-font-family = JetBrains Mono
+window-title-font-family = JetBrains Mono
