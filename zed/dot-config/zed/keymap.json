@@ -10,7 +10,9 @@
       "ctrl-left": "workspace::ActivatePaneLeft",
       "ctrl-right": "workspace::ActivatePaneRight",
 
+      "cmd-shift-a": "agent::ToggleFocus",
       "cmd-shift-g": "git_panel::ToggleFocus",
+      "cmd-shift-d": "debug_panel::Toggle",
       "cmd-shift-t": "terminal_panel::ToggleFocus",
 
       "cmd-ctrl-alt-r": "editor::RestartLanguageServer",
@@ -20,9 +22,10 @@
     },
   },
 
-  // ----------------------------------------
+  // ========================================
   // PANE
-  // ----------------------------------------
+  // ========================================
+
   {
     "context": "Pane",
     "bindings": {
@@ -30,9 +33,10 @@
     },
   },
 
-  // ----------------------------------------
+  // ========================================
   // EDITOR
-  // ----------------------------------------
+  // ========================================
+
   {
     "context": "Editor",
     "bindings": {
@@ -41,10 +45,17 @@
       "shift-alt-i": "editor::SplitSelectionIntoLines",
     },
   },
+  {
+    "context": "RecentProjects || RecentProjects > Picker > Editor",
+    "bindings": {
+      "cmd-shift-a": "agent::ToggleFocus",
+    },
+  },
 
-  // ----------------------------------------
+  // ========================================
   // PROJECT PANEL
-  // ----------------------------------------
+  // ========================================
+
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
@@ -52,22 +63,46 @@
     },
   },
 
-  // ----------------------------------------
+  // ========================================
   // GIT PANEL
-  // ----------------------------------------
+  // ========================================
+
   {
     "context": "GitPanel && ChangesList",
     "bindings": {
       "h": "git::FileHistory",
       "t": "git_panel::ToggleTreeView",
-      "d": ["workspace::SendKeystrokes", "ctrl-enter cmd-shift-g"], // Open file diff
-      "o": ["workspace::SendKeystrokes", "enter alt-enter"], // Open and focus file
+      "f": ["workspace::SendKeystrokes", "enter enter"], // Focus file
+      "d": ["workspace::SendKeystrokes", "ctrl-enter cmd-shift-g"], // Open diff
+    },
+  },
+  {
+    "context": "GitDiff > Editor",
+    "bindings": {
+      "cmd-shift-d": "editor::ToggleSplitDiff",
+    },
+  },
+  {
+    "context": "GitDiff > Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "z d": "editor::ToggleSplitDiff",
+    },
+  },
+  // ========================================
+  // AGENT PANEL
+  // ========================================
+
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "cmd-shift-t": "terminal_panel::ToggleFocus",
     },
   },
 
-  // ----------------------------------------
+  // ========================================
   // VIM
-  // ----------------------------------------
+  // ========================================
+
   {
     "context": "vim_mode == normal || vim_mode == visual",
     "bindings": {
