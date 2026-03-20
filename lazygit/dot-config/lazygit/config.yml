@@ -4,9 +4,9 @@ gui:
   tabWidth: 2
   theme:
     activeBorderColor:
-      - cyan
+      - blue
     inactiveBorderColor:
-      - default
+      - "#859289"
     selectedLineBgColor:
       - reverse
   authorColors:
