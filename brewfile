@@ -23,6 +23,7 @@ brew "gh"
 brew "git"
 brew "gpg"
 brew "go"
+brew "gomplate"
 brew "hashicorp/tap/terraform"
 brew "helix"
 brew "imagemagick"
@@ -50,13 +51,15 @@ brew "zoxide"
 # Language Servers
 brew "gopls"                           # Go
 brew "lua-language-server"             # Lua
-brew "python-lsp-server"               # Python
+brew "basedpyright"                    # Python
 brew "rust-analyzer"                   # Rust
 brew "sql-language-server"             # SQL
 brew "taplo"                           # TOML
 brew "typescript-language-server"      # TypeScript/JavaScript
 brew "vscode-langservers-extracted"    # JSON/HTML/CSS
 brew "yaml-language-server"            # YAML
+brew "glsl_analyzer"                   # GLSL
+brew "wgsl-analyzer"                   # WGSL (WebGPU)
 
 # Applications
 cask "1password"
@@ -71,7 +74,6 @@ cask "docker-desktop"
 cask "dropbox"
 cask "entire"
 cask "figma"
-cask "freecad"
 cask "ghostty"
 cask "github"
 cask "google-chrome"
@@ -80,6 +82,7 @@ cask "kitty"
 cask "kaleidoscope"
 cask "logi-options+"
 cask "loom"
+cask "microsoft-teams"
 cask "miro"
 cask "nordlayer"
 cask "notion"
@@ -90,7 +93,6 @@ cask "raycast"
 cask "screen-studio"
 cask "slack"
 cask "spotify"
-cask "superset"
 cask "superwhisper"
 cask "ticktick"
 cask "tradingview"
