@@ -1,3 +1,6 @@
+# Yazi Configuration
+# https://yazi-rs.github.io/docs/configuration/yazi
+
 [mgr]
 ratio        = [2, 3, 3]
 linemode     = "size"

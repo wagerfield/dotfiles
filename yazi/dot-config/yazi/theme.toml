@@ -1,5 +1,7 @@
-# #232A2E - bg_dim
+# Yazi Theme
+# https://yazi-rs.github.io/docs/configuration/theme
 #
+# #232A2E - bg_dim
 # #2D353B - bg0
 # #343F44 - bg1
 # #3D484D - bg2
@@ -22,6 +24,8 @@
 
 [mgr]
 cwd             = { fg = "#D3C6AA" }
+find_keyword    = { fg = "#DBBC7F", italic = false, underline = true, bold = true }
+find_position   = { fg = "#D699B6", italic = false, underline = false, bold = true }
 marker_marked   = { fg = "#D699B6", bg = "#D699B6" }
 marker_selected = { fg = "#7FBBB3", bg = "#7FBBB3" }
 count_selected  = { fg = "#2D353B", bg = "#7FBBB3" }
@@ -34,6 +38,8 @@ border_symbol   = " "
 
 [indicator]
 padding     = { open = "█", close = "█" }
+parent      = { reversed = true, bold = true }
+current     = { reversed = true, bold = true }
 preview     = { underline = false }
 
 [tabs]
@@ -56,7 +62,7 @@ sep_left    = { open = "", close = "" }
 sep_right   = { open = "", close = "" }
 
 [which]
-mask            = { bg = "#343F44" }
+mask            = { bg = "#232A2E" }
 cand            = { fg = "#DBBC7F" }
 desc            = { fg = "#D3C6AA" }
 separator_style = { fg = "#9DA9A0" }
@@ -67,7 +73,7 @@ cols            = 2
 on          = { fg = "#9DA9A0" }
 run         = { fg = "#9DA9A0" }
 desc        = { fg = "#9DA9A0" }
-footer      = { fg = "#9DA9A0", bg = "#232A2E" }
+footer      = { fg = "#859289", bg = "#232A2E" }
 
 [input]
 border = { fg = "#4F585E" }
@@ -75,11 +81,13 @@ title  = { fg = "#D3C6AA" }
 
 [pick]
 border = { fg = "#4F585E" }
-title  = { fg = "#DBBC7F" }
+title  = { fg = "#D3C6AA" }
 
 [spot]
-border = { fg = "#4F585E" }
-title  = { fg = "#DBBC7F" }
+border   = { fg = "#4F585E" }
+title    = { fg = "#D3C6AA" }
+tbl_col  = { fg = "#9DA9A0" }
+tbl_cell = { fg = "#2D353B", bg = "#9DA9A0", bold = true }
 
 [confirm]
 border = { fg = "#4F585E" }
@@ -87,11 +95,11 @@ title  = { fg = "#E67E80" }
 
 [tasks]
 border = { fg = "#4F585E" }
-title  = { fg = "#DBBC7F" }
+title  = { fg = "#D3C6AA" }
 
 [cmp]
 border = { fg = "#4F585E" }
-title  = { fg = "#DBBC7F" }
+title  = { fg = "#D3C6AA" }
 
 [filetype]
 rules = [
