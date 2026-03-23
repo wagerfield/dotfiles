@@ -7,9 +7,11 @@ tap "hashicorp/tap"
 tap "qmk/qmk"
 
 # Packages
+brew "agent-browser"
 brew "ast-grep"
 brew "autossh"
 brew "awscli"
+brew "bat"
 brew "biome"
 brew "bob" # neovim version manager
 brew "btop"
@@ -32,6 +34,7 @@ brew "llvm"
 brew "luarocks"
 brew "mas" # Mac App Store
 brew "nmap"
+brew "anomalyco/tap/opencode"
 brew "poppler"
 brew "postgresql@18"
 brew "pnpm"
@@ -39,7 +42,9 @@ brew "pulumi"
 brew "qmk/qmk/qmk"
 brew "ripgrep"
 brew "sevenzip"
+brew "skills"
 brew "stow"
+brew "television"
 brew "tree"
 brew "uv"
 brew "wget"
@@ -47,19 +52,6 @@ brew "yarn"
 brew "yazi"
 brew "yq"
 brew "zoxide"
-
-# Language Servers
-brew "gopls"                           # Go
-brew "lua-language-server"             # Lua
-brew "basedpyright"                    # Python
-brew "rust-analyzer"                   # Rust
-brew "sql-language-server"             # SQL
-brew "taplo"                           # TOML
-brew "typescript-language-server"      # TypeScript/JavaScript
-brew "vscode-langservers-extracted"    # JSON/HTML/CSS
-brew "yaml-language-server"            # YAML
-brew "glsl_analyzer"                   # GLSL
-brew "wgsl-analyzer"                   # WGSL (WebGPU)
 
 # Applications
 cask "1password"
