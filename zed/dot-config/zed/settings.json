@@ -75,7 +75,18 @@
   "theme_overrides": {
     "Everforest Dark Medium (material)": {
       "tab.active_background": "#2d353b",
+      "panel.focused_border": "#7FBBB3",
       "debugger.accent": "#e67e80",
+      // element
+      "element.selected": "#343f44",
+      "element.hover": "#343f44",
+      // ghost_element
+      "ghost_element.selected": "#343f44",
+      "ghost_element.hover": "#343f44",
+      // border
+      "border.variant": "#3d484d",
+      "border": "#3d484d",
+      // misc
       "predictive": "#859289",
       "hint": "#859289",
     },
@@ -181,7 +192,7 @@
         "opencode/big-pickle",
         "opencode-go/glm-5",
         "opencode-go/kimi-k2.5",
-        "opencode-go/minimax-m2.5",
+        "opencode-go/minimax-m2.7",
       ],
     },
   },

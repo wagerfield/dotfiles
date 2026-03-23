@@ -10,6 +10,7 @@
   - Paste image file (not filename) from clipboard
   - Edit previous message
 - Terminal Panel
+  - Paste image file (not filename) from clipboard
   - Adjust font cell width and height like Kitty and Ghostty
   - Hide tabs configuration option
 - Debug Panel
