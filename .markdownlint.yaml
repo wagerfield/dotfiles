@@ -1,0 +1,4 @@
+# MD013/line-length
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/md013.md
+MD013:
+  enabled: false
