@@ -6,17 +6,14 @@ tap "entireio/tap"
 tap "hashicorp/tap"
 tap "qmk/qmk"
 
-# Packages
+# Tools
 brew "agent-browser"
 brew "ast-grep"
 brew "autossh"
 brew "awscli"
 brew "bat"
-brew "biome"
-brew "bob" # neovim version manager
 brew "btop"
 brew "charmbracelet/tap/crush"
-brew "deno"
 brew "fd"
 brew "fish"
 brew "ffmpeg"
@@ -37,7 +34,6 @@ brew "nmap"
 brew "anomalyco/tap/opencode"
 brew "poppler"
 brew "postgresql@18"
-brew "pnpm"
 brew "pulumi"
 brew "qmk/qmk/qmk"
 brew "ripgrep"
@@ -46,12 +42,34 @@ brew "skills"
 brew "stow"
 brew "television"
 brew "tree"
-brew "uv"
 brew "wget"
-brew "yarn"
 brew "yazi"
 brew "yq"
 brew "zoxide"
+
+# Package Managers
+brew "bob"       # Neovim
+brew "rustup"    # Rust
+brew "uv"        # Python
+brew "deno"      # Node
+brew "pnpm"      # Node
+brew "yarn"      # Node
+
+# Language Servers
+brew "basedpyright"                  # Python
+brew "gopls"                         # Go
+brew "lua-language-server"           # Lua
+brew "sql-language-server"           # SQL
+brew "tailwindcss-language-server"   # Tailwind CSS
+brew "typescript-language-server"    # TypeScript/JavaScript
+brew "vscode-langservers-extracted"  # HTML, CSS, JSON
+brew "yaml-language-server"          # YAML
+brew "taplo"                         # TOML
+
+# Formatters
+brew "biome"
+brew "prettier"
+brew "stylua"
 
 # Applications
 cask "1password"
