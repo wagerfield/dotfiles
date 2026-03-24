@@ -1,30 +1,46 @@
-export XDG_CONFIG_HOME="$HOME/.config"
-export PNPM_HOME="$HOME/Library/pnpm"
-
-export BOB="$HOME/.local/share/bob"
-export BUN="$HOME/.bun"
-export NVM="$HOME/.nvm"
-export ZSH="$HOME/.oh-my-zsh"
-export GOPATH="$HOME/go"
-
-export BREW="/opt/homebrew"
-export PATH="$BREW/bin:$BREW/sbin:$PATH"
-export PATH="$PATH:$BOB/nvim-bin"
-export PATH="$PATH:$BREW/opt/postgresql@18/bin"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$BUN/bin"
-export PATH="$PATH:$PNPM_HOME"
-export PATH="$PATH:./node_modules/.bin"
-export PATH="$PATH:$GOPATH/bin"
+# ========================================
+# ENV VARS
+# ========================================
 
 export EDITOR="nvim"
 
-# title
+export BREW="/opt/homebrew"
+export XDG_CONFIG_HOME="$HOME/.config"
+export PNPM_HOME="$HOME/Library/pnpm"
+export GOPATH="$HOME/go"
+
+export BUN="$HOME/.bun"
+export NVM="$HOME/.nvm"
+export ZSH="$HOME/.oh-my-zsh"
+
+export BOB="$HOME/.local/share/bob"
+export BOB_USED_VERSION="$(cat $BOB/used)"
+export VIMRUNTIME="$BOB/$BOB_USED_VERSION/share/nvim/runtime"
+
+# ========================================
+# PATH
+# ========================================
+
+export PATH="$BREW/bin:$BREW/sbin:$PATH"           # Homebrew
+export PATH="$PATH:$BREW/opt/postgresql@18/bin"    # PostgreSQL
+export PATH="$PATH:$BREW/opt/rustup/bin"           # Rust
+export PATH="$PATH:$HOME/.local/bin"               # Local bin
+export PATH="$PATH:$BOB/nvim-bin"                  # Bob (Neovim)
+export PATH="$PATH:$BUN/bin"                       # Bun
+export PATH="$PATH:$PNPM_HOME"                     # pnpm
+export PATH="$PATH:$GOPATH/bin"                    # Go
+export PATH="$PATH:./node_modules/.bin"            # Local node_modules
+
+# ========================================
+# TITLE
+# ========================================
 
 DISABLE_AUTO_TITLE=true
 precmd() { print -Pn "\e]2;%1~\a" }
 
-# aliases
+# ========================================
+# ALIASES
+# ========================================
 
 alias b="bun"
 alias br="bun run"
@@ -62,7 +78,9 @@ alias c="claude"
 alias lg="lazygit"
 alias oc="opencode"
 alias sb="supabase"
+
 alias zd="zed-preview"
+alias zp="zed-preview"
 alias zedp="zed-preview"
 
 alias f="fzf"
@@ -75,31 +93,41 @@ alias kn="killall node -9"
 alias lts="nvm use --lts"
 alias fkb="qmk flash --no-eject"
 
-# config
+# ========================================
+# OH MY ZSH
+# ========================================
 
-ZSH_THEME="wagerfield"
 HIST_STAMPS="dd/mm/yyyy"
+ZSH_THEME="wagerfield"
 
 plugins=(git wd)
-
 tabs -2
+
+# ========================================
+# COMPLETIONS
+# ========================================
+
+# Add completion paths before initializing compinit
+fpath=(/Users/wagerfield/.docker/completions $fpath)
+
+# Run compinit before sourcing files
+autoload -Uz compinit
+compinit
+
+eval "$(brew shellenv)"
+eval "$(zoxide init zsh)"
+eval "$(tv init zsh)"
+eval "$(fzf --zsh)"
 
 source $BUN/_bun
 source $NVM/nvm.sh
 source $NVM/bash_completion
 source $ZSH/oh-my-zsh.sh
 
-eval "$(brew shellenv)"
-eval "$(zoxide init zsh)"
+# ========================================
+# YAZI
+# ========================================
 
-# brew completions
-autoload -Uz compinit
-compinit
-
-# bun completions
-[ -s "/Users/wagerfield/.bun/_bun" ] && source "/Users/wagerfield/.bun/_bun"
-
-# yazi quit cwd
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
@@ -108,39 +136,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# ========================================
+# OPENCODE
+# ========================================
 
-
-### Global NPM Packages ###
-function install-global-npm-packages() {
-	local packages_file="$HOME/.config/npm/global-packages.txt"
-
-	if [[ ! -f "$packages_file" ]]; then
-		echo "Error: $packages_file not found"
-		return 1
-	fi
-
-	echo "Installing global npm packages..."
-	grep -v '^#\|^$' "$packages_file" | xargs npm install -g
-}
-### Global NPM Packages ###
-
-
-
-### Docker Desktop ###
-fpath=(/Users/wagerfield/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-### Docker Desktop ###
-
-
-
-### Antigravity ###
-export PATH="/Users/wagerfield/.antigravity/antigravity/bin:$PATH"
-### Antigravity ###
-
-
-
-### OpenCode ###
 _opencode_yargs_completions()
 {
   local reply
@@ -159,4 +158,3 @@ if [[ "'${zsh_eval_context[-1]}" == "loadautofunc" ]]; then
 else
   compdef _opencode_yargs_completions opencode
 fi
-### OpenCode ###
