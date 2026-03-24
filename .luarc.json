@@ -1,4 +1,10 @@
 {
   "runtime.version": "LuaJIT",
-  "diagnostics.globals": ["vim"]
+  "diagnostics.globals": ["vim"],
+  "workspace.library": [
+    "${env:VIMRUNTIME}/lua",
+    "${env:HOME}/.local/share/nvim/lazy/**/lua",
+    "${env:HOME}/.local/share/nvim-lazyvim/lazy/**/lua",
+    "${env:HOME}/.local/share/nvim/lazy/ui/nvchad_types"
+  ]
 }
