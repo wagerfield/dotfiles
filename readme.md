@@ -30,11 +30,30 @@
 
 **Step 8:** Stow directories to `$HOME` directory
 
-    stow --dotfiles --target=$HOME claude ghostty git kitty lazygit npm nvim oh-my-zsh opencode ssh vim yazi zed zsh
+    stow --dotfiles --target=$HOME agents claude ghostty git kitty lazygit npm nvim oh-my-zsh opencode ssh vim yazi zed zsh
 
 You will likely have to delete (or rename) some files like `$HOME/.zshrc` that already exist before running `stow`.
 
-## Brew Commands
+## Post-Install Steps
+
+### Neovim
+
+Install Neovim nightly via `bob`:
+
+    bob install nightly
+    bob use nightly
+
+### Rust
+
+Install Rust via `rustup` (includes `rustfmt`, `cargo`, `clippy`):
+
+    rustup default stable
+
+Then install `rust-analyzer` via `rustup`:
+
+    rustup component add rust-analyzer
+
+### Brew Commands
 
 | Command                          | Description                      |
 | -------------------------------- | -------------------------------- |
