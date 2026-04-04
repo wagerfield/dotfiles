@@ -15,8 +15,9 @@ theme = everforest-dark
 font-family = JetBrains Mono
 font-size = 14
 
-font-synthetic-style = false
 font-thicken = true
+font-thicken-strength = 0
+font-synthetic-style = false
 
 adjust-cell-width = 0%
 adjust-cell-height = 10%
