@@ -1,7 +1,9 @@
 {
   "words": [
+    "autocmd",
     "autocmds",
     "cand",
+    "chadrc",
     "conds",
     "darkgray",
     "everforest",
@@ -9,6 +11,7 @@
     "gopath",
     "keymap",
     "lazyvim",
+    "lightyellow",
     "linemode",
     "nvchad",
     "nvim",

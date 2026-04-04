@@ -32,6 +32,7 @@ brew "luarocks"
 brew "mas" # Mac App Store
 brew "nmap"
 brew "anomalyco/tap/opencode"
+brew "pi-coding-agent"
 brew "poppler"
 brew "postgresql@18"
 brew "pulumi"
@@ -42,6 +43,7 @@ brew "skills"
 brew "stow"
 brew "television"
 brew "tree"
+brew "tree-sitter-cli"
 brew "wget"
 brew "yazi"
 brew "yq"
@@ -63,6 +65,7 @@ brew "sql-language-server"           # SQL
 brew "tailwindcss-language-server"   # Tailwind CSS
 brew "typescript-language-server"    # TypeScript/JavaScript
 brew "vscode-langservers-extracted"  # HTML, CSS, JSON
+brew "vtsls"                         # Vue
 brew "yaml-language-server"          # YAML
 brew "taplo"                         # TOML
 
