@@ -1,39 +1,30 @@
-# Yazi Theme
+# Yazi Theme - Everforest Dark Medium
 # https://yazi-rs.github.io/docs/configuration/theme
-#
-# #232A2E - bg_dim
-# #2D353B - bg0
-# #343F44 - bg1
-# #3D484D - bg2
-# #475258 - bg3
-# #4F585E - bg4
-# #56635f - bg5
-#
-# #7A8478 - grey0
-# #859289 - grey1
-# #9DA9A0 - grey2
-#
-# #D3C6AA - fg
-# #E67E80 - red
-# #E69875 - orange
-# #DBBC7F - yellow
-# #A7C080 - green
-# #83C092 - aqua
-# #7FBBB3 - blue
-# #D699B6 - purple
 
 [mgr]
-cwd             = { fg = "#D3C6AA" }
-find_keyword    = { fg = "#DBBC7F", italic = false, underline = true, bold = true }
-find_position   = { fg = "#D699B6", italic = false, underline = false, bold = true }
-marker_marked   = { fg = "#D699B6", bg = "#D699B6" }
-marker_selected = { fg = "#7FBBB3", bg = "#7FBBB3" }
-count_selected  = { fg = "#2D353B", bg = "#7FBBB3" }
-marker_copied   = { fg = "#DBBC7F", bg = "#DBBC7F" }
-count_copied    = { fg = "#2D353B", bg = "#DBBC7F" }
-marker_cut      = { fg = "#E67E80", bg = "#E67E80" }
-count_cut       = { fg = "#2D353B", bg = "#E67E80" }
-border_style    = { bg = "#3D484D" }
+cwd             = { fg = "reset" }
+
+# find
+find_keyword    = { fg = "lightyellow", italic = false, underline = true, bold = true }
+find_position   = { fg = "magenta", italic = false, underline = false, bold = true }
+
+# marked
+marker_marked   = { fg = "magenta", bg = "magenta" }
+
+# selected
+marker_selected = { fg = "blue", bg = "blue" }
+count_selected  = { fg = "black", bg = "blue" }
+
+# copied
+marker_copied   = { fg = "lightyellow", bg = "lightyellow" }
+count_copied    = { fg = "black", bg = "lightyellow" }
+
+# cut
+marker_cut      = { fg = "red", bg = "red" }
+count_cut       = { fg = "black", bg = "red" }
+
+# border
+border_style    = { bg = "darkgray" }
 border_symbol   = " "
 
 [indicator]
@@ -43,75 +34,75 @@ current     = { reversed = true, bold = true }
 preview     = { underline = false }
 
 [tabs]
-active      = { fg = "#2D353B", bg = "#D3C6AA" }
-inactive    = { fg = "#9DA9A0", bg = "#3D484D" }
+active      = { fg = "reset", bg = "reset", reversed = true }
+inactive    = { fg = "white", bg = "darkgray" }
 sep_outer   = { open = " ", close = " " }
 sep_inner   = { open = "", close = "" }
 
 [mode]
-normal_main = { fg = "#2D353B", bg = "#D3C6AA" }
-normal_alt  = { fg = "#9DA9A0", bg = "#3D484D" }
-select_main = { fg = "#2D353B", bg = "#D699B6" }
-select_alt  = { fg = "#9DA9A0", bg = "#3D484D" }
-unset_main  = { fg = "#2D353B", bg = "#E67E80" }
-unset_alt   = { fg = "#9DA9A0", bg = "#3D484D" }
+normal_main = { fg = "reset", bg = "reset", bold = true, reversed = true }
+normal_alt  = { fg = "white", bg = "darkgray" }
+select_main = { fg = "black", bg = "magenta", bold = true }
+select_alt  = { fg = "white", bg = "darkgray" }
+unset_main  = { fg = "black", bg = "red", bold = true }
+unset_alt   = { fg = "white", bg = "darkgray" }
 
 [status]
-overall     = { fg = "#859289", bg = "#232A2E" }
+overall     = { fg = "gray", bg = "black" }
 sep_left    = { open = "", close = "" }
 sep_right   = { open = "", close = "" }
 
 [which]
-mask            = { bg = "#232A2E" }
-cand            = { fg = "#DBBC7F" }
-desc            = { fg = "#D3C6AA" }
-separator_style = { fg = "#9DA9A0" }
+mask            = { bg = "black" }
+cand            = { fg = "lightyellow" }
+desc            = { fg = "reset" }
+separator_style = { fg = "white" }
 separator       = " -> "
 cols            = 2
 
 [help]
-on          = { fg = "#9DA9A0" }
-run         = { fg = "#9DA9A0" }
-desc        = { fg = "#9DA9A0" }
-footer      = { fg = "#859289", bg = "#232A2E" }
+on          = { fg = "white" }
+run         = { fg = "white" }
+desc        = { fg = "white" }
+footer      = { fg = "gray", bg = "black" }
 
 [input]
-border = { fg = "#4F585E" }
-title  = { fg = "#D3C6AA" }
+border = { fg = "gray" }
+title  = { fg = "reset" }
 
 [pick]
-border = { fg = "#4F585E" }
-title  = { fg = "#D3C6AA" }
+border = { fg = "gray" }
+title  = { fg = "reset" }
 
 [spot]
-border   = { fg = "#4F585E" }
-title    = { fg = "#D3C6AA" }
-tbl_col  = { fg = "#9DA9A0" }
-tbl_cell = { fg = "#2D353B", bg = "#9DA9A0", bold = true }
+border   = { fg = "gray" }
+title    = { fg = "reset" }
+tbl_col  = { fg = "white" }
+tbl_cell = { fg = "black", bg = "white", bold = true }
 
 [confirm]
-border = { fg = "#4F585E" }
-title  = { fg = "#E67E80" }
+border = { fg = "gray" }
+title  = { fg = "red" }
 
 [tasks]
-border = { fg = "#4F585E" }
-title  = { fg = "#D3C6AA" }
+border = { fg = "gray" }
+title  = { fg = "reset" }
 
 [cmp]
-border = { fg = "#4F585E" }
-title  = { fg = "#D3C6AA" }
+border = { fg = "gray" }
+title  = { fg = "reset" }
 
 [filetype]
 rules = [
-  { fg = "#9DA9A0", url = "*"  }, # files
-	{ fg = "#9DA9A0", url = "*/" }, # folders
+  { fg = "white", url = "*"  }, # files
+	{ fg = "white", url = "*/" }, # folders
 ]
 
 [icon]
 conds = []
 globs = [
-  { text = " ", url = "*"  }, # files
-  { text = " ", url = "*/" }, # folders
+  { text = "", url = "*"  }, # files
+  { text = "", url = "*/" }, # folders
 ]
 files = []
 dirs  = []
