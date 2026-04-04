@@ -6,7 +6,7 @@
 # THEME
 # ========================================
 
-theme = everforest-dark-medium
+theme = everforest-dark
 
 # ========================================
 # FONT
@@ -16,7 +16,7 @@ font-family = JetBrains Mono
 font-size = 14
 
 font-synthetic-style = false
-font-thicken = false
+font-thicken = true
 
 adjust-cell-width = 0%
 adjust-cell-height = 10%
@@ -64,19 +64,12 @@ macos-option-as-alt = true
 macos-icon = blueprint
 
 # ========================================
-# QUICK TERMINAL
-# ========================================
-
-quick-terminal-position = left
-quick-terminal-size = 50%
-
-# ========================================
 # CLIPBOARD
 # ========================================
 
 clipboard-trim-trailing-spaces = true
 clipboard-paste-protection = true
-copy-on-select = true
+copy-on-select = clipboard
 
 # ========================================
 # KEY BINDINGS
@@ -85,9 +78,6 @@ copy-on-select = true
 # Tab Navigation
 keybind = alt+cmd+left=previous_tab
 keybind = alt+cmd+right=next_tab
-
-# Quick Terminal
-keybind = global:cmd+backquote=toggle_quick_terminal
 
 # Focus Split/Window
 keybind = ctrl+k=goto_split:up
@@ -100,32 +90,18 @@ keybind = ctrl+down=goto_split:down
 keybind = ctrl+left=goto_split:left
 keybind = ctrl+right=goto_split:right
 
-# Resize Split (Ghostty doesn't have move_split like Kitty, using resize instead)
-keybind = shift+up=resize_split:up,10
-keybind = shift+down=resize_split:down,10
-keybind = shift+left=resize_split:left,10
-keybind = shift+right=resize_split:right,10
-
-# Window Navigation (previous/next split)
-keybind = ctrl+alt+[=goto_split:previous
-keybind = ctrl+alt+]=goto_split:next
-
 # Window Management
 keybind = cmd+enter=new_split:auto
 keybind = ctrl+alt+x=close_surface
-
-# Toggle Split Zoom (closest to Kitty's toggle_layout stack)
 keybind = ctrl+alt+f=toggle_split_zoom
 
 # Terminal Input - Shift+Enter sends Alt+Enter (Escape + Return)
-# Using CSI sequence instead of text for better compatibility
-keybind = shift+enter=csi:1;3M
+# \x1b = Escape (Alt prefix), \r = Return
+keybind = shift+enter=text:\x1b\r
 
 # ========================================
 # ADVANCED
 # ========================================
-# Shell integration (disabled cursor override to match Kitty's no-cursor)
-shell-integration-features = no-cursor
 
-# Minimum contrast for better visibility
-minimum-contrast = 1.1
+shell-integration-features = no-cursor
+minimum-contrast = 1
