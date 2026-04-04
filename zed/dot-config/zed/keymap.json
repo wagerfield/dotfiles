@@ -104,10 +104,16 @@
   // ========================================
 
   {
-    "context": "vim_mode == normal || vim_mode == visual",
+    "context": "vim_mode == normal",
     "bindings": {
       "s": "vim::PushSneak",
       "shift-s": "vim::PushSneakBackward",
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": "vim::PushAddSurrounds",
     },
   },
   {
