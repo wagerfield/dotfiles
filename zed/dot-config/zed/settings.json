@@ -188,6 +188,9 @@
     "claude-acp": {
       "type": "registry",
     },
+    "pi-acp": {
+      "type": "registry",
+    },
     "opencode": {
       "type": "registry",
       "default_model": "opencode-go/kimi-k2.5",
