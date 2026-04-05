@@ -101,8 +101,8 @@ rules = [
 [icon]
 conds = []
 globs = [
-  { text = "", url = "*"  }, # files
-  { text = "", url = "*/" }, # folders
+  { text = " ", url = "*"  }, # files
+  { text = " ", url = "*/" }, # folders
 ]
 files = []
 dirs  = []
