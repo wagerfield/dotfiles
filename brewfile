@@ -37,6 +37,7 @@ brew "poppler"
 brew "postgresql@18"
 brew "pulumi"
 brew "qmk/qmk/qmk"
+brew "resvg"
 brew "ripgrep"
 brew "sevenzip"
 brew "skills"
@@ -63,9 +64,8 @@ brew "gopls"                         # Go
 brew "lua-language-server"           # Lua
 brew "sql-language-server"           # SQL
 brew "tailwindcss-language-server"   # Tailwind CSS
-brew "typescript-language-server"    # TypeScript/JavaScript
 brew "vscode-langservers-extracted"  # HTML, CSS, JSON
-brew "vtsls"                         # Vue
+brew "vtsls"                         # TypeScript/JavaScript (VSCode port)
 brew "yaml-language-server"          # YAML
 brew "taplo"                         # TOML
 
