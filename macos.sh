@@ -14,24 +14,38 @@ defaults read > "$HOME/Desktop/macos-defaults-$now.txt"
 ###############################################################################
 
 # Set fast keyboard repeat rate
-defaults write -g InitialKeyRepeat -int 20
-defaults write -g KeyRepeat -int 2
+defaults write -g InitialKeyRepeat -int 20 # 300ms
+defaults write -g KeyRepeat -int 2 # 30ms
 
 ###############################################################################
 # Keyboard Shortcuts
 ###############################################################################
 
-# Disable Spotlight keyboard shortcut (CMD+SPACE)
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ enabled = 0; value = { parameters = (32, 49, 1048576); type = standard; }; }'
+# Disable input source switching and Spotlight keyboard shortcuts.
+# Entry 60 = Select Previous Input Source (default: Cmd+Space)
+# Entry 61 = Select Next Input Source (default: Ctrl+Opt+Space)
+# Entry 64 = Show Spotlight search field (default: Cmd+Space)
+# Entry 65 = Show Spotlight window (default: Cmd+Option+Space)
+# Frees up Cmd+Space and Ctrl+Space for editor completions (Zed, VSCode, etc.)
+#
+# NOTE: We use Python's plistlib instead of `defaults write` because the
+# latter converts booleans and integers to strings, which macOS ignores.
+#
+# NOTE: A LOGOUT/LOGIN is required for these changes to take effect.
+# WindowServer (which manages symbolic hotkeys) only reads this plist at
+# session start. Simply running this script won't apply the changes immediately.
+python3 -c "
+import plistlib, os
+p = os.path.expanduser('~/Library/Preferences/com.apple.symbolichotkeys.plist')
+d = plistlib.load(open(p, 'rb'))
+for k in [60, 61, 64, 65]:
+    d['AppleSymbolicHotKeys'][str(k)]['enabled'] = False
+plistlib.dump(d, open(p, 'wb'))
+"
 
-# Disable Convert Text to Simplified Chinese (CTL+OPT+SFT+CMD+C)
-# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 69 '{ enabled = 0; value = { parameters = (116, 84, 1310720); type = standard; }; }'
-
-# Disable Convert Text to Traditional Chinese (CTL+SFT+CMD+C)
-# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '{ enabled = 0; value = { parameters = (116, 84, 1179648); type = standard; }; }'
-
-# Kill the System UI Server to apply changes immediately
-killall SystemUIServer
+# Apply keyboard shortcut changes (requires logout/login to fully take effect)
+killall cfprefsd 2>/dev/null
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -forcePrefUpdate
 
 ###############################################################################
 # Finder
