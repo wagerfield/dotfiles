@@ -34,23 +34,14 @@
 
 You will likely have to delete (or rename) some files like `$HOME/.zshrc` that already exist before running `stow`.
 
-## Post-Install Steps
+**Step 9:** Install Neovim with `bob`
 
-### Neovim
+    bob install stable
+    bob use stable
 
-Install Neovim nightly via `bob`:
-
-    bob install nightly
-    bob use nightly
-
-### Rust
-
-Install Rust via `rustup` (includes `rustfmt`, `cargo`, `clippy`):
+**Step 10:** Install Rust and `rust-analyzer` with `rustup`
 
     rustup default stable
-
-Then install `rust-analyzer` via `rustup`:
-
     rustup component add rust-analyzer
 
 ### Brew Commands
