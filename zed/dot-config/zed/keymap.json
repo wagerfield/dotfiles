@@ -10,9 +10,13 @@
       "ctrl-left": "workspace::ActivatePaneLeft",
       "ctrl-right": "workspace::ActivatePaneRight",
 
+      "cmd-l": "multi_workspace::ToggleWorkspaceSidebar",
+      "ctrl-x l": "multi_workspace::ToggleWorkspaceSidebar",
+
       "cmd-shift-a": "agent::ToggleFocus",
-      "cmd-shift-g": "git_panel::ToggleFocus",
       "cmd-shift-d": "debug_panel::Toggle",
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "cmd-shift-s": "multi_workspace::FocusWorkspaceSidebar",
       "cmd-shift-t": "terminal_panel::ToggleFocus",
 
       "cmd-ctrl-alt-r": "editor::RestartLanguageServer",
@@ -23,32 +27,27 @@
   },
 
   // ========================================
-  // PANE
-  // ========================================
-
-  {
-    "context": "Pane",
-    "bindings": {
-      "cmd-shift-g": "git_panel::ToggleFocus",
-    },
-  },
-
-  // ========================================
   // EDITOR
   // ========================================
 
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-up": "workspace::ActivatePaneUp",
-      "ctrl-down": "workspace::ActivatePaneDown",
+      "ctrl-space": "editor::ShowCompletions",
       "shift-alt-i": "editor::SplitSelectionIntoLines",
     },
   },
+
+  // ========================================
+  // AGENT PANEL
+  // ========================================
+
   {
-    "context": "RecentProjects || RecentProjects > Picker > Editor",
+    "context": "AgentPanel",
     "bindings": {
-      "cmd-shift-a": "agent::ToggleFocus",
+      "ctrl-x a": "agent::CycleModeSelector",
+      "ctrl-x m": "agent::ToggleModelSelector",
+      "ctrl-x n": "agent::NewThread",
     },
   },
 
@@ -77,25 +76,9 @@
     },
   },
   {
-    "context": "GitDiff > Editor",
-    "bindings": {
-      "cmd-shift-d": "editor::ToggleSplitDiff",
-    },
-  },
-  {
     "context": "GitDiff > Editor && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
       "z d": "editor::ToggleSplitDiff",
-    },
-  },
-  // ========================================
-  // AGENT PANEL
-  // ========================================
-
-  {
-    "context": "AgentPanel",
-    "bindings": {
-      "cmd-shift-t": "terminal_panel::ToggleFocus",
     },
   },
 
@@ -125,6 +108,50 @@
       // mini.ai plugin behavior
       "Q": "vim::MiniQuotes",
       "B": "vim::MiniBrackets",
+    },
+  },
+
+  // ========================================
+  // UNBIND
+  // ========================================
+
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-shift-s": "workspace::SaveAs",
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-shift-g": "search::SelectPreviousMatch", // git_panel::ToggleFocus
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-l": "editor::SelectLine", // multi_workspace::ToggleWorkspaceSidebar
+      "ctrl-up": "editor::MoveToStartOfParagraph", // workspace::ActivatePaneUp
+      "ctrl-down": "editor::MoveToEndOfParagraph", // workspace::ActivatePaneDown
+    },
+  },
+  {
+    "context": "TabSwitcher",
+    "unbind": {
+      "ctrl-up": "menu::SelectPrevious", // workspace::ActivatePaneUp
+      "ctrl-down": "menu::SelectNext", // workspace::ActivatePaneDown
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "unbind": {
+      "cmd-shift-t": "agent::CycleStartThreadIn", // terminal_panel::ToggleFocus
+    },
+  },
+  {
+    "context": "RecentProjects || RecentProjects > Picker > Editor",
+    "unbind": {
+      "cmd-shift-a": "workspace::AddFolderToProject", // agent::ToggleFocus
     },
   },
 ]
