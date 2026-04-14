@@ -92,6 +92,7 @@ alias nv="nvim"
 alias kn="killall node -9"
 alias lts="nvm use --lts"
 alias fkb="qmk flash --no-eject"
+alias src="source ~/.zshrc"
 
 # ========================================
 # OH MY ZSH
@@ -129,11 +130,11 @@ source $ZSH/oh-my-zsh.sh
 # ========================================
 
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	command yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 # ========================================
@@ -158,3 +159,25 @@ if [[ "'${zsh_eval_context[-1]}" == "loadautofunc" ]]; then
 else
   compdef _opencode_yargs_completions opencode
 fi
+
+# ========================================
+# FORGE
+# ========================================
+
+# Add required zsh plugins if not already present
+if [[ ! " ${plugins[@]} " =~ " zsh-autosuggestions " ]]; then
+  plugins+=(zsh-autosuggestions)
+fi
+if [[ ! " ${plugins[@]} " =~ " zsh-syntax-highlighting " ]]; then
+  plugins+=(zsh-syntax-highlighting)
+fi
+
+# Load forge shell plugin (commands, completions, keybindings) if not already loaded
+# if [[ -z "$_FORGE_PLUGIN_LOADED" ]]; then
+#   eval "$(forge zsh plugin)"
+# fi
+
+# Load forge shell theme (prompt with AI context) if not already loaded
+# if [[ -z "$_FORGE_THEME_LOADED" ]]; then
+#   eval "$(forge zsh theme)"
+# fi
