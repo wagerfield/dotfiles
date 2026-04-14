@@ -66,8 +66,8 @@ brew "sql-language-server"           # SQL
 brew "tailwindcss-language-server"   # Tailwind CSS
 brew "vscode-langservers-extracted"  # HTML, CSS, JSON
 brew "vtsls"                         # TypeScript/JavaScript (VSCode port)
-brew "yaml-language-server"          # YAML
 brew "taplo"                         # TOML
+brew "yaml-language-server"          # YAML
 
 # Formatters
 brew "biome"
@@ -79,7 +79,10 @@ cask "1password"
 cask "antigravity"
 cask "arc"
 cask "brainfm"
+cask "chatgpt"
 cask "claude"
+cask "codex" # CLI Agent
+cask "codex-app"
 cask "cursor"
 cask "datagrip"
 cask "discord"
