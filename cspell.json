@@ -1,0 +1,36 @@
+{
+  "ignoreRegExpList": ["vim-api"],
+  "patterns": [
+    {
+      "name": "vim-api",
+      "pattern": "vim\\.(api|diagnostic|fn|g|o|opt|hl)\\.\\w+"
+    }
+  ],
+  "words": [
+    "autocommands",
+    "darkgray",
+    "everforest",
+    "habamax",
+    "ghostty",
+    "gopath",
+    "kanagawa",
+    "keymap",
+    "keymaps",
+    "lazyvim",
+    "lightyellow",
+    "linemode",
+    "nvim",
+    "opencode",
+    "rustup",
+    "sainnhe",
+    "statusline",
+    "symbolichotkeys",
+    "tabdo",
+    "tokyonight",
+    "undodir",
+    "vimruntime",
+    "wagerfield",
+    "wincmd",
+    "yazi"
+  ]
+}
