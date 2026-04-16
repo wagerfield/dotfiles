@@ -1,0 +1,39 @@
+-- -- Window navigation
+-- vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
+-- vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
+-- vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
+-- vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+--
+-- vim.keymap.set("n", "<C-Up>", "<C-w>h", { desc = "Go to left window" })
+-- vim.keymap.set("n", "<C-Down>", "<C-w>j", { desc = "Go to lower window" })
+-- vim.keymap.set("n", "<C-Left>", "<C-w>k", { desc = "Go to upper window" })
+-- vim.keymap.set("n", "<C-Right>", "<C-w>l", { desc = "Go to right window" })
+--
+-- -- Move lines up/down
+-- vim.keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move line up" })
+-- vim.keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move line down" })
+-- vim.keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move selection up" })
+-- vim.keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
+--
+-- vim.keymap.set("n", "<A-Up>", "<cmd>m .-2<cr>==", { desc = "Move line up" })
+-- vim.keymap.set("n", "<A-Down>", "<cmd>m .+1<cr>==", { desc = "Move line down" })
+-- vim.keymap.set("v", "<A-Up>", ":m '<-2<cr>gv=gv", { desc = "Move selection up" })
+-- vim.keymap.set("v", "<A-Down>", ":m '>+1<cr>gv=gv", { desc = "Move selection down" })
+--
+-- -- Buffer navigation
+-- vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
+-- vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
+--
+-- -- Clear search highlighting
+-- vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlighting" })
+--
+-- -- Pasting
+-- vim.keymap.set("v", "p", '"_dP', { desc = "Paste without yanking" })
+--
+-- -- Quick access
+-- vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+-- vim.keymap.set("n", "<leader>qw", "<cmd>q<cr>", { desc = "Quit window" })
+-- vim.keymap.set("n", "<leader>ww", "<cmd>w<cr>", { desc = "Save file" })
+--
+-- -- Terminal
+-- vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
