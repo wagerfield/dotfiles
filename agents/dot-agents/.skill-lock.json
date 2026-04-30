@@ -1,0 +1,19 @@
+{
+  "version": 3,
+  "lastSelectedAgents": ["codex", "cursor", "opencode"],
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "skills": {
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "skillFolderHash": "d601c797f9bbb8e999d98ff25d0ebdfb3acbd6aa",
+      "pluginName": "agent-browser",
+      "installedAt": "2026-03-23T14:01:52.591Z",
+      "updatedAt": "2026-03-23T14:01:52.591Z"
+    }
+  }
+}
