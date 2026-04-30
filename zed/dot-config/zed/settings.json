@@ -10,11 +10,18 @@
   "agent_ui_font_size": 15, // match ui_font_size
   "agent_buffer_font_size": 14, // match buffer_font_size
 
+  "markdown_preview_font_family": ".ZedSans",
+
   "horizontal_scroll_margin": 8,
   "vertical_scroll_margin": 4,
 
-  "auto_signature_help": true,
+  "preferred_line_length": 80,
+  "show_wrap_guides": true,
+  "wrap_guides": [80],
+
   "inline_code_actions": false,
+  "auto_signature_help": false,
+  "show_signature_help_after_edits": true,
 
   "rounded_selection": false,
   "selection_highlight": true,
@@ -23,6 +30,7 @@
   "pane_split_direction_horizontal": "down",
   "pane_split_direction_vertical": "right",
 
+  "cli_default_open_behavior": "existing_window",
   "relative_line_numbers": "enabled",
   "format_on_save": "on",
 
@@ -31,9 +39,7 @@
     "metrics": false,
   },
 
-  // ========================================
-  // PROFILES
-  // ========================================
+  // Profiles ------------------------------------------------------------------
 
   "profiles": {
     "Presentation": {
@@ -47,9 +53,7 @@
     },
   },
 
-  // ========================================
-  // VIM
-  // ========================================
+  // Vim -----------------------------------------------------------------------
 
   "vim_mode": true,
   "vim": {
@@ -59,9 +63,7 @@
     "use_smartcase_find": true,
   },
 
-  // ========================================
-  // THEME
-  // ========================================
+  // Theme ---------------------------------------------------------------------
 
   "icon_theme": {
     "mode": "system",
@@ -70,13 +72,27 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Fleet Light",
-    "dark": "Zedokai Darker (Filter Octagon)",
+    // "One Light"
+    // "GitHub Light"
+    // "Zedokai Light"
+    "light": "GitHub Light",
+    // "Arrakis Night"
+    // "Gruvbox Dark"
+    // "Everforest Dark Hard (regular)"
+    // "Kanagawa"
+    // "Kanagawa Dragon"
+    // "Zedokai Darker (Octagon)"
+    "dark": "Kanagawa Wave - No Italics",
   },
+
   // https://zed.dev/theme-builder
   "theme_overrides": {
     "Catppuccin Latte": {
       "border.variant": "#ccd0da",
+    },
+    "GitHub Light": {
+      "editor.document_highlight.read_background": "#0969da1a", // 10% opacity
+      "editor.document_highlight.write_background": "#0969da33", // 20% opacity
     },
     "Everforest Dark Medium (material)": {
       "tab.active_background": "#2d353b",
@@ -95,14 +111,33 @@
       "predictive": "#859289",
       "hint": "#859289",
     },
+    "Kanagawa": {
+      "border.variant": "#2a2a37",
+      "border": "#2a2a37",
+    },
+    "Kanagawa Wave": {
+      "border.variant": "#181820",
+      "border": "#181820",
+    },
+    "Kanagawa Wave - No Italics": {
+      "editor.wrap_guide": "#37373d",
+      "border.variant": "#181820",
+      "border": "#181820",
+      "hint": "#4C4C63",
+    },
+    "Kanagawa Dragon": {
+      "border.variant": "#12120f",
+      "border": "#12120f",
+    },
+    "Kanagawa Dragon - No Italics": {
+      "border.variant": "#12120f",
+      "border": "#12120f",
+    },
   },
 
-  // ========================================
-  // UI
-  // ========================================
+  // UI ------------------------------------------------------------------------
 
   "title_bar": {
-    "show_branch_icon": false,
     "show_onboarding_banner": false,
     "show_user_menu": false,
   },
@@ -122,7 +157,11 @@
     "runnables": false,
   },
   "scrollbar": {
-    "show": "never",
+    "cursors": false,
+    "git_diff": false,
+    "search_results": false,
+    "selected_symbol": false,
+    "selected_text": false,
   },
   "sticky_scroll": {
     "enabled": false,
@@ -132,10 +171,12 @@
       "enabled": false,
     },
   },
+  "centered_layout": {
+    "left_padding": 0.25,
+    "right_padding": 0.25,
+  },
 
-  // ========================================
-  // PANELS
-  // ========================================
+  // Panels --------------------------------------------------------------------
 
   "project_panel": {
     "default_width": 360,
@@ -149,7 +190,7 @@
     "default_width": 360,
     "folder_icons": false,
     "file_icons": false,
-    "tree_view": true,
+    "tree_view": false,
   },
   "outline_panel": {
     "default_width": 360,
@@ -168,13 +209,13 @@
     "dock": "left",
   },
 
-  // ========================================
-  // AI
-  // ========================================
+  // AI ------------------------------------------------------------------------
 
   "agent": {
-    "default_width": 720,
-    "max_content_width": 720,
+    "flexible": true,
+    "default_width": 800,
+    "max_content_width": 800,
+    "single_file_review": true,
     "expand_edit_card": false,
     "expand_terminal_card": false,
     "play_sound_when_agent_done": "when_hidden",
@@ -194,19 +235,43 @@
     "claude-acp": {
       "type": "registry",
     },
+    "Codex": {
+      "type": "custom",
+      "command": "npx",
+      "args": ["-y", "@zed-industries/codex-acp@0.10.0"],
+      "default_model": "gpt-5.5",
+      "default_mode": "high",
+      "default_config_options": {
+        "model": "gpt-5.5",
+        "reasoning_effort": "high",
+      },
+    },
+    "codex-acp": {
+      "type": "registry",
+      "default_config_options": {
+        "mode": "auto",
+        "model": "gpt-5.5",
+        "reasoning_effort": "medium",
+      },
+      "favorite_config_option_values": {
+        "model": ["gpt-5.3-codex", "gpt-5.4", "gpt-5.5"],
+      },
+    },
     "pi-acp": {
       "type": "registry",
       "favorite_models": [
         "opencode-go/glm-5",
         "opencode-go/glm-5.1",
         "opencode-go/kimi-k2.5",
-        "opencode-go/minimax-m2.7",
+        "openai-codex/gpt-5.4",
+        "openai-codex/gpt-5.5",
+        "openai-codex/gpt-5.3-codex",
       ],
     },
     "opencode": {
       "type": "registry",
       "default_config_options": {
-        "model": "openai/gpt-5.4",
+        "model": "openai/gpt-5.4/high",
         "mode": "plan",
       },
       "favorite_config_option_values": {
@@ -220,13 +285,37 @@
           "openai/gpt-5.4/high",
           "openai/gpt-5.3-codex/medium",
           "openai/gpt-5.3-codex/high",
+          "openai/gpt-5.5",
+          "openai/gpt-5.5/medium",
+          "openai/gpt-5.5/high",
         ],
       },
     },
   },
   "context_servers": {
+    "mcp-server-playwright": {
+      "enabled": false,
+      "remote": false,
+      "settings": {},
+    },
+    "svelte-mcp": {
+      "enabled": false,
+      "remote": false,
+      "settings": {},
+    },
+    "chrome-devtools-mcp-zed": {
+      "enabled": false,
+      "remote": false,
+      "settings": {},
+    },
+    "daisyui-github": {
+      "enabled": false,
+      "remote": false,
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://gitmcp.io/saadeghi/daisyui"],
+    },
     "mcp-server-context7": {
-      "enabled": true,
+      "enabled": false,
       "remote": false,
       "settings": {
         "context7_api_key": "ctx7sk-41c0cdc5-742d-44e2-a54d-46175401d4f4",
@@ -235,21 +324,20 @@
   },
   "edit_predictions": {
     "provider": "copilot",
-    "mode": "eager",
+    "mode": "subtle",
   },
 
-  // ========================================
-  // EXTENSIONS
-  // ========================================
+  // Extensions ----------------------------------------------------------------
 
   "auto_install_extensions": {
     // Themes
     "catppuccin": true,
+    "dune-theme": true,
     "everforest": true,
     "fleet-themes": true,
     "github-theme": true,
-    "rose-pine-theme": true,
     "tokyo-night": true,
+    "vercel-theme": true,
     "zedokai": true,
 
     // Icon Themes
@@ -266,7 +354,6 @@
     "glsl": true,
     "html": true,
     "lua": true,
-    "markdown-oxide": true,
     "markdownlint": true,
     "mdx": true,
     "mermaid": true,
@@ -276,7 +363,6 @@
     "terraform": true,
     "toml": true,
     "vue": true,
-    "wgsl-wesl": true,
     "xml": true,
 
     // MCP Servers
@@ -296,15 +382,28 @@
     "svelte-mcp": true,
   },
 
-  // ========================================
-  // LSP
-  // ========================================
+  // LSP -----------------------------------------------------------------------
 
   "lsp": {
     "biome": {
       "settings": {
         "require_config_file": true,
       },
+    },
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
     },
   },
 }

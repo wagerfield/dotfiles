@@ -4,14 +4,15 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-tab": "tab_switcher::ToggleAll",
+      "ctrl-alt-l": "zed::OpenLog",
 
       "ctrl-up": "workspace::ActivatePaneUp",
       "ctrl-down": "workspace::ActivatePaneDown",
       "ctrl-left": "workspace::ActivatePaneLeft",
       "ctrl-right": "workspace::ActivatePaneRight",
 
-      "cmd-l": "multi_workspace::ToggleWorkspaceSidebar",
-      "ctrl-x l": "multi_workspace::ToggleWorkspaceSidebar",
+      "cmd-b": "multi_workspace::ToggleWorkspaceSidebar",
+      "cmd-l": "workspace::ToggleLeftDock",
 
       "cmd-shift-a": "agent::ToggleFocus",
       "cmd-shift-d": "debug_panel::Toggle",
@@ -26,9 +27,7 @@
     },
   },
 
-  // ========================================
-  // EDITOR
-  // ========================================
+  // Editor --------------------------------------------------------------------
 
   {
     "context": "Editor",
@@ -37,23 +36,44 @@
       "shift-alt-i": "editor::SplitSelectionIntoLines",
     },
   },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space p a": "pane::JoinAll",
+      "space p n": "pane::JoinIntoNext",
+      "space p c": "workspace::ToggleCenteredLayout",
+      "space p u": "pane::SplitAndMoveUp",
+      "space p d": "pane::SplitAndMoveDown",
+      "space p l": "pane::SplitAndMoveLeft",
+      "space p r": "pane::SplitAndMoveRight",
+    },
+  },
 
-  // ========================================
-  // AGENT PANEL
-  // ========================================
+  // Agent Panel ---------------------------------------------------------------
 
   {
     "context": "AgentPanel",
     "bindings": {
-      "ctrl-x a": "agent::CycleModeSelector",
+      "ctrl-x g g": "agent::ScrollOutputToTop",
+      "ctrl-x shift-g": "agent::ScrollOutputToBottom",
       "ctrl-x m": "agent::ToggleModelSelector",
+      "ctrl-x d": "agent::OpenAgentDiff",
       "ctrl-x n": "agent::NewThread",
     },
   },
+  {
+    "context": "AgentPanel > Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-e": "agent::ScrollOutputLineDown",
+      "ctrl-y": "agent::ScrollOutputLineUp",
+      "ctrl-f": "agent::ScrollOutputPageDown",
+      "ctrl-b": "agent::ScrollOutputPageUp",
+      "ctrl-p": "agent::ScrollOutputToPreviousMessage",
+      "ctrl-n": "agent::ScrollOutputToNextMessage",
+    },
+  },
 
-  // ========================================
-  // PROJECT PANEL
-  // ========================================
+  // Project Panel -------------------------------------------------------------
 
   {
     "context": "ProjectPanel && not_editing",
@@ -62,9 +82,7 @@
     },
   },
 
-  // ========================================
-  // GIT PANEL
-  // ========================================
+  // Git Panel -----------------------------------------------------------------
 
   {
     "context": "GitPanel && ChangesList",
@@ -76,27 +94,58 @@
     },
   },
   {
-    "context": "GitDiff > Editor && (vim_mode == normal || vim_mode == visual)",
+    "context": "GitCommit",
+    "bindings": {
+      "ctrl-x g": "git::GenerateCommitMessage",
+    },
+  },
+  {
+    "context": "(AgentDiff || FileDiff || GitDiff) > Editor && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
       "z d": "editor::ToggleSplitDiff",
     },
   },
 
-  // ========================================
-  // VIM
-  // ========================================
+  // Outline Panel -------------------------------------------------------------
 
+  {
+    "context": "OutlinePanel",
+    "bindings": {
+      "c": "outline_panel::CollapseAllEntries",
+      "e": "outline_panel::ExpandAllEntries",
+    },
+  },
+
+  // Vim -----------------------------------------------------------------------
+
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "z shift-f": "editor::ToggleFoldAll",
+    },
+  },
+  {
+    "context": "Editor && VimControl && !VimCount && !menu",
+    "bindings": {
+      "k": ["vim::Up", { "display_lines": true }],
+      "j": ["vim::Down", { "display_lines": true }],
+      "up": ["vim::Up", { "display_lines": true }],
+      "down": ["vim::Down", { "display_lines": true }],
+    },
+  },
   {
     "context": "vim_mode == normal",
     "bindings": {
       "s": "vim::PushSneak",
       "shift-s": "vim::PushSneakBackward",
+      "g s": "vim::HelixJumpToWord",
     },
   },
   {
     "context": "vim_mode == visual",
     "bindings": {
-      "shift-s": "vim::PushAddSurrounds",
+      "s": "vim::PushAddSurrounds",
+      "p": ["workspace::SendKeystrokes", "\" _ d shift-p"], // Paste without clobbering unnamed register
     },
   },
   {
@@ -111,13 +160,12 @@
     },
   },
 
-  // ========================================
-  // UNBIND
-  // ========================================
+  // Unbind --------------------------------------------------------------------
 
   {
     "context": "Workspace",
     "unbind": {
+      "cmd-b": "workspace::ToggleLeftDock",
       "cmd-shift-s": "workspace::SaveAs",
     },
   },
@@ -140,12 +188,6 @@
     "unbind": {
       "ctrl-up": "menu::SelectPrevious", // workspace::ActivatePaneUp
       "ctrl-down": "menu::SelectNext", // workspace::ActivatePaneDown
-    },
-  },
-  {
-    "context": "AgentPanel",
-    "unbind": {
-      "cmd-shift-t": "agent::CycleStartThreadIn", // terminal_panel::ToggleFocus
     },
   },
   {
