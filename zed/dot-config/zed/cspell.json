@@ -1,9 +1,11 @@
 {
   "words": [
+    "arrakis",
     "catppuccin",
     "everforest",
     "ghostty",
     "glsl",
+    "kanagawa",
     "keymap",
     "kimi",
     "opencode",
@@ -12,6 +14,7 @@
     "vtsls",
     "wesl",
     "wgsl",
+    "worktree",
     "zedokai"
   ]
 }
