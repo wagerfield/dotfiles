@@ -1,9 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "alwaysThinkingEnabled": false,
   "includeCoAuthoredBy": false,
-  "model": "sonnet",
-  "theme": "dark",
   "permissions": {
     "allow": [
       "Read(~/.zshrc)",
@@ -35,30 +32,12 @@
       "Bash(vitest:*)",
       "Bash(markdownlint:*)",
       "WebFetch(domain:docs.anthropic.com)",
-      "WebFetch(domain:github.com)",
-      "mcp__ide__getDiagnostics",
-      "mcp__language-server__definition",
-      "mcp__language-server__diagnostics",
-      "mcp__language-server__edit_file",
-      "mcp__language-server__references",
-      "mcp__language-server__rename_symbol",
-      "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs",
-      "mcp__wallaby__wallaby_runtimeValues",
-      "mcp__wallaby__wallaby_runtimeValuesByTest",
-      "mcp__wallaby__wallaby_coveredLinesForFile",
-      "mcp__wallaby__wallaby_coveredLinesForTest",
-      "mcp__wallaby__wallaby_updateTestSnapshots",
-      "mcp__wallaby__wallaby_updateFileSnapshots",
-      "mcp__wallaby__wallaby_updateProjectSnapshots",
-      "mcp__wallaby__wallaby_failingTests",
-      "mcp__wallaby__wallaby_allTests",
-      "mcp__wallaby__wallaby_failingTestsForFile",
-      "mcp__wallaby__wallaby_allTestsForFile",
-      "mcp__wallaby__wallaby_failingTestsForFileAndLine",
-      "mcp__wallaby__wallaby_allTestsForFileAndLine",
-      "mcp__wallaby__wallaby_testById"
+      "WebFetch(domain:github.com)"
     ],
     "deny": []
-  }
+  },
+  "enabledPlugins": {},
+  "alwaysThinkingEnabled": true,
+  "voiceEnabled": true,
+  "theme": "dark"
 }
