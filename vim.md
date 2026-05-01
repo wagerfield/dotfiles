@@ -72,33 +72,97 @@ file-line 3: short line                            | display-line 5
 - `n` - next search match
 - `N` - previous search match
 
-### Text Objects
+## Grammar
 
-- `a` - around
-- `i` - inside
-- `w/W` - word/WORD
-- `s` - sentence
-- `p` - paragraph
-- `b` - brackets
-- `q` - quotes
-- `i` - indent
-- `c` - class
-- `f` - function
+- `{operator}{motion}` - operate over a motion, e.g. `dw`, `c$`, `yap`
+- `{operator}{operator}` - operate on the current line, e.g. `dd`, `cc`, `yy`
+- `{count}{operator}{motion}` - repeat an operation, e.g. `3dw`
+- `{operator}{count}{motion}` - repeat the motion, e.g. `d3w`
+
+## Text Objects
+
+Text objects are used after an operator or from visual mode.
+
+- `a` - around, _including_ surrounding whitespace/delimiters
+- `i` - inside, _excluding_ surrounding whitespace/delimiters
+- `aw/iw` - around/inside word
+- `aW/iW` - around/inside WORD
+- `as/is` - around/inside sentence
+- `ap/ip` - around/inside paragraph
+- `ab/ib` - around/inside parentheses
+- `a(/i(` - around/inside parentheses
+- `aB/iB` - around/inside curly braces
+- `a{/i{` - around/inside curly braces
+- `a[/i[` - around/inside square brackets
+- `a</i<` - around/inside angle brackets
+- `a"/i"` - around/inside double quotes
+- `a'/i'` - around/inside single quotes
+- ``a`/i` `` - around/inside backticks
+
+### Treesitter Text Objects
+
+- `ai/ii` - around/inside indent
+- `ac/ic` - around/inside class
+- `af/if` - around/inside function
 
 ## Operators
 
 - `c` - change
 - `d` - delete
 - `y` - yank
-- `v` - visual
-- `V` - visual-line
-- `ctrl-v` - visual-block
-- `qx` - record macro into `x` register
-- `'x` - replay macro from `x` register
 - `gc` - comment
 - `gu` - lowercase
 - `gU` - uppercase
 - `>` - indent more
 - `<` - indent less
 - `=` - auto-indent
+
+## Visual Mode
+
+- `v` - visual
+- `V` - visual-line
+- `ctrl-v` - visual-block
+
+## Macros
+
+- `qx` - record macro into `x` register
+- `q` - stop recording macro
+- `@x` - replay macro from `x` register
+- `@@` - replay last macro
+
+## Repeating
+
 - `.` - repeat
+
+## Insert & Replace
+
+- `i` - insert before cursor
+- `a` - insert after cursor
+- `I` - insert at beginning of file-line
+- `A` - insert at end of file-line
+- `o` - open line below
+- `O` - open line above
+- `r` - replace one char
+- `R` - replace mode
+
+## Common Edits
+
+- `x` - delete char under cursor
+- `X` - delete char before cursor
+- `s` - substitute char
+- `S` - substitute line
+- `C` - change to end of line
+- `D` - delete to end of line
+- `Y` - yank line
+
+## Undo & Redo
+
+- `u` - undo
+- `ctrl-r` - redo
+
+## Registers
+
+- `"xy` - yank into `x` register
+- `"xp` - paste from `x` register
+- `"+y` - yank to system clipboard
+- `"+p` - paste from system clipboard
