@@ -78,6 +78,7 @@ alias c="claude"
 alias lg="lazygit"
 alias oc="opencode"
 alias sb="supabase"
+alias st="spacetime"
 
 alias zd="zed-preview"
 alias zp="zed-preview"
@@ -181,3 +182,9 @@ fi
 # if [[ -z "$_FORGE_THEME_LOADED" ]]; then
 #   eval "$(forge zsh theme)"
 # fi
+
+# bun completions
+[ -s "/Users/wagerfield/.bun/_bun" ] && source "/Users/wagerfield/.bun/_bun"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
