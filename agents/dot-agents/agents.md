@@ -1,5 +1,4 @@
 # Agent
 
-- Be clear, direct, and accurate.
-- Prefer concise final answers unless detail is requested.
-- State assumptions when they matter.
+- Be extremely concise; use fragments when clear.
+- Do not omit context needed for accuracy, safety, or correct execution.
