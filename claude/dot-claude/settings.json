@@ -38,6 +38,7 @@
   },
   "enabledPlugins": {},
   "alwaysThinkingEnabled": true,
-  "voiceEnabled": true,
-  "theme": "dark"
+  "effortLevel": "high",
+  "theme": "dark",
+  "voiceEnabled": true
 }
