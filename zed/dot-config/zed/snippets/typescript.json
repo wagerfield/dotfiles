@@ -1,0 +1,64 @@
+{
+  "console log": {
+    "prefix": "log",
+    "description": "Add a console.log() statement",
+    "body": ["console.log($0)"]
+  },
+  "Named function": {
+    "prefix": "fn",
+    "description": "Create a typed named function",
+    "body": [
+      "export function ${1:functionName}(${2:params}): ${3:void} {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Async named function": {
+    "prefix": "afn",
+    "description": "Create a typed async named function",
+    "body": [
+      "export async function ${1:functionName}(${2:params}): Promise<${3:void}> {",
+      "  $0",
+      "}"
+    ]
+  },
+  "Const arrow function": {
+    "prefix": "cfn",
+    "description": "Create a typed const arrow function",
+    "body": [
+      "export const ${1:functionName} = (${2:params}): ${3:void} => {",
+      "  $0",
+      "};"
+    ]
+  },
+  "Type alias": {
+    "prefix": "type",
+    "description": "Create an exported type alias",
+    "body": ["export type ${1:TypeName} = $0;"]
+  },
+  "Class": {
+    "prefix": "class",
+    "description": "Create an exported class",
+    "body": [
+      "export class ${1:ClassName} {",
+      "  constructor(public ${2:memberName}: ${3:memberType}) {",
+      "    $0",
+      "  }",
+      "}"
+    ]
+  },
+  "Interface": {
+    "prefix": "iface",
+    "description": "Create an exported interface",
+    "body": ["export interface ${1:InterfaceName} {", "  $0", "}"]
+  },
+  "Type guard": {
+    "prefix": "guard",
+    "description": "Create a user-defined type guard",
+    "body": [
+      "export function is${1:TypeName}(value: unknown): value is ${1:TypeName} {",
+      "  return ${2:false};$0",
+      "}"
+    ]
+  }
+}
