@@ -53,15 +53,15 @@ file-line 3: short line                            | display-line 5
 - `H` - top of screen
 - `M` - middle of screen
 - `L` - bottom of screen
-- `ctrl-u` - half-page up
-- `ctrl-d` - half-page down
-- `ctrl-b` - page up
-- `ctrl-f` - page down
+- `ctrl-y` - scroll up one display-line
+- `ctrl-e` - scroll down one display-line
+- `ctrl-u` - scroll up half-page
+- `ctrl-d` - scroll down half-page
+- `ctrl-b` - scroll up full-page
+- `ctrl-f` - scroll down full-page
 
 ### Jumps (Horizontal & Vertical)
 
-- `sxx` - sneak/jump to next pair of chars (`xx`) _forwards_
-- `Sxx` - sneak/jump to next pair of chars (`xx`) _backwards_
 - `%` - matching pair/bracket
 - `(` - previous sentence
 - `)` - next sentence
@@ -71,6 +71,10 @@ file-line 3: short line                            | display-line 5
 - `?pattern` - search _backwards_
 - `n` - next search match
 - `N` - previous search match
+- `sxx` - sneak/jump to next pair of chars (`xx`) _forwards_
+- `Sxx` - sneak/jump to next pair of chars (`xx`) _backwards_
+- `;` - repeat last `sxx/Sxx`
+- `,` - reverse last `sxx/Sxx`
 
 ## Grammar
 
