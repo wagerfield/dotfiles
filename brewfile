@@ -31,6 +31,7 @@ brew "llvm"
 brew "luarocks"
 brew "mas" # Mac App Store
 brew "nmap"
+brew "can1357/tap/omp" # oh-my-pi https://omp.sh/
 brew "anomalyco/tap/opencode"
 brew "poppler"
 brew "postgresql@18"
