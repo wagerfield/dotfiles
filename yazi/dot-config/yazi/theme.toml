@@ -1,70 +1,43 @@
-# Yazi Theme - Everforest Dark Medium
+# Yazi Theme - ANSI adaptive
 # https://yazi-rs.github.io/docs/configuration/theme
+
+[flavor]
+light = "ansi-light"
+dark  = "ansi-dark"
 
 [mgr]
 cwd             = { fg = "reset" }
-
-# find
-find_keyword    = { fg = "lightyellow", italic = false, underline = true, bold = true }
 find_position   = { fg = "magenta", italic = false, underline = false, bold = true }
-
-# marked
 marker_marked   = { fg = "magenta", bg = "magenta" }
-
-# selected
 marker_selected = { fg = "blue", bg = "blue" }
 count_selected  = { fg = "black", bg = "blue" }
-
-# copied
-marker_copied   = { fg = "lightyellow", bg = "lightyellow" }
-count_copied    = { fg = "black", bg = "lightyellow" }
-
-# cut
 marker_cut      = { fg = "red", bg = "red" }
 count_cut       = { fg = "black", bg = "red" }
-
-# border
-border_style    = { bg = "darkgray" }
 border_symbol   = " "
 
 [indicator]
 padding     = { open = "█", close = "█" }
 parent      = { reversed = true, bold = true }
 current     = { reversed = true, bold = true }
-preview     = { underline = false }
 
 [tabs]
 active      = { fg = "reset", bg = "reset", reversed = true }
-inactive    = { fg = "white", bg = "darkgray" }
 sep_outer   = { open = " ", close = " " }
 sep_inner   = { open = "", close = "" }
 
 [mode]
 normal_main = { fg = "reset", bg = "reset", bold = true, reversed = true }
-normal_alt  = { fg = "white", bg = "darkgray" }
 select_main = { fg = "black", bg = "magenta", bold = true }
-select_alt  = { fg = "white", bg = "darkgray" }
 unset_main  = { fg = "black", bg = "red", bold = true }
-unset_alt   = { fg = "white", bg = "darkgray" }
 
 [status]
-overall     = { fg = "gray", bg = "black" }
 sep_left    = { open = "", close = "" }
 sep_right   = { open = "", close = "" }
 
 [which]
-mask            = { bg = "black" }
-cand            = { fg = "lightyellow" }
-desc            = { fg = "reset" }
-separator_style = { fg = "white" }
-separator       = " -> "
-cols            = 2
-
-[help]
-on          = { fg = "white" }
-run         = { fg = "white" }
-desc        = { fg = "white" }
-footer      = { fg = "gray", bg = "black" }
+desc        = { fg = "reset" }
+separator   = " -> "
+cols        = 2
 
 [input]
 border = { fg = "gray" }
@@ -77,7 +50,6 @@ title  = { fg = "reset" }
 [spot]
 border   = { fg = "gray" }
 title    = { fg = "reset" }
-tbl_col  = { fg = "white" }
 tbl_cell = { fg = "black", bg = "white", bold = true }
 
 [confirm]
@@ -94,16 +66,6 @@ title  = { fg = "reset" }
 
 [filetype]
 rules = [
-  { fg = "white", url = "*"  }, # files
-	{ fg = "white", url = "*/" }, # folders
+  { fg = "reset", url = "*"  }, # files
+  { fg = "reset", url = "*/" }, # folders
 ]
-
-[icon]
-conds = []
-globs = [
-  { text = " ", url = "*"  }, # files
-  { text = " ", url = "*/" }, # folders
-]
-files = []
-dirs  = []
-exts  = []

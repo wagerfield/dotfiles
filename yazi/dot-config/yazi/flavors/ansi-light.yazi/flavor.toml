@@ -1,0 +1,42 @@
+# Yazi Flavor - ANSI Light
+# https://yazi-rs.github.io/docs/flavors/overview
+
+[mgr]
+find_keyword    = { fg = "yellow", italic = false, underline = true, bold = true }
+marker_copied   = { fg = "yellow", bg = "yellow" }
+count_copied    = { fg = "black", bg = "yellow" }
+border_style    = { bg = "white" }
+
+[indicator]
+preview     = { underline = false, fg = "black" }
+
+[tabs]
+inactive    = { fg = "black", bg = "white" }
+
+[mode]
+normal_alt  = { fg = "black", bg = "white" }
+select_alt  = { fg = "black", bg = "white" }
+unset_alt   = { fg = "black", bg = "white" }
+
+[status]
+overall     = { fg = "darkgray", bg = "white" }
+
+[which]
+mask            = { bg = "white" }
+cand            = { fg = "yellow" }
+separator_style = { fg = "darkgray" }
+
+[help]
+on          = { fg = "black" }
+run         = { fg = "black" }
+desc        = { fg = "black" }
+footer      = { fg = "darkgray", bg = "white" }
+
+[spot]
+tbl_col     = { fg = "black" }
+
+[icon]
+globs = [
+  { text = " ", fg = "black", url = "*"  }, # files
+  { text = " ", fg = "black", url = "*/" }, # folders
+]
