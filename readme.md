@@ -44,7 +44,7 @@ You will likely have to delete (or rename) some files like `$HOME/.zshrc` that a
     rustup default stable
     rustup component add rust-analyzer
 
-### Brew Commands
+## Brew Commands
 
 | Command                          | Description                      |
 | -------------------------------- | -------------------------------- |
