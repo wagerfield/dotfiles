@@ -12,7 +12,7 @@
 
   "git_commit_buffer_font_size": 14, // match buffer_font_size
 
-  "markdown_preview_font_size": 17,
+  "markdown_preview_font_size": 16,
   "markdown_preview_font_family": "Inter",
   "markdown_preview_code_font_family": "JetBrains Mono",
 
@@ -234,20 +234,8 @@
     },
   },
   "agent_servers": {
-    "claude-acp": {
+    "cursor": {
       "type": "registry",
-    },
-    "Codex": {
-      "type": "custom",
-      "command": "npx",
-      "args": ["-y", "@zed-industries/codex-acp@0.10.0"],
-      "default_model": "gpt-5.5",
-      "default_mode": "high",
-      "default_config_options": {
-        "mode": "auto",
-        "model": "gpt-5.5",
-        "reasoning_effort": "xhigh",
-      },
     },
     "codex-acp": {
       "type": "registry",
@@ -257,25 +245,8 @@
         "reasoning_effort": "xhigh",
       },
       "favorite_config_option_values": {
-        "model": [
-          "gpt-5.3-codex",
-          "gpt-5.5",
-          "gpt-5.6-luna",
-          "gpt-5.6-sol",
-          "gpt-5.6-terra",
-        ],
+        "model": ["gpt-5.6-luna", "gpt-5.6-sol", "gpt-5.6-terra"],
       },
-    },
-    "pi-acp": {
-      "type": "registry",
-      "favorite_models": [
-        "opencode-go/glm-5",
-        "opencode-go/glm-5.1",
-        "opencode-go/kimi-k2.5",
-        "openai-codex/gpt-5.4",
-        "openai-codex/gpt-5.5",
-        "openai-codex/gpt-5.3-codex",
-      ],
     },
     "opencode": {
       "type": "registry",
@@ -371,6 +342,7 @@
     "svelte": true,
     "terraform": true,
     "toml": true,
+    "tsgo": true,
     "vue": true,
     "xml": true,
 
