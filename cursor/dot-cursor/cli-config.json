@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "editor": {
+    "vimMode": false
+  },
+  "attribution": {
+    "attributeCommitsToAgent": false,
+    "attributePRsToAgent": false
+  },
+  "permissions": {
+    "allow": [],
+    "deny": []
+  }
+}
