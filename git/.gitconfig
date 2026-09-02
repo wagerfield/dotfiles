@@ -17,5 +17,5 @@
   smudge = git-lfs smudge -- %f
   clean = git-lfs clean -- %f
 
-[includeIf "gitdir:~/Documents/work/make/prg/"]
-  path = ~/.config/git/prg.gitconfig
+[includeIf "gitdir:~/Documents/"]
+  path = ~/.config/git/zinc.gitconfig
