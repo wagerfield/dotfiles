@@ -21,9 +21,7 @@ export VIMRUNTIME="$BOB/$BOB_USED_VERSION/share/nvim/runtime"
 # PATH
 # ========================================
 
-export PATH="$BREW/bin:$BREW/sbin:$PATH"           # Homebrew
 export PATH="$PATH:$BREW/opt/postgresql@18/bin"    # PostgreSQL
-export PATH="$PATH:$BREW/opt/rustup/bin"           # Rust
 export PATH="$PATH:$HOME/.local/bin"               # Local bin
 export PATH="$PATH:$BOB/nvim-bin"                  # Bob (Neovim)
 export PATH="$PATH:$BUN/bin"                       # Bun
@@ -93,7 +91,7 @@ alias nv="nvim"
 alias kn="killall node -9"
 alias lts="nvm use --lts"
 alias fkb="qmk flash --no-eject"
-alias src="source ~/.zshrc"
+alias src="exec zsh"
 
 # ========================================
 # OH MY ZSH
@@ -105,12 +103,16 @@ ZSH_THEME="wagerfield"
 plugins=(git wd)
 tabs -2
 
+eval "$(direnv hook zsh)"
+
 # ========================================
 # COMPLETIONS
 # ========================================
 
 # Add completion paths before initializing compinit
 fpath=(/Users/wagerfield/.docker/completions $fpath)
+
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
 # Run compinit before sourcing files
 autoload -Uz compinit
@@ -160,31 +162,3 @@ if [[ "'${zsh_eval_context[-1]}" == "loadautofunc" ]]; then
 else
   compdef _opencode_yargs_completions opencode
 fi
-
-# ========================================
-# FORGE
-# ========================================
-
-# Add required zsh plugins if not already present
-if [[ ! " ${plugins[@]} " =~ " zsh-autosuggestions " ]]; then
-  plugins+=(zsh-autosuggestions)
-fi
-if [[ ! " ${plugins[@]} " =~ " zsh-syntax-highlighting " ]]; then
-  plugins+=(zsh-syntax-highlighting)
-fi
-
-# Load forge shell plugin (commands, completions, keybindings) if not already loaded
-# if [[ -z "$_FORGE_PLUGIN_LOADED" ]]; then
-#   eval "$(forge zsh plugin)"
-# fi
-
-# Load forge shell theme (prompt with AI context) if not already loaded
-# if [[ -z "$_FORGE_THEME_LOADED" ]]; then
-#   eval "$(forge zsh theme)"
-# fi
-
-# bun completions
-[ -s "/Users/wagerfield/.bun/_bun" ] && source "/Users/wagerfield/.bun/_bun"
-
-# Vite+ bin (https://viteplus.dev)
-. "$HOME/.vite-plus/env"
