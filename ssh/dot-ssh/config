@@ -8,12 +8,7 @@ Host github.com
     IdentitiesOnly yes
     IdentityFile ~/.ssh/id_ed25519
 
-Host prg.github.com
+Host wagerfield.github.com
     HostName github.com
     IdentitiesOnly yes
-    IdentityFile ~/.ssh/prg_ed25519
-
-Host make.github.com
-    HostName github.com
-    IdentitiesOnly yes
-    IdentityFile ~/.ssh/make_ed25519
+    IdentityFile ~/.ssh/wagerfield_ed25519
