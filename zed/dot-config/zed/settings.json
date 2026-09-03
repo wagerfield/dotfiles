@@ -37,7 +37,7 @@
   "cli_default_open_behavior": "existing_window",
   "relative_line_numbers": "enabled",
   "format_on_save": "on",
-  "code_lens": "off",
+  "code_lens": "on",
 
   "telemetry": {
     "diagnostics": false,
@@ -63,7 +63,7 @@
   "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
-    "highlight_on_yank_duration": 400,
+    "highlight_on_yank_duration": 300,
     "use_system_clipboard": "always",
     "use_smartcase_find": true,
   },
@@ -77,14 +77,11 @@
   },
   "theme": {
     "mode": "system",
-    // "One Light"
     // "GitHub Light"
     // "Zedokai Light"
     "light": "GitHub Light",
-    // "Arrakis Night"
     // "Gruvbox Dark"
     // "Everforest Dark Hard (regular)"
-    // "Kanagawa"
     // "Kanagawa Dragon"
     // "Zedokai Darker (Octagon)"
     "dark": "Kanagawa Wave - No Italics",
@@ -188,9 +185,9 @@
     "hide_root": true,
   },
   "git_panel": {
+    "folder_indicator": "icon",
     "group_by": "status",
     "default_width": 360,
-    "folder_icons": false,
     "file_icons": false,
     "tree_view": false,
   },
@@ -234,20 +231,15 @@
     },
   },
   "agent_servers": {
+    "cursor": {
+      "type": "registry",
+      "default_config_options": {
+        "effort": "high",
+        "model": "grok-4.6",
+      },
+    },
     "claude-acp": {
       "type": "registry",
-    },
-    "Codex": {
-      "type": "custom",
-      "command": "npx",
-      "args": ["-y", "@zed-industries/codex-acp@0.10.0"],
-      "default_model": "gpt-5.5",
-      "default_mode": "high",
-      "default_config_options": {
-        "mode": "auto",
-        "model": "gpt-5.5",
-        "reasoning_effort": "xhigh",
-      },
     },
     "codex-acp": {
       "type": "registry",
@@ -257,79 +249,14 @@
         "reasoning_effort": "xhigh",
       },
       "favorite_config_option_values": {
-        "model": [
-          "gpt-5.3-codex",
-          "gpt-5.5",
-          "gpt-5.6-luna",
-          "gpt-5.6-sol",
-          "gpt-5.6-terra",
-        ],
+        "model": ["gpt-5.6-luna", "gpt-5.6-sol", "gpt-5.6-terra"],
       },
     },
     "pi-acp": {
       "type": "registry",
-      "favorite_models": [
-        "opencode-go/glm-5",
-        "opencode-go/glm-5.1",
-        "opencode-go/kimi-k2.5",
-        "openai-codex/gpt-5.4",
-        "openai-codex/gpt-5.5",
-        "openai-codex/gpt-5.3-codex",
-      ],
     },
     "opencode": {
       "type": "registry",
-      "default_config_options": {
-        "effort": "xhigh",
-        "model": "openai/gpt-5.5",
-        "mode": "build",
-      },
-      "favorite_config_option_values": {
-        "model": [
-          "openai/gpt-5.4",
-          "opencode-go/glm-5",
-          "opencode-go/glm-5.1",
-          "opencode-go/kimi-k2.5",
-          "opencode-go/minimax-m2.7",
-          "openai/gpt-5.4/medium",
-          "openai/gpt-5.4/high",
-          "openai/gpt-5.3-codex/medium",
-          "openai/gpt-5.3-codex/high",
-          "openai/gpt-5.5",
-          "openai/gpt-5.5/medium",
-          "openai/gpt-5.5/high",
-        ],
-      },
-    },
-  },
-  "context_servers": {
-    "mcp-server-playwright": {
-      "enabled": false,
-      "remote": false,
-      "settings": {},
-    },
-    "svelte-mcp": {
-      "enabled": false,
-      "remote": false,
-      "settings": {},
-    },
-    "chrome-devtools-mcp-zed": {
-      "enabled": false,
-      "remote": false,
-      "settings": {},
-    },
-    "daisyui-github": {
-      "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://gitmcp.io/saadeghi/daisyui"],
-    },
-    "mcp-server-context7": {
-      "enabled": false,
-      "remote": false,
-      "settings": {
-        "context7_api_key": "ctx7sk-41c0cdc5-742d-44e2-a54d-46175401d4f4",
-      },
     },
   },
   "edit_predictions": {
@@ -345,6 +272,7 @@
     "everforest": true,
     "fleet-themes": true,
     "github-theme": true,
+    "kanagawa-themes": true,
     "tokyo-night": true,
     "vercel-theme": true,
     "zedokai": true,
@@ -375,20 +303,12 @@
     "xml": true,
 
     // MCP Servers
-    "browser-tools-context-server": true,
-    "chrome-devtools-mcp": true,
-    "mcp-server-brave-search": true,
-    "mcp-server-context7": true,
-    "mcp-server-github": true,
-    "mcp-server-nextjs": true,
-    "mcp-server-notion": true,
-    "mcp-server-playwright": true,
-    "mcp-server-resend": true,
-    "mcp-server-supabase": true,
-    "postgres-context-server": true,
-    "sentry-mcp": true,
-    "shadcn-mcp": true,
-    "svelte-mcp": true,
+    // "chrome-devtools-mcp": true,
+    // "mcp-server-playwright": true,
+    // "mcp-server-resend": true,
+    // "mcp-server-supabase": true,
+    // "postgres-context-server": true,
+    // "sentry-mcp": true,
   },
 
   // LSP -----------------------------------------------------------------------
@@ -400,6 +320,7 @@
       },
     },
     "vtsls": {
+      "enable_lsp_tasks": true,
       "settings": {
         "typescript": {
           "updateImportsOnFileMove": {
@@ -412,7 +333,6 @@
           },
         },
       },
-      "enable_lsp_tasks": true,
     },
   },
 }
