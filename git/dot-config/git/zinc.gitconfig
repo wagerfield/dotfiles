@@ -1,3 +1,6 @@
 [user]
   name = Matthew Wagerfield
   email = matthew.wagerfield@zincwork.com
+
+[url "git@zinc.github.com:zincwork/"]
+  insteadOf = git@github.com:zincwork/
