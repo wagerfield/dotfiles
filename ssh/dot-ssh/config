@@ -6,9 +6,9 @@ Include ~/.orbstack/ssh/config
 Host github.com
     HostName github.com
     IdentitiesOnly yes
-    IdentityFile ~/.ssh/id_ed25519
+    IdentityFile ~/.ssh/wagerfield_ed25519
 
-Host wagerfield.github.com
+Host zinc.github.com
     HostName github.com
     IdentitiesOnly yes
-    IdentityFile ~/.ssh/wagerfield_ed25519
+    IdentityFile ~/.ssh/zinc_ed25519
