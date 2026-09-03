@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "Context7": {
+      "url": "https://mcp.context7.com/mcp/oauth"
+    },
+    "Granola": {
+      "url": "https://mcp.granola.ai/mcp"
+    },
+    "Linear": {
+      "url": "https://mcp.linear.app/mcp"
+    },
+    "Notion": {
+      "url": "https://mcp.notion.com/mcp"
+    },
+    "Shortcut": {
+      "url": "https://mcp.shortcut.com/mcp"
+    },
+    "Slack": {
+      "url": "https://mcp.slack.com/mcp"
+    }
+  }
+}

@@ -7,8 +7,95 @@
     "attributeCommitsToAgent": false,
     "attributePRsToAgent": false
   },
+  "approvalMode": "allowlist",
+  "autoAcceptWebSearch": true,
+  "webFetchDomainAllowlist": ["*"],
   "permissions": {
-    "allow": [],
-    "deny": []
+    "allow": [
+      "Read(**)",
+      "WebFetch(*)",
+
+      "Shell(bat)",
+      "Shell(cat)",
+      "Shell(diff)",
+      "Shell(fd)",
+      "Shell(file)",
+      "Shell(find)",
+      "Shell(grep)",
+      "Shell(head)",
+      "Shell(jq)",
+      "Shell(less)",
+      "Shell(ls)",
+      "Shell(pwd)",
+      "Shell(rg)",
+      "Shell(sort)",
+      "Shell(stat)",
+      "Shell(tail)",
+      "Shell(tree)",
+      "Shell(uniq)",
+      "Shell(wc)",
+      "Shell(which)",
+      "Shell(yq)",
+
+      "Shell(gh:pr)",
+      "Shell(git:branch)",
+      "Shell(git:diff)",
+      "Shell(git:log)",
+      "Shell(git:rev-parse)",
+      "Shell(git:show)",
+      "Shell(git:status)",
+
+      "Shell(bun:run)",
+      "Shell(npm:run)",
+      "Shell(pnpm:run)",
+      "Shell(yarn:run)",
+
+      "Shell(jest)",
+      "Shell(vitest)",
+
+      "Shell(markdownlint)",
+
+      "Mcp(Context7:*)",
+
+      "Mcp(Granola:*get*)",
+      "Mcp(Granola:*list*)",
+      "Mcp(Granola:*read*)",
+      "Mcp(Granola:*search*)",
+
+      "Mcp(Notion:notion-search*)",
+      "Mcp(Notion:notion-fetch)",
+      "Mcp(Notion:notion-get-*)",
+      "Mcp(Notion:notion-list-*)",
+      "Mcp(Notion:notion-query-*)",
+      "Mcp(Notion:notion-read-*)",
+      "Mcp(Notion:notion-wait-session)",
+      "Mcp(Notion:notion-download-attachment)",
+      "Mcp(Notion:notion-check-mcp-next-steps)",
+      "Mcp(Notion:notion-show-advanced-analysis-next-steps)",
+
+      "Mcp(Shortcut:*-search)",
+      "Mcp(Shortcut:*-list)",
+      "Mcp(Shortcut:*-get-*)",
+      "Mcp(Shortcut:files-read)",
+      "Mcp(Shortcut:custom-fields-list)",
+
+      "Mcp(Slack:*search*)",
+      "Mcp(Slack:*read*)",
+      "Mcp(Slack:*list*)",
+      "Mcp(Slack:*get*)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+
+      "Write(**/.env)",
+      "Write(**/.env.*)",
+      "Write(**/*.pem)",
+      "Write(**/*.key)"
+    ]
   }
 }
