@@ -6,6 +6,7 @@ export EDITOR="nvim"
 
 export BREW="/opt/homebrew"
 export XDG_CONFIG_HOME="$HOME/.config"
+export CURSOR_CONFIG_DIR="$HOME/.cursor"
 export PNPM_HOME="$HOME/Library/pnpm"
 export GOPATH="$HOME/go"
 
