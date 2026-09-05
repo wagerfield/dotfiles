@@ -6,6 +6,7 @@ export EDITOR="nvim"
 
 export BREW="/opt/homebrew"
 export XDG_CONFIG_HOME="$HOME/.config"
+export CURSOR_CONFIG_DIR="$HOME/.cursor"
 export PNPM_HOME="$HOME/Library/pnpm"
 export GOPATH="$HOME/go"
 
@@ -21,13 +22,14 @@ export VIMRUNTIME="$BOB/$BOB_USED_VERSION/share/nvim/runtime"
 # PATH
 # ========================================
 
-export PATH="$PATH:$BREW/opt/postgresql@18/bin"    # PostgreSQL
-export PATH="$PATH:$HOME/.local/bin"               # Local bin
-export PATH="$PATH:$BOB/nvim-bin"                  # Bob (Neovim)
-export PATH="$PATH:$BUN/bin"                       # Bun
-export PATH="$PATH:$PNPM_HOME"                     # pnpm
-export PATH="$PATH:$GOPATH/bin"                    # Go
-export PATH="$PATH:./node_modules/.bin"            # Local node_modules
+export PATH="$BREW/bin:$BREW/sbin:$PATH"         # Homebrew
+export PATH="$PATH:$BREW/opt/postgresql@18/bin"  # PostgreSQL
+export PATH="$PATH:$HOME/.local/bin"             # Local bin
+export PATH="$PATH:$BOB/nvim-bin"                # Bob (Neovim)
+export PATH="$PATH:$BUN/bin"                     # Bun
+export PATH="$PATH:$PNPM_HOME"                   # pnpm
+export PATH="$PATH:$GOPATH/bin"                  # Go
+export PATH="$PATH:./node_modules/.bin"          # Local node_modules
 
 # ========================================
 # TITLE
