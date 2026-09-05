@@ -9,13 +9,22 @@ alwaysApply: true
 - Prefer bullets and fragments.
 - Skip preamble and filler.
 
-## Tools
+## CLI Tools
 
-- GitHub: use `gh` CLI.
-- Library docs: Context7 MCP, then WebFetch or WebSearch.
-- Engineering tracker: Shortcut MCP.
-- Company workspace: Notion MCP.
-- Communications: Slack MCP.
-- Meeting notes: Granola MCP.
+- Find files: `fd`.
+- Search contents: `rg`.
+- Structural search: `sg` (`ast-grep`).
+- YAML / JSON: `yq`.
+- GitHub: `gh` (PRs, issues, checks).
+- Browser (shell): `agent-browser`.
+
+## MCP Servers
+
+- Library docs: Context7, then WebFetch or WebSearch.
+- Engineering tracker: Shortcut.
+- Issues / projects: Linear.
+- Company workspace: Notion.
+- Communications: Slack.
+- Meeting notes: Granola.
 
 > If an MCP needs login, say so.
