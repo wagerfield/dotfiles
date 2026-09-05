@@ -46,18 +46,22 @@ You will likely have to delete (or rename) some files like `$HOME/.zshrc` that a
 
 ## Brew Commands
 
-| Command                          | Description                      |
-| -------------------------------- | -------------------------------- |
-| `brew help`                      | View `brew` commands             |
-| `brew update`                    | Update `brew`                    |
-| `brew doctor`                    | Check `brew` installation        |
-| `brew cleanup`                   | Cleanup `brew` packages          |
-| `brew outdated`                  | List outdated `brew` packages    |
-| `brew upgrade`                   | Upgrade outdated `brew` packages |
-| `brew tap`                       | List `brew` taps                 |
-| `brew list`                      | List `brew` packages             |
-| `brew (un)install <package>`     | (Un)install `brew` package       |
-| `brew (un)install --cask <cask>` | (Un)install `brew` cask          |
+| Command                                 | Description                                 |
+| --------------------------------------- | ------------------------------------------- |
+| `brew help`                             | View `brew` commands                        |
+| `brew update`                           | Update `brew`                               |
+| `brew doctor`                           | Check `brew` installation                   |
+| `brew cleanup`                          | Cleanup `brew` packages                     |
+| `brew outdated`                         | List outdated `brew` packages               |
+| `brew upgrade`                          | Upgrade outdated `brew` packages            |
+| `brew tap`                              | List `brew` taps                            |
+| `brew list`                             | List `brew` packages                        |
+| `brew (un)install <package>`            | (Un)install `brew` package                  |
+| `brew (un)install --cask <cask>`        | (Un)install `brew` cask                     |
+| `brew bundle`                           | Install packages/casks from the brewfile    |
+| `brew bundle check --verbose`           | Check which brewfile entries are missing    |
+| `brew bundle cleanup`                   | Preview packages/casks not in the brewfile  |
+| `brew bundle cleanup --install --force` | Sync machine to brewfile (install + remove) |
 
 ## Mac Configuration
 
