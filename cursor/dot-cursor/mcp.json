@@ -17,6 +17,10 @@
     },
     "Slack": {
       "url": "https://mcp.slack.com/mcp"
+    },
+    "Wallaby": {
+      "command": "node",
+      "args": ["~/.wallaby/mcp"]
     }
   }
 }
