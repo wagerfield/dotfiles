@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "editor": {
+    "vimMode": false
+  },
+  "attribution": {
+    "attributeCommitsToAgent": false,
+    "attributePRsToAgent": false
+  },
+  "approvalMode": "allowlist",
+  "autoAcceptWebSearch": true,
+  "permissions": {
+    "allow": [
+      "Read(**)",
+
+      "Shell(bat)",
+      "Shell(cat)",
+      "Shell(diff)",
+      "Shell(fd)",
+      "Shell(file)",
+      "Shell(find)",
+      "Shell(grep)",
+      "Shell(head)",
+      "Shell(jq)",
+      "Shell(less)",
+      "Shell(ls)",
+      "Shell(pwd)",
+      "Shell(rg)",
+      "Shell(sort)",
+      "Shell(stat)",
+      "Shell(tail)",
+      "Shell(tree)",
+      "Shell(uniq)",
+      "Shell(wc)",
+      "Shell(which)",
+      "Shell(yq)",
+
+      "Shell(sg)",
+      "Shell(ast-grep)",
+      "Shell(pdftotext)",
+      "Shell(pdfinfo)",
+
+      "Shell(du)",
+      "Shell(df)",
+      "Shell(date)",
+      "Shell(realpath)",
+      "Shell(basename)",
+      "Shell(dirname)",
+      "Shell(cut)",
+      "Shell(column)",
+      "Shell(nl)",
+      "Shell(tac)",
+
+      "Shell(gh:pr view*)",
+      "Shell(gh:pr list*)",
+      "Shell(gh:pr diff*)",
+      "Shell(gh:pr checks*)",
+      "Shell(gh:pr status*)",
+      "Shell(gh:issue view*)",
+      "Shell(gh:issue list*)",
+      "Shell(gh:run view*)",
+      "Shell(gh:run list*)",
+      "Shell(gh:repo view*)",
+      "Shell(gh:search*)",
+
+      "Shell(git:branch*)",
+      "Shell(git:diff*)",
+      "Shell(git:log*)",
+      "Shell(git:rev-parse*)",
+      "Shell(git:show*)",
+      "Shell(git:status*)",
+
+      "Shell(bun:run*)",
+      "Shell(npm:run*)",
+      "Shell(pnpm:run*)",
+      "Shell(yarn:run*)",
+
+      "Shell(jest)",
+      "Shell(vitest)",
+
+      "Shell(markdownlint)",
+
+      "Mcp(context7:*)",
+
+      "Mcp(granola:*get*)",
+      "Mcp(granola:*list*)",
+      "Mcp(granola:*read*)",
+      "Mcp(granola:*search*)",
+
+      "Mcp(linear:get_*)",
+      "Mcp(linear:list_*)",
+      "Mcp(linear:search_documentation)",
+      "Mcp(linear:extract_images)",
+
+      "Mcp(notion:notion-search*)",
+      "Mcp(notion:notion-fetch)",
+      "Mcp(notion:notion-get-*)",
+      "Mcp(notion:notion-list-*)",
+      "Mcp(notion:notion-query-*)",
+      "Mcp(notion:notion-read-*)",
+      "Mcp(notion:notion-wait-session)",
+      "Mcp(notion:notion-download-attachment)",
+      "Mcp(notion:notion-check-mcp-next-steps)",
+      "Mcp(notion:notion-show-advanced-analysis-next-steps)",
+
+      "Mcp(shortcut:*-search)",
+      "Mcp(shortcut:*-list)",
+      "Mcp(shortcut:*-get-*)",
+      "Mcp(shortcut:files-read)",
+      "Mcp(shortcut:custom-fields-list)",
+
+      "Mcp(slack:*search*)",
+      "Mcp(slack:*read*)",
+      "Mcp(slack:slack_list_*)",
+      "Mcp(slack:*get*)",
+
+      "WebFetch(cursor.com)",
+      "WebFetch(*.cursor.com)",
+      "WebFetch(github.com)",
+      "WebFetch(*.github.com)",
+      "WebFetch(raw.githubusercontent.com)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+
+      "Write(**/.env)",
+      "Write(**/.env.*)",
+      "Write(**/*.pem)",
+      "Write(**/*.key)"
+    ]
+  }
+}

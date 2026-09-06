@@ -1,24 +1,24 @@
 {
   "mcpServers": {
-    "Context7": {
+    "context7": {
       "url": "https://mcp.context7.com/mcp/oauth"
     },
-    "Granola": {
+    "granola": {
       "url": "https://mcp.granola.ai/mcp"
     },
-    "Linear": {
+    "linear": {
       "url": "https://mcp.linear.app/mcp"
     },
-    "Notion": {
+    "notion": {
       "url": "https://mcp.notion.com/mcp"
     },
-    "Shortcut": {
+    "shortcut": {
       "url": "https://mcp.shortcut.com/mcp"
     },
-    "Slack": {
+    "slack": {
       "url": "https://mcp.slack.com/mcp"
     },
-    "Wallaby": {
+    "wallaby": {
       "command": "node",
       "args": ["~/.wallaby/mcp"]
     }
