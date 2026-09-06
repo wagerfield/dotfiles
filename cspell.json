@@ -1,4 +1,8 @@
 {
+  "import": [
+    "https://cdn.jsdelivr.net/npm/@cspell/dict-en-gb@5/cspell-ext.json"
+  ],
+  "language": "en-GB,en-US",
   "ignoreRegExpList": ["vim-api"],
   "patterns": [
     {
@@ -21,6 +25,8 @@
     "linemode",
     "nvim",
     "opencode",
+    "pdfinfo",
+    "pdftotext",
     "rustup",
     "sainnhe",
     "statusline",

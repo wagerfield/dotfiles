@@ -13,6 +13,7 @@
     "allow": [
       "Read(**)",
 
+      "Shell(ast-grep)",
       "Shell(bat)",
       "Shell(cat)",
       "Shell(diff)",
@@ -24,8 +25,11 @@
       "Shell(jq)",
       "Shell(less)",
       "Shell(ls)",
+      "Shell(pdfinfo)",
+      "Shell(pdftotext)",
       "Shell(pwd)",
       "Shell(rg)",
+      "Shell(sg)",
       "Shell(sort)",
       "Shell(stat)",
       "Shell(tail)",
@@ -34,11 +38,6 @@
       "Shell(wc)",
       "Shell(which)",
       "Shell(yq)",
-
-      "Shell(sg)",
-      "Shell(ast-grep)",
-      "Shell(pdftotext)",
-      "Shell(pdfinfo)",
 
       "Shell(du)",
       "Shell(df)",
