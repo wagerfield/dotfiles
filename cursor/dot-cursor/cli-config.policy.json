@@ -17,6 +17,7 @@
       "Shell(bat)",
       "Shell(cat)",
       "Shell(diff)",
+      "Shell(echo)",
       "Shell(fd)",
       "Shell(file)",
       "Shell(find)",
