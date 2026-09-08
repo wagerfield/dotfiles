@@ -3,11 +3,17 @@
     "context7": {
       "url": "https://mcp.context7.com/mcp/oauth"
     },
+    "figma": {
+      "url": "https://mcp.figma.com/mcp"
+    },
     "granola": {
       "url": "https://mcp.granola.ai/mcp"
     },
     "linear": {
       "url": "https://mcp.linear.app/mcp"
+    },
+    "mobbin": {
+      "url": "https://api.mobbin.com/mcp"
     },
     "notion": {
       "url": "https://mcp.notion.com/mcp"
