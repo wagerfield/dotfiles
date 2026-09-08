@@ -23,7 +23,6 @@ export VIMRUNTIME="$BOB/$BOB_USED_VERSION/share/nvim/runtime"
 # ========================================
 
 export PATH="$BREW/bin:$BREW/sbin:$PATH"         # Homebrew
-export PATH="$PATH:$BREW/opt/postgresql@18/bin"  # PostgreSQL
 export PATH="$PATH:$HOME/.local/bin"             # Local bin
 export PATH="$PATH:$BOB/nvim-bin"                # Bob (Neovim)
 export PATH="$PATH:$BUN/bin"                     # Bun
@@ -111,24 +110,21 @@ eval "$(direnv hook zsh)"
 # COMPLETIONS
 # ========================================
 
-# Add completion paths before initializing compinit
+# fpath must be set before Oh My Zsh runs compinit
 fpath=(/Users/wagerfield/.docker/completions $fpath)
-
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
-# Run compinit before sourcing files
-autoload -Uz compinit
-compinit
-
 eval "$(brew shellenv)"
+
+source $NVM/nvm.sh
+source $ZSH/oh-my-zsh.sh
+
 eval "$(zoxide init zsh)"
 eval "$(tv init zsh)"
 eval "$(fzf --zsh)"
 
 source $BUN/_bun
-source $NVM/nvm.sh
 source $NVM/bash_completion
-source $ZSH/oh-my-zsh.sh
 
 # ========================================
 # YAZI
