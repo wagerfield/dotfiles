@@ -17,5 +17,5 @@
   smudge = git-lfs smudge -- %f
   clean = git-lfs clean -- %f
 
-[includeIf "gitdir:~/Documents/"]
+[includeIf "gitdir:~/Zinc/"]
   path = ~/.config/git/zinc.gitconfig
