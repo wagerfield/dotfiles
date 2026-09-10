@@ -82,6 +82,12 @@
 
       "Mcp(context7:*)",
 
+      "Mcp(figma:get_*)",
+      "Mcp(figma:list_*)",
+      "Mcp(figma:search_*)",
+      "Mcp(figma:download_assets)",
+      "Mcp(figma:whoami)",
+
       "Mcp(granola:*get*)",
       "Mcp(granola:*list*)",
       "Mcp(granola:*read*)",
