@@ -22,13 +22,13 @@ export VIMRUNTIME="$BOB/$BOB_USED_VERSION/share/nvim/runtime"
 # PATH
 # ========================================
 
-export PATH="$BREW/bin:$BREW/sbin:$PATH"         # Homebrew
-export PATH="$PATH:$HOME/.local/bin"             # Local bin
-export PATH="$PATH:$BOB/nvim-bin"                # Bob (Neovim)
-export PATH="$PATH:$BUN/bin"                     # Bun
-export PATH="$PATH:$PNPM_HOME"                   # pnpm
-export PATH="$PATH:$GOPATH/bin"                  # Go
-export PATH="$PATH:./node_modules/.bin"          # Local node_modules
+export PATH="$BREW/bin:$BREW/sbin:$PATH"   # Homebrew
+export PATH="$PATH:$HOME/.local/bin"       # Local bin
+export PATH="$PATH:$BOB/nvim-bin"          # Bob (Neovim)
+export PATH="$PATH:$BUN/bin"               # Bun
+export PATH="$PATH:$PNPM_HOME"             # pnpm
+export PATH="$PATH:$GOPATH/bin"            # Go
+export PATH="$PATH:./node_modules/.bin"    # Local node_modules
 
 # ========================================
 # TITLE
@@ -72,16 +72,9 @@ alias yb="yarn run build"
 alias ys="yarn run start"
 alias yt="yarn run test"
 
-alias o="ollama"
-alias c="claude"
 alias lg="lazygit"
 alias oc="opencode"
 alias sb="supabase"
-alias st="spacetime"
-
-alias zd="zed-preview"
-alias zp="zed-preview"
-alias zedp="zed-preview"
 
 alias f="fzf"
 alias fz="fzf"
@@ -127,7 +120,7 @@ source $BUN/_bun
 source $NVM/bash_completion
 
 # ========================================
-# YAZI
+# Yazi https://yazi-rs.github.io/
 # ========================================
 
 function y() {
@@ -139,7 +132,7 @@ function y() {
 }
 
 # ========================================
-# OPENCODE
+# OpenCode (https://opencode.ai/)
 # ========================================
 
 _opencode_yargs_completions()
@@ -160,3 +153,9 @@ if [[ "'${zsh_eval_context[-1]}" == "loadautofunc" ]]; then
 else
   compdef _opencode_yargs_completions opencode
 fi
+
+# ========================================
+# Vite+ (https://viteplus.dev)
+# ========================================
+
+. "$HOME/.config/vite-plus/env"
