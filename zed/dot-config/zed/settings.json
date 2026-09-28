@@ -7,14 +7,16 @@
   "buffer_line_height": "comfortable",
   "buffer_font_size": 14,
 
-  "agent_ui_font_size": 15, // match ui_font_size
+  "agent_ui_font_size": 16,
   "agent_buffer_font_size": 14, // match buffer_font_size
 
   "git_commit_buffer_font_size": 14, // match buffer_font_size
 
-  "markdown_preview_font_size": 16,
-  "markdown_preview_font_family": "Inter",
-  "markdown_preview_code_font_family": "JetBrains Mono",
+  "markdown_preview": {
+    "font_size": 16,
+    "font_family": "Inter",
+    "code_font_family": "JetBrains Mono",
+  },
 
   "horizontal_scroll_margin": 8,
   "vertical_scroll_margin": 4,
@@ -37,7 +39,7 @@
   "cli_default_open_behavior": "existing_window",
   "relative_line_numbers": "enabled",
   "format_on_save": "on",
-  "code_lens": "on",
+  "code_lens": "off",
 
   "telemetry": {
     "diagnostics": false,
@@ -79,19 +81,17 @@
     "mode": "system",
     // "GitHub Light"
     // "Zedokai Light"
-    "light": "GitHub Light",
+    "light": "Catppuccin Latte",
     // "Gruvbox Dark"
     // "Everforest Dark Hard (regular)"
     // "Kanagawa Dragon"
+    // "Kanagawa Wave - No Italics"
     // "Zedokai Darker (Octagon)"
-    "dark": "Kanagawa Wave - No Italics",
+    "dark": "Catppuccin Frappé",
   },
 
   // https://zed.dev/theme-builder
   "theme_overrides": {
-    "Catppuccin Latte - No Italics": {
-      "border.variant": "#ccd0da",
-    },
     "GitHub Light": {
       "editor.document_highlight.read_background": "#0969da1a", // 10% opacity
       "editor.document_highlight.write_background": "#0969da33", // 20% opacity
@@ -136,7 +136,7 @@
 
   "title_bar": {
     "show_onboarding_banner": false,
-    "show_user_menu": false,
+    "show_user_menu": true,
   },
   "tab_bar": {
     "show_nav_history_buttons": false,
@@ -156,7 +156,7 @@
   "scrollbar": {
     "show": "auto",
     "cursors": false,
-    "git_diff": false,
+    "git_diff": true,
     "search_results": false,
     "selected_symbol": false,
     "selected_text": false,
@@ -234,8 +234,11 @@
     "cursor": {
       "type": "registry",
       "default_config_options": {
+        "reasoning_effort": "high",
+        "fast": "false",
+        "mode": "agent",
         "effort": "high",
-        "model": "grok-4.6",
+        "model": "grok-4.7",
       },
     },
     "claude-acp": {
@@ -294,6 +297,7 @@
     "markdownlint": true,
     "mdx": true,
     "mermaid": true,
+    "oxc": true,
     "rainbow-csv": true,
     "sql": true,
     "svelte": true,

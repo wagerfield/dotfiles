@@ -109,7 +109,7 @@
   // Outline Panel -------------------------------------------------------------
 
   {
-    "context": "OutlinePanel",
+    "context": "OutlinePanel && not_editing",
     "bindings": {
       "c": "outline_panel::CollapseAllEntries",
       "e": "outline_panel::ExpandAllEntries",
