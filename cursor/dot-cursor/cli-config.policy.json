@@ -65,6 +65,7 @@
 
       "Shell(git:branch*)",
       "Shell(git:diff*)",
+      "Shell(git:fetch*)",
       "Shell(git:log*)",
       "Shell(git:rev-parse*)",
       "Shell(git:show*)",
@@ -74,10 +75,12 @@
       "Shell(npm:run*)",
       "Shell(pnpm:run*)",
       "Shell(yarn:run*)",
+      "Shell(docker:ps*)",
 
       "Shell(jest)",
       "Shell(vitest)",
 
+      "Shell(eslint)",
       "Shell(markdownlint)",
 
       "Mcp(context7:*)",
@@ -109,6 +112,14 @@
       "Mcp(notion:notion-check-mcp-next-steps)",
       "Mcp(notion:notion-show-advanced-analysis-next-steps)",
 
+      "Mcp(nuxt:get-*)",
+      "Mcp(nuxt:list-*)",
+      "Mcp(nuxt:search-*)",
+
+      "Mcp(nuxt-ui:get-*)",
+      "Mcp(nuxt-ui:list-*)",
+      "Mcp(nuxt-ui:search-*)",
+
       "Mcp(shortcut:*-search)",
       "Mcp(shortcut:*-list)",
       "Mcp(shortcut:*-get-*)",
@@ -124,7 +135,10 @@
       "WebFetch(*.cursor.com)",
       "WebFetch(github.com)",
       "WebFetch(*.github.com)",
-      "WebFetch(raw.githubusercontent.com)"
+      "WebFetch(raw.githubusercontent.com)",
+      "WebFetch(jsonapi.org)",
+      "WebFetch(*.owasp.org)",
+      "WebFetch(ico.org.uk)"
     ],
     "deny": [
       "Read(.env)",
