@@ -1,44 +1,32 @@
 return {
   {
-    -- https://github.com/rebelot/kanagawa.nvim#readme
-    "rebelot/kanagawa.nvim",
-    name = "kanagawa",
+    -- https://github.com/catppuccin/nvim#readme
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
     opts = {
-      colors = {
-        theme = {
-          all = {
-            ui = {
-              bg_gutter = "none",
-            },
-          },
-        },
+      flavour = "auto",
+      background = {
+        light = "latte",
+        dark = "frappe",
       },
     },
     config = function(_, opts)
-      require("kanagawa").setup(opts)
-      vim.cmd.colorscheme("kanagawa")
+      require("catppuccin").setup(opts)
+      vim.cmd.colorscheme("catppuccin")
     end,
+  },
+  {
+    -- https://github.com/rebelot/kanagawa.nvim#readme
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    lazy = true,
   },
   {
     -- https://github.com/neanias/everforest-nvim#readme
     "neanias/everforest-nvim",
     name = "everforest",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.cmd.colorscheme("everforest")
-    end,
+    lazy = true,
   },
-  {
-    -- https://github.com/neanias/everforest-nvim#readme
-    "neanias/everforest-nvim",
-    name = "everforest",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.cmd.colorscheme("everforest")
-    end,
-  }
 }

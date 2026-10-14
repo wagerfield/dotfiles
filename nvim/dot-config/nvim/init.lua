@@ -27,6 +27,7 @@ require("lazy").setup({
   },
   install = {
     colorscheme = {
+      "catppuccin",
       "everforest",
       "quiet",
     },
