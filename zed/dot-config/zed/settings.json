@@ -81,7 +81,7 @@
     "mode": "system",
     // "GitHub Light"
     // "Zedokai Light"
-    "light": "Catppuccin Latte",
+    "light": "GitHub Light",
     // "Gruvbox Dark"
     // "Everforest Dark Hard (regular)"
     // "Kanagawa Dragon"
@@ -242,6 +242,11 @@
       },
     },
     "claude-acp": {
+      "default_config_options": {
+        "model": "default",
+        "effort": "high",
+        "mode": "auto"
+      },
       "type": "registry",
     },
     "codex-acp": {

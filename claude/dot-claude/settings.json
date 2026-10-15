@@ -39,6 +39,6 @@
   "enabledPlugins": {},
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
-  "theme": "dark",
+  "theme": "auto",
   "voiceEnabled": true
 }
